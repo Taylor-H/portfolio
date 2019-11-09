@@ -1,0 +1,799 @@
+@import "style.css";
+
+.check {
+  width: .5rem;
+  height: .5rem;
+
+}
+
+.portriat {
+  background-image: url("../images/tay-purpel.png");
+  grid-area: port;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-clip: border-box; */
+  border: 2px solid black;
+  box-sizing: border-box;
+      box-shadow: inset 0 0 10px #898989;
+}
+
+.hi {
+  display: flex;
+  background-color: white;
+  grid-area: hi;
+  width: 100%;
+  font-family: 'Libre Franklin', sans-serif;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid black;
+  box-sizing: border-box;
+      box-shadow: inset 0 0 10px #cccccc;
+}
+
+.hi h6 {
+  font-size: .9rem;
+  margin-bottom: 1.2rem;
+}
+
+.hi p {
+  padding-left: .5rem;
+  padding-right: .5rem;
+  margin-bottom: 2rem;
+  font-size: .6rem;
+}
+
+.skills {
+  grid-area: skills;
+  border: 2px solid black;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  background-color: #D8E3E8;
+  align-content: stretch;
+  justify-content: space-between;
+  margin: 0 auto;
+      box-shadow: inset 0 0 10px #898989;
+}
+
+.skill-list {
+  font-size: .7rem;
+  font-family: 'Libre Franklin', sans-serif;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  align-self: center;
+
+}
+
+.tools {
+  grid-area: tools;
+  border: 2px solid black;
+  box-sizing: border-box;
+  background-color: #999999;
+  text-align: center;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+    box-shadow: inset 0 0 10px #565656;
+  /* border: 1px solid white; */
+}
+
+.tool-list {
+  font-size: .7rem;
+  font-family: 'Libre Franklin', sans-serif;
+  margin-top: .5rem;
+}
+
+.experience {
+  grid-area: exp;
+  border: 2px solid black;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: .7rem;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 3rem;
+}
+/*---------------------- styling for project carousel-------------------- */
+.projects {
+  grid-area: proj;
+  border: 2px solid black;
+  width: 100%;
+  background-color: #99ADB4;
+  height: 100%;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 10px #898989;
+}
+.post-slider {
+  width: 100%;
+  height: 360px;
+  margin: 0 auto;
+}
+.post-wrapper {
+  width: 85%;
+  max-width: 800px;
+  min-width: 625px;
+  height: 320px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.post {
+  text-align: center;
+  color: darkgrey;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid white;
+  margin-right: 7px;
+  margin-left: 7px;
+  margin-bottom: .5rem;
+  position: relative;
+
+}
+.project-image {
+  box-sizing: border-box;
+  width: 100%;
+  background: lightgrey;
+  text-align: center;
+  /* border: 1px solid purple; */
+  height: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.preview {
+  width: 90%;
+  max-width: 180px;
+  max-height: 150px;
+  display: block;
+}
+.slide-info {
+  text-align: left;
+  margin: 0 auto;
+  width: 100%;
+}
+.slide-header {
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 600;
+  margin-top: 15px;
+  /* margin-left: .3rem; */
+  font-size: .55rem;
+  color: #4e637b;
+}
+.slide-summary {
+  font-family: 'Libre Franklin', sans-serif;
+  /* margin-left: .3rem; */
+  font-weight: 300;
+  font-size: .4rem;
+  margin-top: .3rem;
+}
+.slider-nav-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: baseline;
+  position: relative;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  outline: none;
+}
+.slider-nav {
+    height: 10px;
+    align-self: center;
+    outline: none;
+}
+.prev {
+  width: 24px;
+  height: 24px;
+  background: url("../images/left-black.svg") no-repeat;
+  background-size: 20px;
+  background-position: right center;
+  position:relative;
+  top: 0px;
+  left: 1px;
+  outline: none;
+}
+.prev:hover{
+  background-size: 24px;
+  top: 0px;
+  left:1px;
+}
+.next {
+  width: 24px;
+  height: 24px;
+  background: url("../images/right-black.svg") no-repeat;
+  background-size: 20px;
+  background-position: left center;
+  position:relative;
+  top: 0px;
+  right: 1px;
+}
+.next:hover{
+  background-size: 24px;
+  top: 0px;
+  right: 1px;
+}
+.slick-dots {
+  display: flex;
+  justify-content: space-between;
+  background-color: #565656;
+  width: 100%;
+  margin: 0 auto;
+  list-style-type: none;
+  outline: none;
+}
+
+.slick-dots li {
+  margin: 0px;
+  outline: none;
+}
+
+.slick-dots button {
+  display: block;
+  width: 3.5vw;
+  max-width: 45px;
+  height: .3rem;
+  padding-bottom: 0rem;
+  border: .5px solid #565656;
+  border-radius: none;
+  background-color: #565656;
+  text-indent: -9999px;
+  outline: none;
+}
+
+li.slick-active button {
+  background-color: #ffffff;
+}
+
+/* -----------------end carousel styling ------------------------------------- */
+.spacer {
+  grid-area: blank;
+  border: 2px solid black;
+  box-sizing: border-box;
+  background-color: rgba(78, 99, 123, .5);
+  box-shadow: inset 0 0 10px #565656;
+  display: flex;
+}
+/* -------------------styling for contact form----------------------------------- */
+.contact {
+  grid-area: cont;
+  border: 2px solid black;
+  box-sizing: border-box;
+  background-color: #4e637b;
+  display: flex;
+  width: 100%;
+  color: #000;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  box-shadow: inset 0 0 10px #565656;
+
+}
+
+.connect-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  height: 100%;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Lekton', sans-serif;
+  text-align: left;
+  font-size: .5rem;
+  margin-top: .5vh;
+  color: #000;
+}
+
+.thank-you{
+  color:#cc9900;
+}
+
+.input-box {
+  box-sizing: border-box;
+  width: 49%;
+  height: 20px;
+  display: inline;
+  color: #565656;
+  background-color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: .5rem;
+  border: 3px solid #000;
+  wrap: nowrap;
+  padding: .4rem;
+}
+
+.input-box:hover {
+  border: 3px solid #cc9900;
+}
+
+.subject {
+  height: 20px;
+  width: 99%;
+  font-size: .5rem;
+  font-family: 'Roboto', sans-serif;
+  color: #565656;
+  background-color: #fff;
+  border: 3px solid #000;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: .5rem;
+}
+
+.subject:hover {
+  border: 3px solid #cc9900;
+}
+
+.comment-area {
+  width: 99%;
+  height: 110px;
+  padding: .5rem;
+  font-size: .5rem;
+  color: #565656;
+  box-sizing: border-box;
+  background-color: #fff;
+  resize: none;
+  border: 3px solid #000;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.comment-area:hover {
+  border: 3px solid #cc9900;
+}
+
+.connect-submit {
+  width: 99%;
+  text-align: center;
+  background-color: #fff;
+  border: 3px solid #000;
+  padding: .2rem;
+  font-family: 'Lekton', sans-serif;
+  color: #000;
+  font-size: .5rem;
+  margin: 0;
+}
+.connect-submit:hover {
+  cursor: pointer;
+  color: #cc9900;
+  border: 3px solid #cc9900;
+}
+
+.make-white a {
+  color: #ffffff;
+}
+  /* --------------------------end contact form styling---------------------------- */
+.linkedin {
+  grid-area: link;
+  place-self: center stretch;
+  align-self: stretch;
+  text-align: center;
+  background-color: white;
+  padding: 1rem;
+  border: 2px solid black;
+  box-sizing: border-box;
+  color: #000;
+  box-shadow: inset 0 0 10px #cccccc;
+
+}
+.linkedin-link{
+  display: block;
+  color: #000;
+}
+.linkedin-link:hover{
+  color: #cc9900;
+}
+.linkedin-link path{
+  fill: currentcolor;
+}
+.linkedin-link svg{
+  width: 40px;
+  height: 40px;
+}
+.email {
+  grid-area: email;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  box-sizing: border-box;
+  background-color: white;
+  font-family: 'Lekton', sans-serif;
+  font-size: .7rem;
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow: inset 0 0 10px #cccccc;
+
+}
+.email a:hover{
+  color: #cc9900;
+}
+.resume {
+  grid-area: pdf;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  box-sizing: border-box;
+  background-color: white;
+  font-family: 'Lekton', sans-serif;
+  font-size: .7rem;
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow: inset 0 0 10px #cccccc;
+
+}
+.resume a:hover{
+  color: #cc9900;
+  background-color: greeen;
+}
+.footer {
+  grid-area: foot;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  box-sizing: border-box;
+  background-color: white;
+  font-family: 'Lekton', sans-serif;
+  font-size: .7rem;
+  text-align: center;
+  color: #000;
+  box-shadow: inset 0 0 10px #cccccc;
+}
+
+
+.footer a{
+  display: block;
+  margin: 10 auto;
+  width: 100%;
+}
+.footer a:hover{
+  color: #cc9900;
+}
+
+.grid-container {
+  display: grid;
+  background-color: transparent;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  max-width: 100%;
+  min-width: 290px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 340px 360px 150px 120px 120px 120px 100px;
+  grid-template-areas: "port port port port hi hi hi skills skills skills"
+                       "tools tools tools proj proj proj proj proj proj proj"
+                       "blank blank blank blank blank blank blank blank blank blank"
+                       "email email email email cont cont cont cont cont cont"
+                       "link link link link cont cont cont cont cont cont"
+                       "pdf pdf pdf pdf cont cont cont cont cont cont"
+                       "foot foot foot foot foot foot foot foot foot foot";
+  justify-content: stretch;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+/*media queries for grid*/
+@media screen and (max-width: 1200px) and (min-width: 950px) {
+  .grid-container {
+    grid-template-rows: 260px 360px 260px 360px 50px 100px;
+    grid-template-areas: "port port port port port port hi hi hi hi"
+                         "tools tools tools proj proj proj proj proj proj proj"
+                         "blank blank blank blank blank blank skills skills skills skills"
+                         "cont cont cont cont cont cont cont cont cont cont"
+                         "link link link email email email email pdf pdf pdf"
+                         "foot foot foot foot foot foot foot foot foot foot";
+  }
+  #links {
+    margin-bottom: 1vh;
+  }
+
+  #section-title {
+    font-size: .6rem;
+  }
+
+  .hi h6 {
+    font-size: .6rem;
+    margin-bottom: 1rem;
+  }
+
+  .hi p {
+    padding-left: .5rem;
+    padding-right: .5rem;
+    margin-bottom: 1.5rem;
+    font-size: .5rem;
+  }
+
+  .skill-list {
+    font-size: .5rem;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0rem;
+  }
+
+  .tool-list {
+    font-size: .6rem;
+    font-family: 'Roboto', sans-serif;
+    margin-top: .3rem;
+  }
+
+  .connect-container {
+    padding: .1rem;
+  }
+  .linkedin {
+    padding: .2rem;
+  }
+
+  .linkedin-link svg{
+    width: 30px;
+    height: 30px;
+  }
+  .email {
+    font-size: .6rem;
+    padding: .5rem;
+  }
+
+  .resume {
+    font-size: .5rem;
+    padding: .5rem;
+  }
+}
+
+@media screen and (max-width: 949px) and (min-width: 550px) {
+  .grid-container {
+    grid-template-rows: 260px 360px 260px 150px 360px 50px 100px;
+    grid-template-areas: "port port port port port port hi hi hi hi"
+                         "proj proj proj proj proj proj proj proj proj proj"
+                         "skills skills skills skills skills tools tools tools tools tools"
+                         "blank blank blank blank blank blank blank blank blank blank"
+                         "cont cont cont cont cont cont cont cont cont cont"
+                         "link link link email email email email pdf pdf pdf"
+                         "foot foot foot foot foot foot foot foot foot foot";
+  }
+
+  .hi h6 {
+    font-size: .6rem;
+    margin-bottom: .8rem;
+  }
+
+  .hi p {
+    margin-bottom: 1rem;
+    font-size: .5rem;
+  }
+
+  #section-title {
+    font-size: .6rem;
+    margin-left: .3rem;
+    margin-top: .5rem;
+  }
+
+  .tools li {
+    font-size: .5rem;
+  }
+
+  .skill-list {
+    font-size: .5rem;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0;
+    padding-top: 1rem;
+    padding-bottom: 0;
+  }
+  .connect-container {
+    padding: 0;
+  }
+  .input-box {
+    height: 15px;
+    font-size: .4rem;
+    padding: .4rem;
+  }
+  .linkedin {
+    padding: .2rem;
+  }
+  .linkedin-link svg{
+    width: 30px;
+    height: 30px;
+  }
+  .email {
+    font-size: .6rem;
+    padding: .5rem;
+  }
+  .resume {
+    font-size: .5rem;
+    padding: .5rem;
+  }
+}
+
+@media screen and (max-width: 549px) {
+  .grid-container {
+    grid-template-rows: 240px 150px 360px 200px 200px 100px 360px 50px 100px;
+    grid-template-areas: "port port port port port port port port port port"
+                       "hi hi hi hi hi hi hi hi hi hi"
+                       "proj proj proj proj proj proj proj proj proj proj"
+                       "skills skills skills skills skills skills skills skills skills skills"
+                       "tools tools tools tools tools tools tools tools tools tools"
+                       "blank blank blank blank blank blank blank blank blank blank"
+                       "cont cont cont cont cont cont cont cont cont cont"
+                       "link link link email email email email pdf pdf pdf"
+                       "foot foot foot foot foot foot foot foot foot foot";
+    min-width: 295px;
+  }
+
+  #links {
+    margin-top: 0;
+  }
+
+  #section-title {
+    font-size: .5rem;
+    margin-left: .2rem;
+    margin-top: .3rem;
+  }
+
+  .hi h6 {
+    font-size: .6rem;
+    margin-bottom: .3rem;
+  }
+
+  .hi p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 0;
+    font-size: .5rem;
+  }
+
+  .code-bg {
+    margin-top: 30vh;
+  }
+
+  .skill-list {
+    font-size: .5rem;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .tool-list {
+    font-size: .5rem;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+  }
+
+  .connect-container {
+    padding: 0;
+  }
+
+  .connect-container p {
+    font-size: .5rem;
+    margin-top: .3rem;
+    margin-bottom: 0;
+  }
+
+  .input-box {
+    width: 99%;
+    height: 15px;
+    font-size: .4rem;
+    padding: .4rem;
+    margin-bottom: .2rem;
+  }
+
+  .subject {
+    height: 15px;
+    font-size: .4rem;
+    margin-bottom: .1rem;
+    padding: .4rem;
+  }
+
+  .comment-area {
+    margin-bottom: 0;
+    height: 90px;
+    padding: .4rem;
+    font-size: .4rem;
+    /* margin-top: .2rem; */
+  }
+
+  .connect-submit {
+    height: 32px;
+    padding: .2rem;
+  }
+
+  .connect-submit p {
+    font-size: .5rem;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  .linkedin {
+    padding: .3rem;
+  }
+
+  .linkedin svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .email {
+    font-size: .4rem;
+    padding:.5rem;
+  }
+  .resume {
+    font-size: .4rem;
+    padding: .5rem;
+  }
+}
+/*media querie for slick slider */
+@media screen and (max-width: 799px) and (min-width: 601px){
+  /*---------------------- styling for project carousel-------------------- */
+
+
+  .post-wrapper {
+    width: 80%;
+    max-width: 480px;
+    min-width: 300px;
+    height: 320px;
+    padding-top: 0px;
+    overflow: hidden;
+    position: relative;
+  }
+  .preview {
+    max-width: 250px;
+    max-height: 200px;
+  }
+  .slider-nav-container {
+    position: absolute;
+    top: 280px;
+    z-index: 4;
+  }
+  .slick-dots {
+    width: 100% !important;
+  }
+.slick-dots button {
+    width: 4vw;
+  }
+
+
+  /* -----------------end carousel styling ------------------------------------- */
+}
+
+/*media queries for header and nav on tablets and phones*/
+
+
+@media (max-width: 600px) {
+  .post-wrapper {
+    width: 80%;
+    min-width: 260px;
+  }
+
+  .preview {
+    max-width: 250px;
+    max-height: 200px;
+  }
+
+  .slider-nav-container {
+    position: absolute;
+    top: 285;
+    z-index: 4;
+  }
+
+  .slick-dots {
+    width: 100%;
+  }
+
+  .slick-dots button {
+    width: 3.5vw;
+  }
+}

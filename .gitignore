@@ -1,0 +1,10 @@
+# Ignore Mac system files
+.DS_store
+
+.ftpconfig
+
+formtools
+
+hide
+
+slick
