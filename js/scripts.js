@@ -82,4 +82,5 @@ $(document).ready(function() {
       }
   ]
 });
+$('#mailto').attr('href','mailto:taylor@htmlartist.net');
 });

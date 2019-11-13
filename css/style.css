@@ -22,8 +22,8 @@ html {
 font-family: 'Libre Franklin', sans-serif;
 font-family: 'Nanum Gothic Coding', monospace;
 font-family: 'Roboto', sans-serif;
-font-family: 'Roboto Mono', monospace;
-font-family: 'Lekton', sans-serif; */
+font-family: 'Roboto Mono', monospace;*/
+
 body {
   background-color: #ffffff;
   max-width: 1599px;
@@ -36,7 +36,7 @@ a {
 }
 
 header {
-  background-color: #fff;
+  background-color: white;
   position: sticky;
   top: 0;
   height: 80px;
@@ -63,15 +63,14 @@ header {
   text-align: right;
   list-style: none;
   overflow: hidden;
-  z-index: 5;
 }
 
 .header li a {
   position: sticky;
   display: inline;
-  font-size: .6rem;
+  font-size: .7rem;
   text-decoration: none;
-  z-index: 6;
+  z-index:1;
 
 }
 
@@ -79,27 +78,32 @@ header {
 .header .menu-btn:hover {
   color: #99ADB4;
 }
-
+/* #d9d1c9 */
 .header .logo a {
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   text-decoration: none;
-  font-size: 1rem;
-  font-family: 'Lekton', sans-serif;
-  background-color: #d9d1c9;
+  font-size: .9rem;
+  font-family: 'Nanum Gothic Coding', monospace;
+  background-color: #e1d9e0;
   box-sizing: border-box;
   text-align: center;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .name-container {
-  display: inline-block;
+  display: block;
   box-sizing: border-box;
   height: 100%;
   width: 320px;
   padding-top: 20px;
   text-align: center;
   border-right: 4px solid black;
-  background-color: #d9d1c9;
+  overflow: hidden;
+  background-color: #e1d9e0;
 }
 /* menu */
 .clearfix::after {
@@ -111,8 +115,8 @@ header {
   position: relative;
   max-height: 0;
   padding-top: 15px;
-  transition: max-height .2s ease-out;
-  z-index: 5;
+  /* transition: max-height .2s ease-in; */
+  z-index: 1;
 }
 
 /* menu icon */
@@ -195,15 +199,6 @@ header {
   top: 0;
 }
 /* ---------------------end header and nav----------------- */
-.code-bg {
-  position: absolute;
-  background-image: url("../images/code-grey-bg.png");
-  z-index: -1000;
-  width: 100%;
-  max-width: 1599;
-  margin-top: 10vh;
-  height: 100vh;
-}
 
 #links {
 font-family: 'Nanum Gothic Coding', monospace;
@@ -230,7 +225,13 @@ font-family: 'Nanum Gothic Coding', monospace;
   text-align: left;
   align-self: flex-start;
 }
-
+#detail-header{
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 500;
+    font-size: .75rem;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
 /*media queries for header and nav on tablets and phones*/
 
 @media (min-width: 1025px) {
@@ -269,7 +270,7 @@ font-family: 'Nanum Gothic Coding', monospace;
   .header .logo a {
     padding-right: 1rem;
     padding-left: 1rem;
-    font-size: .8rem;
+    font-size: .7rem;
   }
 
   .name-container {

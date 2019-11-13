@@ -1,9 +1,30 @@
 @import "style.css";
 
+.code-bg {
+  position: absolute;
+  background-image: url("../images/light-purple-bg@3x.png");
+  z-index: -1000;
+  width: 100%;
+  margin-top: -80px;
+  max-width: 1599;
+  height: 600px;
+}
+
+.code-bg2 {
+  position: absolute;
+  background-image: url("../images/purple-bg@3x.png");
+  z-index: -1000;
+  width: 100%;
+  max-width: 1599;
+  margin-top: 40vh;
+  height: 690px;
+}
+
 .check {
   width: .5rem;
   height: .5rem;
-
+  color: white;
+  margin-right: 5px;
 }
 
 .portriat {
@@ -15,7 +36,7 @@
   /* background-clip: border-box; */
   border: 2px solid black;
   box-sizing: border-box;
-      box-shadow: inset 0 0 10px #898989;
+      /* box-shadow: inset 0 0 10px #898989; */
 }
 
 .hi {
@@ -30,7 +51,7 @@
   text-align: center;
   border: 2px solid black;
   box-sizing: border-box;
-      box-shadow: inset 0 0 10px #cccccc;
+      /* box-shadow: inset 0 0 10px #cccccc; */
 }
 
 .hi h6 {
@@ -53,11 +74,24 @@
   width: 100%;
   height: 100%;
   flex-direction: column;
-  background-color: #D8E3E8;
+  background-color: #4e637b;
   align-content: stretch;
   justify-content: space-between;
   margin: 0 auto;
-      box-shadow: inset 0 0 10px #898989;
+  color: D8E3E8;
+      /* box-shadow: inset 0 0 10px #898989; */
+}
+
+.skills li {
+  padding: 2px;
+}
+
+.skills #section-title a {
+  color: #D8E3E8;
+}
+
+.skills #links a {
+  color: D8E3E8;
 }
 
 .skill-list {
@@ -66,7 +100,6 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   align-self: center;
-
 }
 
 .tools {
@@ -82,7 +115,7 @@
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-    box-shadow: inset 0 0 10px #565656;
+    /* box-shadow: inset 0 0 10px #565656; */
   /* border: 1px solid white; */
 }
 
@@ -109,13 +142,15 @@
   background-color: #99ADB4;
   height: 100%;
   box-sizing: border-box;
-  box-shadow: inset 0 0 10px #898989;
+  /* box-shadow: inset 0 0 10px #898989; */
 }
+
 .post-slider {
   width: 100%;
   height: 360px;
   margin: 0 auto;
 }
+
 .post-wrapper {
   width: 85%;
   max-width: 800px;
@@ -127,6 +162,7 @@
   overflow: hidden;
   position: relative;
 }
+
 .post {
   text-align: center;
   color: darkgrey;
@@ -139,8 +175,8 @@
   margin-left: 7px;
   margin-bottom: .5rem;
   position: relative;
-
 }
+
 .project-image {
   box-sizing: border-box;
   width: 100%;
@@ -152,17 +188,20 @@
   align-items: center;
   justify-content: center;
 }
+
 .preview {
   width: 90%;
   max-width: 180px;
   max-height: 150px;
   display: block;
 }
+
 .slide-info {
   text-align: left;
   margin: 0 auto;
   width: 100%;
 }
+
 .slide-header {
   font-family: 'Libre Franklin', sans-serif;
   font-weight: 600;
@@ -171,6 +210,7 @@
   font-size: .55rem;
   color: #4e637b;
 }
+
 .slide-summary {
   font-family: 'Libre Franklin', sans-serif;
   /* margin-left: .3rem; */
@@ -178,6 +218,7 @@
   font-size: .4rem;
   margin-top: .3rem;
 }
+
 .slider-nav-container {
   display: flex;
   justify-content: center;
@@ -189,42 +230,48 @@
   z-index: 4;
   outline: none;
 }
+
 .slider-nav {
-    height: 10px;
-    align-self: center;
-    outline: none;
+  height: 10px;
+  align-self: center;
+  outline: none;
 }
+
 .prev {
   width: 24px;
   height: 24px;
   background: url("../images/left-black.svg") no-repeat;
   background-size: 20px;
   background-position: right center;
-  position:relative;
+  position: relative;
   top: 0px;
   left: 1px;
   outline: none;
 }
-.prev:hover{
+
+.prev:hover {
   background-size: 24px;
   top: 0px;
-  left:1px;
+  left: 1px;
 }
+
 .next {
   width: 24px;
   height: 24px;
   background: url("../images/right-black.svg") no-repeat;
   background-size: 20px;
   background-position: left center;
-  position:relative;
+  position: relative;
   top: 0px;
   right: 1px;
 }
-.next:hover{
+
+.next:hover {
   background-size: 24px;
   top: 0px;
   right: 1px;
 }
+
 .slick-dots {
   display: flex;
   justify-content: space-between;
@@ -262,183 +309,354 @@ li.slick-active button {
   grid-area: blank;
   border: 2px solid black;
   box-sizing: border-box;
-  background-color: rgba(78, 99, 123, .5);
+  /* background-color: rgba(78, 99, 123, .5); */
   box-shadow: inset 0 0 10px #565656;
   display: flex;
 }
 /* -------------------styling for contact form----------------------------------- */
 .contact {
   grid-area: cont;
-  border: 2px solid black;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 0px;
   box-sizing: border-box;
-  background-color: #4e637b;
+  background-color: #D8E3E8;
   display: flex;
   width: 100%;
-  color: #000;
+  color: #666666;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  box-shadow: inset 0 0 10px #565656;
-
+  /* box-shadow: inset 0 0 10px #565656; */
+  outline: none;
 }
 
 .connect-container {
   display: flex;
-  justify-content: space-evenly;
-  width: 90%;
+  justify-content: flex-start;
   height: 100%;
+  width: 80%;
   flex-wrap: nowrap;
   flex-direction: column;
   margin: 0 auto;
   text-align: center;
-  font-family: 'Lekton', sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
   text-align: left;
   font-size: .5rem;
-  margin-top: .5vh;
-  color: #000;
+  margin-top: .7rem;
+  color: #fff;
+  outline: none;
 }
 
-.thank-you{
-  color:#cc9900;
+.connect-container p {
+  margin-bottom: 10px;
+}
+
+.thank-you {
+  color: #cc9900;
 }
 
 .input-box {
   box-sizing: border-box;
-  width: 49%;
+  margin-top: 2rem;
+  width: 40%;
   height: 20px;
   display: inline;
-  color: #565656;
-  background-color: #ffffff;
-  font-family: 'Roboto', sans-serif;
+  color: #666666;
+  background-color: transparent;
+  font-family: 'Libre Franklin', sans-serif;
   font-size: .5rem;
-  border: 3px solid #000;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid #666666;
   wrap: nowrap;
-  padding: .4rem;
+  padding-right: 1rem;
 }
 
 .input-box:hover {
-  border: 3px solid #cc9900;
+  border-bottom: 2px solid #000;
+}
+
+.input-box:focus {
+  border-bottom: 2px solid #000;
+  color: #000;
+  outline: none;
+}
+
+.input-box::placeholder {
+  color: #666666;
+}
+
+.input-box:hover::placeholder {
+  color: black;
+}
+
+.input-box:focus::placeholder {
+  color: black;
+}
+
+#em-field {
+  margin-left: 2.1rem;
 }
 
 .subject {
   height: 20px;
   width: 99%;
   font-size: .5rem;
-  font-family: 'Roboto', sans-serif;
-  color: #565656;
-  background-color: #fff;
-  border: 3px solid #000;
+  font-family: 'Libre Franklin', sans-serif;
+  color: #666666;
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid #666666;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding: .5rem;
 }
 
 .subject:hover {
-  border: 3px solid #cc9900;
+  border-bottom: 2px solid #000;
+}
+
+.subject:focus {
+  border-bottom: 2px solid #000;
+  color: #000;
+  outline: none;
+}
+
+.subject::placeholder {
+  color: #666666;
+}
+
+.subject:hover::placeholder {
+  color: #000;
+}
+
+.subject:focus::placeholder {
+  color: #000;
 }
 
 .comment-area {
   width: 99%;
-  height: 110px;
+  height: 100px;
   padding: .5rem;
-  font-size: .5rem;
-  color: #565656;
+  font-size: .4rem;
+  color: #666666;
   box-sizing: border-box;
-  background-color: #fff;
+  background-color: transparent;
   resize: none;
-  border: 3px solid #000;
+  border: 2px solid #666666;
   margin-bottom: 20px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+.comment-area::placeholder {
+  color: #666666;
+}
+
+.comment-area:focus {
+  color: #000;
+  border: 2px solid #000;
+  outline: none;
+}
+
+.comment-area:focus::placeholder {
+  color: #000;
+}
+
+.comment-area:hover::placeholder {
+  color: #000;
 }
 
 .comment-area:hover {
-  border: 3px solid #cc9900;
+  border: 2px solid #000;
 }
 
 .connect-submit {
   width: 99%;
   text-align: center;
-  background-color: #fff;
-  border: 3px solid #000;
+  background-color: transparent;
+  border: 2px solid #666666;
   padding: .2rem;
   font-family: 'Lekton', sans-serif;
-  color: #000;
+  color: #666666;
   font-size: .5rem;
   margin: 0;
 }
+
 .connect-submit:hover {
   cursor: pointer;
-  color: #cc9900;
-  border: 3px solid #cc9900;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.connect-submit:focus {
+  outline: none;
+  color: #000;
+  border: 2px solid #000;
 }
 
 .make-white a {
   color: #ffffff;
 }
   /* --------------------------end contact form styling---------------------------- */
-.linkedin {
-  grid-area: link;
-  place-self: center stretch;
-  align-self: stretch;
-  text-align: center;
-  background-color: white;
-  padding: 1rem;
-  border: 2px solid black;
+.con-h {
+  grid-area: con-h;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  border-top: 2px solid black;
+  border-right: 0px solid black;
+  border-left: 2px solid black;
+  border-bottom: 0px;
   box-sizing: border-box;
-  color: #000;
-  box-shadow: inset 0 0 10px #cccccc;
+  background-color: #D8E3E8;
+  font-family: 'Nanum Gothic Coding', monospace;
+  font-size: .5rem;
+  text-align: left;
+}
 
+.con-h p {
+  margin-left: 1.5rem;
+  margin-top: .3rem;
+  width: 80%;
+  color: #666666;
 }
-.linkedin-link{
-  display: block;
-  color: #000;
+
+.con-h #detail-header {
+  color: #666666;
+  border-bottom: 2px solid #000;
+  width: 80%;
+  margin-top: 1.25rem;
 }
-.linkedin-link:hover{
-  color: #cc9900;
+
+.con-h h5 {
+  color: #666666;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
 }
-.linkedin-link path{
-  fill: currentcolor;
-}
-.linkedin-link svg{
-  width: 40px;
-  height: 40px;
-}
+
 .email {
   grid-area: email;
   width: 100%;
   height: 100%;
-  border: 2px solid black;
-  box-sizing: border-box;
-  background-color: white;
-  font-family: 'Lekton', sans-serif;
-  font-size: .7rem;
-  text-align: center;
-  padding: 1.5rem;
-  box-shadow: inset 0 0 10px #cccccc;
+  background-color: #D8E3E8;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  border-top: 0px solid black;
+  border-right: 0px solid black;
+  border-left: 2px solid black;
+  border-bottom: 0px;
+}
+.em {
+  width: 80%;
+  text-align: right;
+  margin-top: 0rem;
+  display: block;
+  height: 36px;
+}
+#mailto {
+  content: '';
+  display: block;
+  color: #000;
+  background: url('../images/env.svg') no-repeat;
+  background-size: auto;
+  /* border: 1px solid purple; */
+  margin-left: 1.5rem;
+  height: 28px;
+}
+#mailto:hover {
+  background: url('../images/env2.svg') no-repeat;
+}
+.linkedin {
+  grid-area: link;
+  width: 100%;
+  height: 100%;
+  background-color: #D8E3E8;
+  border-right: 0px solid black;
+  border-left: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.in {
+  width: 80%;
+  text-align: right;
+  margin-top: 0rem;
+  display: block;
+  height: 36px;
+}
 
+#linkedin-link {
+  display: block;
+  color: #000;
+  min-height: 35px;
+  width: 80%;
+  background: url('../images/linkedin-grey.svg') no-repeat;
+  background-size: auto;
+  margin-left: 1.6rem;
 }
-.email a:hover{
-  color: #cc9900;
+
+#linkedin-link:hover {
+  background: url('../images/linkedin.svg') no-repeat;
 }
+
+.rs {
+  width: 80%;
+  text-align: right;
+ /* border: 1px solid orange; */
+ /* margin-left: 1.5rem; */
+  margin-top: 0rem;
+  display: block;
+  height: 36px;
+}
+
+#pdf-link {
+  display: block;
+  width: 80%;
+  margin-left: 1.7rem;
+  color: #000;
+  height: 38px;
+  background: url('../images/pdf-grey.svg') no-repeat;
+  background-size: auto;
+  /* border: 1px solid blue; */
+}
+
+#pdf-link:hover {
+  background: url('../images/pdf.svg') no-repeat;
+}
+
 .resume {
   grid-area: pdf;
   width: 100%;
   height: 100%;
-  border: 2px solid black;
+  border-bottom: 2px solid black;
+  border-right: 0px solid black;
+  border-left: 2px solid black;
   box-sizing: border-box;
-  background-color: white;
-  font-family: 'Lekton', sans-serif;
+  background-color: #D8E3E8;
+  font-family: 'Nanum Gothic Coding', monospace;
   font-size: .7rem;
   text-align: center;
-  padding: 1.5rem;
-  box-shadow: inset 0 0 10px #cccccc;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  /* padding: 1.5rem; */
+  /* box-shadow: inset 0 0 10px #cccccc; */
 }
-.resume a:hover{
-  color: #cc9900;
+
+.resume a:hover {
+  color: #000;
   background-color: greeen;
 }
+
 .footer {
   grid-area: foot;
   display: flex;
@@ -448,22 +666,23 @@ li.slick-active button {
   height: 100%;
   border: 2px solid black;
   box-sizing: border-box;
-  background-color: white;
-  font-family: 'Lekton', sans-serif;
+  /* background-color: white; */
+  font-family: 'Nanum Gothic Coding', monospace;
   font-size: .7rem;
   text-align: center;
   color: #000;
-  box-shadow: inset 0 0 10px #cccccc;
+  background-color: transparent;
+  /* box-shadow: inset 0 0 10px #cccccc; */
 }
 
-
-.footer a{
+.footer a {
   display: block;
   margin: 10 auto;
   width: 100%;
 }
-.footer a:hover{
-  color: #cc9900;
+
+.footer a:hover {
+  color: #000;
 }
 
 .grid-container {
@@ -475,10 +694,11 @@ li.slick-active button {
   max-width: 100%;
   min-width: 290px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 340px 360px 150px 120px 120px 120px 100px;
+  grid-template-rows: 340px 360px 150px 175px 45px 50px 100px 100px;
   grid-template-areas: "port port port port hi hi hi skills skills skills"
                        "tools tools tools proj proj proj proj proj proj proj"
                        "blank blank blank blank blank blank blank blank blank blank"
+                       "con-h con-h con-h con-h cont cont cont cont cont cont"
                        "email email email email cont cont cont cont cont cont"
                        "link link link link cont cont cont cont cont cont"
                        "pdf pdf pdf pdf cont cont cont cont cont cont"
@@ -489,16 +709,19 @@ li.slick-active button {
 }
 
 /*media queries for grid*/
-@media screen and (max-width: 1200px) and (min-width: 950px) {
+@media screen and (max-width: 1100px) and (min-width: 951px) {
   .grid-container {
-    grid-template-rows: 260px 360px 260px 360px 50px 100px;
+    grid-template-rows: 260px 360px 260px 172px 50px 50px 100px 100px;
     grid-template-areas: "port port port port port port hi hi hi hi"
                          "tools tools tools proj proj proj proj proj proj proj"
                          "blank blank blank blank blank blank skills skills skills skills"
-                         "cont cont cont cont cont cont cont cont cont cont"
-                         "link link link email email email email pdf pdf pdf"
+                         "con-h con-h con-h con-h cont cont cont cont cont cont"
+                         "email email email email cont cont cont cont cont cont"
+                         "link link link link cont cont cont cont cont cont"
+                         "pdf pdf pdf pdf cont cont cont cont cont cont"
                          "foot foot foot foot foot foot foot foot foot foot";
   }
+
   #links {
     margin-bottom: 1vh;
   }
@@ -521,47 +744,36 @@ li.slick-active button {
 
   .skill-list {
     font-size: .5rem;
-    font-family: 'Roboto', sans-serif;
     margin-top: 0rem;
   }
 
   .tool-list {
     font-size: .6rem;
-    font-family: 'Roboto', sans-serif;
     margin-top: .3rem;
   }
 
-  .connect-container {
-    padding: .1rem;
-  }
-  .linkedin {
-    padding: .2rem;
-  }
-
-  .linkedin-link svg{
-    width: 30px;
-    height: 30px;
-  }
-  .email {
-    font-size: .6rem;
-    padding: .5rem;
+  .con-h p {
+    margin-left: 1rem;
+    margin-top: .2rem;
+    font-size: .4rem;
   }
 
-  .resume {
-    font-size: .5rem;
-    padding: .5rem;
+  .con-h #detail-header {
+    margin-top: 1.5rem;
+    font-size: .7rem;
   }
 }
 
-@media screen and (max-width: 949px) and (min-width: 550px) {
+@media screen and (max-width: 1000px) and (min-width: 550px) {
   .grid-container {
-    grid-template-rows: 260px 360px 260px 150px 360px 50px 100px;
+    grid-template-rows: 260px 360px 260px 150px 120px 250px 60px 100px;
     grid-template-areas: "port port port port port port hi hi hi hi"
                          "proj proj proj proj proj proj proj proj proj proj"
                          "skills skills skills skills skills tools tools tools tools tools"
                          "blank blank blank blank blank blank blank blank blank blank"
+                         "con-h con-h con-h con-h con-h con-h con-h con-h con-h con-h "
                          "cont cont cont cont cont cont cont cont cont cont"
-                         "link link link email email email email pdf pdf pdf"
+                         "email email email link link link link pdf pdf pdf"
                          "foot foot foot foot foot foot foot foot foot foot";
   }
 
@@ -587,47 +799,161 @@ li.slick-active button {
 
   .skill-list {
     font-size: .5rem;
-    font-family: 'Roboto', sans-serif;
     margin-top: 0;
     padding-top: 1rem;
     padding-bottom: 0;
   }
-  .connect-container {
-    padding: 0;
+
+  .con-h {
+    align-items: center;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: 0px;
   }
+
+  .con-h p {
+    margin-top: .2rem;
+    margin-left: 0;
+    width: 85%;
+  }
+
+  .con-h #detail-header {
+    border-bottom: 2px solid #000;
+    width: 85%;
+    margin-top: .8rem;
+    font-size: .6rem;
+  }
+
+  .con-h h5 {
+    margin-top: .5rem;
+    margin-left: 0rem;
+  }
+
+  .contact {
+    border-top: 0px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .connect-container {
+    justify-content: flex-start;
+    width: 75%;
+    flex-wrap: nowrap;
+    font-size: .5rem;
+    margin-top: 0rem;
+    outline: none;
+  }
+
   .input-box {
+    margin-top: .8rem;
+    width: 38%;
     height: 15px;
     font-size: .4rem;
-    padding: .4rem;
+    wrap: nowrap;
+    padding-right: .4rem;
   }
-  .linkedin {
+
+  #em-field {
+    margin-left: 2.6rem;
+  }
+
+  .subject {
+    height: 15px;
+    font-size: .4rem;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #666666;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: .0rem;
+  }
+
+  .comment-area {
+    height: 65px;
     padding: .2rem;
+    margin-bottom: 15px;
   }
-  .linkedin-link svg{
-    width: 30px;
-    height: 30px;
+
+  .connect-submit {
+    padding: .15rem;
+    font-size: .4rem;
+    margin: 0;
   }
+
+  .linkedin {
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    background-color: white;
+  }
+  .in {
+    width: 50px;
+  }
+  #linkedin-link {
+    margin-left: 0rem;
+    height: 28px;
+    background: url('../images/linkedin-icon.svg') no-repeat;
+  }
+  #linkedin-link:hover{
+      background: url('../images/linkedin-icon.svg') no-repeat;
+    }
+
   .email {
-    font-size: .6rem;
-    padding: .5rem;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    background-color: white;
   }
+  .em {
+    width: 50px;
+    margin-top: 0rem;
+    max-height: 28px;
+  }
+  #mailto {
+    margin-left: 0rem;
+    height: 28px;
+    background: url('../images/env-icon.svg') no-repeat;
+  }
+    #mailto:hover{
+      background: url('../images/env-icon.svg') no-repeat;
+    }
   .resume {
-    font-size: .5rem;
-    padding: .5rem;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    background-color: white;
   }
+  .rs {
+  width: 50px;
+}
+
+#pdf-link {
+  margin-left: 0rem;
+background: url('../images/pdf-icon.svg') no-repeat;
+}
+
+#pdf-link:hover {
+ background: url('../images/pdf-icon.svg') no-repeat;
+}
 }
 
 @media screen and (max-width: 549px) {
   .grid-container {
-    grid-template-rows: 240px 150px 360px 200px 200px 100px 360px 50px 100px;
+    grid-template-rows: 240px 150px 360px 210px 210px 100px 120px 250px 50px 100px;
     grid-template-areas: "port port port port port port port port port port"
                        "hi hi hi hi hi hi hi hi hi hi"
                        "proj proj proj proj proj proj proj proj proj proj"
                        "skills skills skills skills skills skills skills skills skills skills"
                        "tools tools tools tools tools tools tools tools tools tools"
                        "blank blank blank blank blank blank blank blank blank blank"
+                       "con-h con-h con-h con-h con-h con-h con-h con-h con-h con-h "
                        "cont cont cont cont cont cont cont cont cont cont"
-                       "link link link email email email email pdf pdf pdf"
+                       " email email email link link link link pdf pdf pdf"
                        "foot foot foot foot foot foot foot foot foot foot";
     min-width: 295px;
   }
@@ -660,87 +986,179 @@ li.slick-active button {
 
   .skill-list {
     font-size: .5rem;
-    font-family: 'Roboto', sans-serif;
     padding-top: 0;
     padding-bottom: 0;
   }
 
   .tool-list {
     font-size: .5rem;
-    font-family: 'Roboto', sans-serif;
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 0;
   }
 
-  .connect-container {
-    padding: 0;
+  .con-h {
+    align-items: center;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: 0px;
   }
 
-  .connect-container p {
+  .con-h p {
+    margin-top: .2rem;
+    margin-left: 0;
+    width: 95%;
+    font-size: .4rem;
+  }
+
+  .con-h #detail-header {
+    border-bottom: 2px solid #000;
+    width: 95%;
+    margin-top: .8rem;
     font-size: .5rem;
-    margin-top: .3rem;
-    margin-bottom: 0;
+  }
+
+  .con-h h5 {
+    color: #666666;
+    margin-top: .5rem;
+    margin-left: 0rem;
+  }
+
+  .contact {
+    border-top: 0px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .connect-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 85%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-size: .5rem;
+    margin-top: 0rem;
+    outline: none;
   }
 
   .input-box {
-    width: 99%;
+    margin-top: .3rem;
+    width: 100%;
     height: 15px;
     font-size: .4rem;
-    padding: .4rem;
-    margin-bottom: .2rem;
+    wrap: nowrap;
+    padding-right: 0rem;
+  }
+
+  #em-field {
+    margin-left: 0rem;
   }
 
   .subject {
     height: 15px;
     font-size: .4rem;
-    margin-bottom: .1rem;
-    padding: .4rem;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #666666;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: .0rem;
   }
 
   .comment-area {
-    margin-bottom: 0;
-    height: 90px;
-    padding: .4rem;
-    font-size: .4rem;
-    /* margin-top: .2rem; */
+    width: 100%;
+    height: 65px;
+    padding: .2rem;
+    margin-bottom: 15px;
   }
 
   .connect-submit {
-    height: 32px;
-    padding: .2rem;
-  }
-
-  .connect-submit p {
-    font-size: .5rem;
-    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid #666666;
+    padding: .15rem;
+    font-family: 'Lekton', sans-serif;
+    color: #666666;
+    font-size: .4rem;
     margin: 0;
   }
-
   .linkedin {
-    padding: .3rem;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    background-color: white;
   }
-
-  .linkedin svg {
-    width: 20px;
-    height: 20px;
+  .in {
+    width: 40px;
   }
+  #linkedin-link {
+    margin-left: 0rem;
+    height: 35px;
+    background: url('../images/linkedin-icon.svg') no-repeat;
+    background-origin: padding-box;
+    background-position: center;
+  }
+  #linkedin-link:hover{
+      background: url('../images/linkedin-icon.svg') no-repeat;
+      background-origin: padding-box;
+      background-position: center;
+    }
 
   .email {
-    font-size: .4rem;
-    padding:.5rem;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    background-color: white;
   }
+  .em {
+    width: 50px;
+    margin-top: 0rem;
+    max-height: 28px;
+  }
+  #mailto {
+    margin-left: 0rem;
+    height: 28px;
+    background: url('../images/env-icon.svg') no-repeat;
+    background-origin: padding-box;
+    background-position: center;
+  }
+    #mailto:hover{
+      background: url('../images/env-icon.svg') no-repeat;
+      background-origin: padding-box;
+      background-position: center;
+    }
   .resume {
-    font-size: .4rem;
-    padding: .5rem;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    background-color: white;
   }
+  .rs {
+  width: 38px;
+}
+
+#pdf-link {
+  margin-left: 0rem;
+background: url('../images/pdf-icon.svg') no-repeat;
+background-origin: padding-box;
+background-position: center;
+}
+
+#pdf-link:hover {
+ background: url('../images/pdf-icon.svg') no-repeat;
+ background-origin: padding-box;
+ background-position: center;
 }
 /*media querie for slick slider */
-@media screen and (max-width: 799px) and (min-width: 601px){
+@  media screen and (max-width: 799px) and (min-width: 601px) {
   /*---------------------- styling for project carousel-------------------- */
-
-
-  .post-wrapper {
+    .post-wrapper {
     width: 80%;
     max-width: 480px;
     min-width: 300px;
@@ -749,19 +1167,23 @@ li.slick-active button {
     overflow: hidden;
     position: relative;
   }
+
   .preview {
     max-width: 250px;
     max-height: 200px;
   }
+
   .slider-nav-container {
     position: absolute;
     top: 280px;
     z-index: 4;
   }
+
   .slick-dots {
     width: 100% !important;
   }
-.slick-dots button {
+
+  .slick-dots button {
     width: 4vw;
   }
 
