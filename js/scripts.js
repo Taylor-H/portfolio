@@ -1,31 +1,18 @@
 $(document).ready(function() {
+  // $(window).resize(function(){
+  //   location.reload();
+  // });
   $('.post-wrapper').slick({
     slide: '.post',
     prevArrow: $('.prev'),
     nextArrow: $('.next'),
-    dots: true,
-    slidesToShow: 3,
+    dots: false,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 100000,
-    appendDots:'.post-wrapper .slider-nav',
-    responsive: [
-{
-  breakpoint: 800,
-  settings: {
-  slide: '.post',
-  prevArrow: $('.prev'),
-  nextArrow: $('.next'),
-  dots: true,
-  autoplay: true,
-  autoplaySpeed: 100000,
-  appendDots:'.post-wrapper .slider-nav',
-  slidesToShow: 1,
-  slidesToScroll: 1
-  }
-}
- ]
+    autoplaySpeed: 15000,
   });
+
   $('.project-details').slick({
    slidesToShow: 1,
    slidesToScroll: 1,
@@ -82,5 +69,6 @@ $(document).ready(function() {
       }
   ]
 });
+
 $('#mailto').attr('href','mailto:taylor@htmlartist.net');
 });

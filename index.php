@@ -1,4 +1,4 @@
-<html lang="en">
+  <html lang="en">
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,14 +9,23 @@
       <!-- Your Stylesheet -->
       <link rel="stylesheet" href="css/index.css">
       <!-- slick and form tools -->
+      <script language="php"><?php
+        require_once("/formtools/global/api/API.class.php");
+        $api = new FormTools\API();
+        $fields = $api->initFormPage(1, "initialize");
+        $params = array(
+            "submit_button" => "send-it",
+            "next_page" => "thanks.php",
+            "form_data" => $_POST,
+            "finalize" => true
+        );
+        $api->processFormSubmission($params);?></script>
       <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-      <script type="text/javascript" src="formtools/global/scripts/rsv.js"></script>
       <link rel="icon" type="image/png" href="images/th.png"/>
       <link href="https://fonts.googleapis.com/css?family=Lekton:400,400i,700&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding:400,700&display=swap" rel="stylesheet">
       <title>Taylor Pell - Front End Web Developer</title>
-</head>
-
+    </head>
   <body>
     <header>
       <div class="header">
@@ -45,7 +54,7 @@
     <div class="portriat"></div>
       <div class="hi">
         <div><h6>Hi, I'm Taylor</h6></div>
-        <div><p>A Boston based front-end web developer especially adept at bridging the gap between design and development... </p></div>
+        <div><p>A Boston based front-end web developer especially adept at bridging the gap between design and development...</p></div>
         <div id="links"><h5><a href="about.html">more ></a></h5></div>
       </div>
       <div class="skills">
@@ -135,8 +144,8 @@
   <div class="spacer"></div>
   <div class="contact">
   <div class="connect-container">
-    <form name="connect" action="https://htmlartist.net/formtools/process.php" method="post" onsubmit="return rsv.validate(this, rules)">
-<input type="hidden" name="form_tools_form_id" value="4" />
+    <form  method="post">
+    <input type="hidden" name="form_tools_form_id" value="2" />
     <div>
       <input class="input-box" type="text" name="name" placeholder="Full Name:" />
       <input class="input-box" id="em-field" type="text" name="email" placeholder="Email Address:" />
@@ -151,9 +160,9 @@
     </div>
 
     <div>
-      <button class="connect-submit" type="submit" name="send-it" value="Submit">Send</button>
+      <button class="connect-submit" type="submit" name="send-it" value="Submit">Send</button>  </form>
     </div>
-</form>
+
   </div>
   </div>
    <!-- footer content -->
@@ -194,6 +203,5 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="js/scripts.js"></script>
-
   </body>
   </html>

@@ -54,8 +54,6 @@ header {
   justify-content: space-between;
   height: 100%;
   width: 100%;
-  box-shadow:2 2 10px #565656;
-
 }
 
 .header ul {
@@ -85,7 +83,7 @@ header {
   text-decoration: none;
   font-size: .9rem;
   font-family: 'Nanum Gothic Coding', monospace;
-  background-color: #e1d9e0;
+  background-color: #a999ab;
   box-sizing: border-box;
   text-align: center;
   display: block;
@@ -103,7 +101,7 @@ header {
   text-align: center;
   border-right: 4px solid black;
   overflow: hidden;
-  background-color: #e1d9e0;
+  background-color: #a999ab;
 }
 /* menu */
 .clearfix::after {
@@ -199,7 +197,7 @@ header {
   top: 0;
 }
 /* ---------------------end header and nav----------------- */
-
+/* ----------------------site wide styles------------------- */
 #links {
 font-family: 'Nanum Gothic Coding', monospace;
   font-size: .5rem;
@@ -218,20 +216,40 @@ font-family: 'Nanum Gothic Coding', monospace;
 font-family: 'Nanum Gothic Coding', monospace;
   font-size: .7rem;
   font-weight: 400;
-  width: 100%;
+  min-width: 100%;
   text-transform: uppercase;
-  margin-left: .3rem;
-  margin-top: .5rem;
+  padding-top: .3rem;
+  margin-left: .2rem;
   text-align: left;
-  align-self: flex-start;
+
 }
 #detail-header{
     font-family: 'Libre Franklin', sans-serif;
     font-weight: 500;
-    font-size: .75rem;
-    width: 100%;
+    font-size: .8rem;
+    color: #565656;
     border-bottom: 2px solid black;
 }
+#summary-header {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .6rem;
+  padding: 0 0;
+/* border: 1px dotted pink; */
+}
+#summary-text {
+  font-family: 'Nanum Gothic Coding', monospace;
+  font-weight: 400;
+  margin-top: 3vh;
+  font-size: .5rem;
+  text-align: left;
+  color: #565656;
+
+  /* border: 1px dotted darkgrey; */
+}
+
+
+
+/* ------------------end site wide style--------------------------- */
 /*media queries for header and nav on tablets and phones*/
 
 @media (min-width: 1025px) {
