@@ -1,74 +1,72 @@
 $(document).ready(function() {
-  // $(window).resize(function(){
-  //   location.reload();
-  // });
   $('.post-wrapper').slick({
     slide: '.post',
-    prevArrow: $('.prev'),
-    nextArrow: $('.next'),
+    // prevArrow: $('.prev'),
+    // nextArrow: $('.next'),
     dots: false,
+    arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 15000,
+    refresh: true,
+    autoplaySpeed: 10000
   });
 
-  $('.project-details').slick({
-   slidesToShow: 1,
-   slidesToScroll: 1,
-   fade: true,
-   arrows: false,
-   adaptiveHeight: true,
-   asNavFor: '.post-wrapper2'
-  });
-  $('.post-wrapper2').slick({
-   asNavFor: '.project-details',
-   prevArrow: $('.prev'),
-   nextArrow: $('.next'),
-   dots: true,
-   slidesToShow: 5,
-   slidesToScroll: 1,
-   autoplay: true,
-   autoplaySpeed: 100000,
-   appendDots:'.post-nav',
-   focusOnSelect: true,
-   centerMode: true,
-  centerPadding: '0',
-  responsive: [
-    {
-      breakpoint: 1100,
-      settings: {
-        centerMode: true,
-        centerPadding: '30px',
-        slidesToShow: 3
-      }
-    },
-    {
-      breakpoint: 820,
-      settings: {
-        centerMode: true,
-        centerPadding: '0px',
-        slidesToShow: 3
-      }
-      },
-      {
-        breakpoint: 615,
-        settings: {
-          centerMode: true,
-          centerPadding: '80px',
-          slidesToShow: 1
-        }
-      },
-      {
-        breakpoint: 440,
-        settings: {
-          centerMode: true,
-          centerPadding: '0px',
-          slidesToShow: 1
-        }
-      }
-  ]
-});
+//   $('.project-details').slick({
+//    slidesToShow: 1,
+//    slidesToScroll: 1,
+//    fade: true,
+//    arrows: false,
+//    autoplay: false,
+//    refresh: true,
+//    adaptiveHeight: true
+//   });
+//   $('.post-wrapper2').slick({
+//    prevArrow: $('.prev'),
+//    nextArrow: $('.next'),
+//    dots: false,
+//    slidesToScroll: 1,
+//    autoplay: false,
+//    focusOnSelect: true,
+//    rows: 3,
+//    slidesPerRow: 3
+// });
 
 $('#mailto').attr('href','mailto:taylor@htmlartist.net');
 });
+
+// responsive: [
+//   {
+//     breakpoint: 1100,
+//     settings: {
+//       refresh:true,
+//       centerMode: true,
+//       centerPadding: '30px',
+//       slidesToShow: 3
+//     }
+//   },
+//   {
+//     breakpoint: 820,
+//     settings: {
+//       centerMode: true,
+//       centerPadding: '0px',
+//       slidesToShow: 3
+//     }
+//     },
+//     {
+//       breakpoint: 615,
+//       settings: {
+//         centerMode: true,
+//         centerPadding: '80px',
+//         slidesToShow: 1
+//       }
+//     },
+//     {
+//       breakpoint: 440,
+//       settings: {
+//         centerMode: true,
+//         centerPadding: '0px',
+//         slidesToShow: 1
+//       }
+//     }
+// ]

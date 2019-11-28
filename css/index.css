@@ -696,10 +696,10 @@ li.slick-active button {
   max-width: 100%;
   min-width: 290px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 340px 370px 150px 175px 45px 50px 100px 210px ;
+  grid-template-rows: 340px 370px 175px 45px 50px 100px 210px ;
   grid-template-areas: "port port port port hi hi hi skills skills skills"
                        "tools tools tools proj proj proj proj proj proj proj"
-                       "blank blank blank blank blank blank blank blank blank blank"
+                       /* "blank blank blank blank blank blank blank blank blank blank" */
                        "con-h con-h con-h con-h cont cont cont cont cont cont"
                        "email email email email cont cont cont cont cont cont"
                        "link link link link cont cont cont cont cont cont"
@@ -716,7 +716,7 @@ li.slick-active button {
     grid-template-rows: 260px 370px 290px 172px 50px 50px 100px 210px;
     grid-template-areas: "port port port port port port hi hi hi hi"
                          "proj proj proj proj proj proj proj proj proj proj"
-                         "tools tools tools blank blank blank skills skills skills skills"
+                         "skills skills skills skills skills tools tools tools tools tools"
                          "con-h con-h con-h con-h cont cont cont cont cont cont"
                          "email email email email cont cont cont cont cont cont"
                          "link link link link cont cont cont cont cont cont"
@@ -770,11 +770,11 @@ li.slick-active button {
 
 @media screen and (max-width: 900px) and (min-width: 550px) {
   .grid-container {
-    grid-template-rows: 260px 370px 290px 150px 120px 250px 60px 150px;
+    grid-template-rows: 260px 370px 290px 120px 250px 60px 150px;
     grid-template-areas: "port port port port port port hi hi hi hi"
                          "proj proj proj proj proj proj proj proj proj proj"
                          "skills skills skills skills skills tools tools tools tools tools"
-                         "blank blank blank blank blank blank blank blank blank blank"
+                         /* "blank blank blank blank blank blank blank blank blank blank" */
                          "con-h con-h con-h con-h con-h con-h con-h con-h con-h con-h "
                          "cont cont cont cont cont cont cont cont cont cont"
                          "email email email link link link link pdf pdf pdf"
@@ -796,7 +796,6 @@ li.slick-active button {
   #section-title {
     font-size: .6rem;
     margin-left: .3rem;
-    margin-top: .5rem;
   }
 
   .tools li {
@@ -953,13 +952,13 @@ background: url('../images/pdf-icon.svg') no-repeat;
 
 @media screen and (max-width: 549px) {
   .grid-container {
-    grid-template-rows: 240px 150px 370px 230px 230px 100px 120px 250px 50px 100px;
+    grid-template-rows: 240px 150px 370px 230px 230px 120px 250px 50px 100px;
     grid-template-areas: "port port port port port port port port port port"
                        "hi hi hi hi hi hi hi hi hi hi"
                        "proj proj proj proj proj proj proj proj proj proj"
                        "skills skills skills skills skills skills skills skills skills skills"
                        "tools tools tools tools tools tools tools tools tools tools"
-                       "blank blank blank blank blank blank blank blank blank blank"
+                       /* "blank blank blank blank blank blank blank blank blank blank" */
                        "con-h con-h con-h con-h con-h con-h con-h con-h con-h con-h "
                        "cont cont cont cont cont cont cont cont cont cont"
                        " email email email link link link link pdf pdf pdf"
@@ -969,6 +968,9 @@ background: url('../images/pdf-icon.svg') no-repeat;
   .code-bg {
     height: 86vh;
   }
+  .code-bg {
+    margin-top: 30vh;
+  }
   #links {
     margin-top: 0;
   }
@@ -976,7 +978,6 @@ background: url('../images/pdf-icon.svg') no-repeat;
   #section-title {
     font-size: .5rem;
     margin-left: .2rem;
-    margin-top: .3rem;
   }
 
   .hi h6 {
@@ -991,9 +992,7 @@ background: url('../images/pdf-icon.svg') no-repeat;
     font-size: .5rem;
   }
 
-  .code-bg {
-    margin-top: 30vh;
-  }
+
 
   .skill-list {
     font-size: .5rem;
@@ -1175,7 +1174,7 @@ background-position: center;
 @media screen and (max-width: 550px) {
   .post-wrapper {
     width: 100%;
-    margin-top: 5%;
+    margin-top: 3%;
   }
 
 }

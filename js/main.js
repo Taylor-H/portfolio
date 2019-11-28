@@ -7,4 +7,4 @@ rsv.errorFieldClass = null;
 rsv.displayType = "alert-all";
 rsv.customErrorHandler = null;
 
-var rellax = new Rellax('.rellax');
+// var rellax = new Rellax('.rellax');

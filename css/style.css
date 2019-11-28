@@ -11,18 +11,22 @@ html {
   list-style: none;
   box-sizing: border-box;
 }
+a{
+  font-weight: bolder;
+}
 /* .colors{
     navy:#4e637b;
 }  */
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300i,400,500,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Lekton:400,700|Roboto:400,500&display=swap');
+  @import url("https://use.typekit.net/ynk5cwc.css");
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,500&display=swap');
 /*
 font-family: 'Libre Franklin', sans-serif;
 font-family: 'Nanum Gothic Coding', monospace;
 font-family: 'Roboto', sans-serif;
-font-family: 'Roboto Mono', monospace;*/
+font-family: 'Roboto Mono', monospace;
+font-family: calling-code,sans-serif;
+*/
 
 body {
   background-color: #ffffff;
@@ -237,11 +241,12 @@ font-family: 'Nanum Gothic Coding', monospace;
 /* border: 1px dotted pink; */
 }
 #summary-text {
-  font-family: 'Nanum Gothic Coding', monospace;
+  font-family: 'Libre Franklin', sans-serif;
   font-weight: 400;
   margin-top: 3vh;
   font-size: .5rem;
   text-align: left;
+  line-height: .7rem;
   color: #565656;
 
   /* border: 1px dotted darkgrey; */
