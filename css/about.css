@@ -44,8 +44,8 @@ background-color: #fff;
 /* border: 1px dotted blue; */
 align-self: center;
 text-align: left;
-margin-top: 1rem;
-margin-bottom: .5rem;
+margin-top: 3rem;
+margin-bottom: 3rem;
 
 }
 .creative #para{
@@ -60,10 +60,13 @@ margin-bottom: .5rem;
 
 }
 #photo1{
-  display: flex;
-  justify-content: center;
+  background-image: url("../images/port1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
   width:100%;
-  height: 100%;
+  /* height: 100%; */
   background-color: #D8E3E8;
 }
 /* ----------------professional------------------- */
@@ -76,16 +79,19 @@ margin-bottom: .5rem;
 }
 .prof #detail-header{
 margin-top:2vh;
+font-size: 1.5rem;
+background-color: transparent;
 }
 .prof{
 }
 .head-shot{
-  box-sizing: border-box;
-  width: 80%;
-  min-width: 280px;
-  max-width: 400px;
-  min-height: 200px;
-  max-height:500px;
+  /* box-sizing: border-box; */
+max-height: 80%;
+  min-width: 100%;
+  /* min-width: 280px; */
+  /* max-width: 400px; */
+  /* min-height: 200px;
+  max-height:500px; */
 }
 #graph1{
   display: flex;
@@ -152,5 +158,12 @@ display: block;
   }
 
   .flex-item {
+  }
+  #para{
+  width: 90%;
+  align-self: center;
+  text-align: left;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
   }
 }
