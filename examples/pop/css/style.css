@@ -347,7 +347,7 @@ nav{
   border-top:none;
   }
 }
-
+/* ---------------------end nav media query---------------------- */
 .parallax__container {
 	clip: rect(0, auto, auto, 0);
 	left: 0;
@@ -378,7 +378,7 @@ nav{
 
 .section1{
 position: fixed;
-height: 100%;
+height: 120vh;
 display: contents;
 text-align: center;
 align-items: center;
@@ -411,6 +411,7 @@ padding: 2em 2em 2em 2em;
 .header-text{
 font-family: 'Montserrat', sans-serif;
 	font-size: 1.5rem;
+	font-weight: 800;
 	color: #FFFFFF;
 	text-align: center;
 	font-stretch: expanded;
@@ -460,22 +461,23 @@ article p {
 .main2{
 	display: flex;
 	background-color: #EDEDEE;
-
 	justify-content: space-evenly;
 	flex-wrap: wrap;
 	margin-top: 250px;
+	margin-bottom: 50px;
 }
 
 .item1{
 width: 336px;
 height: 295px;
 background-image: url('../images/t-shirt2.jpg');
-margin: 2rem;
-margin-bottom: 3rem;
+margin-top: 2rem;
+margin-bottom: 2rem;
 background-repeat: no-repeat;
 background-position: center;
 background-size: contain;
 text-align: center;
+background-color: #fff;
 color: #B97F6D;
 font-family: 'IBM Plex Mono', monospace;
 }
@@ -484,11 +486,12 @@ font-family: 'IBM Plex Mono', monospace;
 	height: 295px;
 	background-image: url('../images/art-board.jpg');
 	margin-top: 2rem;
-	margin-bottom: 3rem;
+	margin-bottom: 2rem;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
 	text-align: center;
+	background-color: #fff;
 	color: #B97F6D;
 	font-family: 'IBM Plex Mono', monospace;
 }
@@ -497,7 +500,7 @@ font-family: 'IBM Plex Mono', monospace;
 	height: 295px;
 	background-image: url('../images/tote.jpg');
 	margin-top: 2rem;
-	margin-bottom: 3rem;
+	margin-bottom: 2rem;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
@@ -617,14 +620,16 @@ font-family: 'IBM Plex Mono', monospace;
 	height: 250px;
 }
 .big-text{
-	color: #B97F6D;
+	color: #70778c;
 	background-color: #363636;
-	text-align:center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	min-height: 300px;
 	flex-grow: 1;
 	font-size: 1rem;
 	font-family: 'Lato', sans-serif;
-	padding: 2rem;
 }
 .big-text::after{
 	margin-top: 5em;
@@ -632,9 +637,10 @@ font-family: 'IBM Plex Mono', monospace;
 }
 
 .big-text >h1{
-padding: 1rem;
+/* padding: 1rem; */
 margin-bottom: 1rem;
 }
+/* -----------------------------@ 576px------------------------  */
 
 @media (min-width: 576px) {
 	.flex-about{
@@ -894,18 +900,23 @@ footer p > a {
 	background-size: cover;
 	min-height: 100vh;
 }
+.item1{
+width: 252px;
+height: 221px;
+margin-top: .8rem;
+margin-bottom: .8rem;
+}
+.item2{
+width: 252px;
+height: 221px;
+margin-top: .8rem;
+margin-bottom: .8rem;
+}
 .item3{
-	width: 336px;
-	height: 295px;
-background-image: url('../images/tote.jpg');
-margin-top: 2rem;
-margin-bottom: 3rem;
-background-repeat: no-repeat;
-background-position: center;
-background-size: contain;
-text-align: center;
-color: #B97F6D;
-font-family: 'IBM Plex Mono', monospace;
+width: 252px;
+height: 221px;
+margin-top: .8rem;
+margin-bottom: .8rem;
 }
 .clothing-container{
 	width: 90%;

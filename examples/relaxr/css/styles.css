@@ -27,6 +27,9 @@ a {
 header {
   background-color: #033048;
   grid-area: header;
+  position: sticky;
+  top: 0;
+  right: 0;
 }
 
 .menu-toggle,
