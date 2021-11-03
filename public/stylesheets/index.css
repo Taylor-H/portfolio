@@ -1,4 +1,6 @@
 @import "style.css";
+@import "projects.css";
+@import "about.css";
 
 .code-bg {
   position: absolute;

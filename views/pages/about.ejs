@@ -1,42 +1,11 @@
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Your Stylesheet -->
-  <link rel="stylesheet" href="css/about.css">
-  <!-- Reset -->
-  <link rel="stylesheet" href="css/reset.css">
-  <!-- Normalize -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <!-- slick and form tools -->
-  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-  <script type="text/javascript" src="formtools/global/scripts/rsv.js"></script>
-  <link rel="icon" type="image/png" href="images/th.png"/>
-  <!-- fonts -->
-  <link rel="stylesheet" href="https://use.typekit.net/ynk5cwc.css">
-  <title>Taylor Pell - Front End Web Developer</title>
-</head>
-  <body>
-    <header>
-      <div class="header">
-      <div class="name-container logo">
-        <a href="index.html">Taylor Pell</a>
-      </div>
-      <input class="menu-btn" type="checkbox" id="menu-btn" />
-      <label class="menu-icon" for="menu-btn">
-        <span class="navicon"></span>
-      </label>
-        <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-    </div>
-    </header>
-<!--- _______________ end header and nav__________________ -->
-<body>
-<main><a href="about"></a>
+
+
+  <%- include ("../partials/level2-header.ejs") %>
+
+
+  <%- include ("../partials/nav.ejs") %>
+
+<main><a href="/about"></a>
   <ul class="prof">
     <li class="flex-item one">
       <div id="para">
@@ -58,7 +27,7 @@
     <li class="flex-item four">
       <div class="creative" id="para">
         <h5 id="detail-header">Creative Developer</h5>
-        <p id="summary-text">Employing modern UI/UX and graphic design conventions I can go from wireframes and mockups to beautiful commercial products for businesses and end users. Please see my <a href="projects.html">projects</a> for examples and more info about my skills.</p>
+        <p id="summary-text">Employing modern UI/UX and graphic design conventions I can go from wireframes and mockups to beautiful commercial products for businesses and end users. Please see my <a href="/projects">projects</a> for examples and more info about my skills.</p>
       </div>
   </li>
 
@@ -71,30 +40,7 @@
         My hobies include CNC laser cutting, silk screen, and abstract acrylic painting.</p>
 </li>
     <li class="flex-item six"><div id="photo1-plum"><img src="images/graph2.svg" class="personal" /></div></li>
-
 </ul>
-
-<!--
-<div class="graphs"></div>
-<div class="personal"></div>
-<div class="contact"></div> -->
-
-
-
-
-
-
-
-  <!--         end main content         -->
   </main>
-  <script src="rellax.min.js"></script>
-  <!--jquary-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="js/main.js"></script>
-  <!-- scripts for slick carousel -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="js/scripts.js"></script>
-  </body>
-  </html>
+  <%- include ("../partials/scripts.ejs") %>
+

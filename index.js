@@ -1,19 +1,21 @@
 const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
-const cool = require('cool-ascii-faces');
-const { Pool } = require('pg');
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
-});
+// const { Pool } = require('pg');
+// const pool = new Pool({
+//   connectionString: process.env.DATABASE_URL,
+//   ssl: {
+//     rejectUnauthorized: false
+//   }
+// });
 express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
+  .get('/about', (req, res) => res.render('pages/about'))
+  .get('/projects', (req, res) => res.render('pages/projects'))
+  // .get('/projects/:id', (req, res) => res.render('pages/projects'))
   // .get('/times', (req, res) => res.send(showTimes()))
   // .get('/cool', (req, res) => res.send(cool()))
   // .get('/taylor', (req, res) => res.send('pages/index'))
@@ -29,7 +31,7 @@ express()
   //     res.send("Error " + err);
   //   }
   // })
-  // .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
   // showTimes = () => {
   //   let result = '';

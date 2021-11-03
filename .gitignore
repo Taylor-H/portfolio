@@ -1,4 +1,6 @@
-# Ignore Mac system files
+/node_modules
+npm-debug.log
+
 .DS_store
 
 .ftpconfig
@@ -7,4 +9,5 @@ formtools
 
 hide
 
+/*.env
 
