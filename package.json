@@ -1,0 +1,40 @@
+{
+  "name": "taylor-hembree-web-developer",
+  "version": "1.0.0",
+  "description": "Examples of Taylor's expertise.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "node": "^17.0.1",
+    "pg": "^8.7.1",
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "got": "^11.3.0",
+    "tape": "^4.7.0"
+  },
+  "scripts": {
+    "test": "node test.js",
+    "start": "npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Taylor-H/portfolio.git"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express",
+    "React"
+  ],
+  "author": "Taylor Hembree",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Taylor-H/portfolio/issues"
+  },
+  "homepage": "https://github.com/Taylor-H/portfolio#readme"
+}
