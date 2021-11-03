@@ -10,4 +10,5 @@ formtools
 hide
 
 /*.env
-
+*.env
+node_modules
