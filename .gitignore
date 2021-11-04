@@ -1,4 +1,4 @@
-/node_modules
+
 npm-debug.log
 
 .DS_store
@@ -8,7 +8,7 @@ npm-debug.log
 formtools
 
 hide
+portfolio.code-workspace
 
-/*.env
 *.env
 node_modules
