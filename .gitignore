@@ -1,0 +1,16 @@
+
+npm-debug.log
+
+.DS_store
+
+hide
+portfolio.code-workspace
+
+*.env
+node_modules
+
+*.env
+*.dev
+
+Dockerfile
+docker-compose.yml
