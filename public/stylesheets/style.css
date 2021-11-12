@@ -122,7 +122,7 @@ header {
   display: block;
   box-sizing: border-box;
   height: 100%;
-  width: 320px;
+  width: 30%;
   padding-top: 20px;
   text-align: center;
   border-right: 4px solid black;
@@ -333,7 +333,7 @@ font-family: 'ibm-plex-mono', sans-serif;
 
   .name-container {
     height: 100%;
-    width: 280px;
+    width: 30%;
     padding-top: 15px;
   }
 
@@ -361,8 +361,8 @@ font-family: 'ibm-plex-mono', sans-serif;
   }
   .name-container {
     height: 100%;
-    width: 240px;
-    font-size: 1.2rem;
+    width: 30%;
+    font-size: .5rem;
 
     padding-top: 15px;
   }
@@ -377,7 +377,7 @@ font-family: 'ibm-plex-mono', sans-serif;
 }
 @media (max-width: 350px) {
   .name-container {
-    font-size: 1rem;
+    font-size: .7rem;
 }
 /* .header .menu-btn:checked ~ .menu {
   position: absolute;
