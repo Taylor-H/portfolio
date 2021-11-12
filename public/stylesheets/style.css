@@ -19,20 +19,6 @@ a{
     navy:#4e637b;
 }  */
 @import url('https://fonts.googleapis.com/css?family=Cabin+Sketch|Delius|Lato:400,400i,700&display=swap');
-/* @import url('https://use.typekit.net/ynk5cwc.css'); */
-/*
-font-family: 'Delius', cursive;
-font-family: 'Cabin Sketch', cursive;
-font-family: 'Lato', sans-serif;
-
-
-
-font-family: 'Libre Franklin', sans-serif;
-font-family: 'ibm-plex-mono', sans-serif;
-font-family: 'monotalic', sans-serif;
-font-style: normal;
-font-weight: 100;
-*/
 
 body {
   background-color: #ffffff;
@@ -44,9 +30,7 @@ a {
   text-decoration: none;
   color: #000000;
 }
-main{
 
-}
 header {
   background-color: white;
   position: -webkit-sticky;
@@ -287,8 +271,6 @@ font-family: 'ibm-plex-mono', sans-serif;
   /* border: 1px dotted darkgrey; */
 }
 
-
-
 /* ------------------end site wide style--------------------------- */
 /*media queries for header and nav on tablets and phones*/
 
@@ -379,14 +361,5 @@ font-family: 'ibm-plex-mono', sans-serif;
   .name-container {
     font-size: .7rem;
 }
-/* .header .menu-btn:checked ~ .menu {
-  position: absolute;
-  top: 76px;
-  right: 0;
-  background-color: white;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-right: .5rem;
 
-} */
 }

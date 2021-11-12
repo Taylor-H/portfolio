@@ -18,11 +18,18 @@ app.use(morgan('dev'));
 app.get('/api/projects', (req, res) => {
   res.json(getProjects());
 });
-
+app.get('/api/projects/:id', (req, res) => {
+  const project = getProjects().find(p => p.id === parseInt(req.params.id));
+  if (project) {
+    res.json(project);
+  } else {
+    res.status(404).send('Project not found');
+  }
+})
 // POST a new project
 app.post('/api/projects', (req, res) => {
   console.log('server received this request body:\n', req.body);
-  const { title, short_description, imageUrl } = req.body;
+  const { id, title, short_description, image_url, stack } = req.body;
   const newProject = { title, short_description, imageUrl };
   addProject(newProject);
   res.json(newProject);

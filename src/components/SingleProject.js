@@ -18,7 +18,7 @@ class SingleProject extends React.Component {
   constructor() {
     super();
     this.state = {
-      included: false,
+      include: true,
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -29,12 +29,12 @@ class SingleProject extends React.Component {
   render() {
     const { included } = this.state;
     const { project, handleDelete } = this.props;
-    const { id, title, short_description, image_url} = project;
-    console.log('What are props?: ', this.props);
+    const { id, title, short_description, image_url, include} = project;
+    console.log('What are project props?: ', this.props.project);
     console.log('What is state?:', this.state);
     return (
       <div className={`single-project ${included ? 'included' : ''}`}>
-        <div>{included ? 'Included!' : 'Excluded'}</div>
+        <div>{include ? 'Included!' : 'Excluded'}</div>
 <button onClick={this.handleClick}>Toggle Status</button>
 <DeleteProject projectId={id} handleDelete={handleDelete} />
         <h2>{title}</h2>
