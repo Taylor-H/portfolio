@@ -1,16 +1,7 @@
 import React from 'react';
-import SinglePet from './SinglePet';
+import SingleProject from './SingleProject';
 
-const cody = {
-  id: 2,
-  name: 'Cody',
-  description: 'Adorable pug who loves to hug',
-  species: 'dog',
-};
-
-// PetList only renders one SinglePet. We'd like it to render a list of pets,
-// passed in as props.pets. Don't forget to add a unique key to each one!
-class PetList extends React.Component {
+class ProjectList extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -25,30 +16,30 @@ class PetList extends React.Component {
     const { filter } = this.state;
     const { handleDelete } = this.props;
 
-    const pets = this.props.pets.filter((pet) => {
-      if (filter === 'all') return pet;
-      if (filter === 'cats') return pet.species === 'cat';
-      if (filter === 'dogs') return pet.species === 'dog';
+    const projects = this.props.projects.filter((project) => {
+      if (filter === 'all') return project;
+      if (filter === 'Included!') return project.include === 'Included!';
+      if (filter === 'Include') return project.include === 'Include';
     });
 
     return (
       <>
         <div>
-          <label htmlFor="speciesFilter">Filter by species: </label>
+          <label htmlFor="includedFilter">Filter by species: </label>
           <select
             onChange={this.handleSelectChange}
             value={filter}
-            name="speciesFilter"
+            name="includedFilter"
           >
             <option>all</option>
-            <option>cats</option>
-            <option>dogs</option>
+            <option>Included</option>
+            <option>Excluded</option>
           </select>
         </div>
-        <div className="pet-list">
-          {pets.map((pet) => {
+        <div className="project-list">
+          {projects.map((project) => {
             return (
-              <SinglePet key={pet.name} pet={pet} handleDelete={handleDelete} />
+              <SingleProject key={project.title} project={project}handleDelete={handleDelete} />
             );
           })}
         </div>
@@ -57,4 +48,4 @@ class PetList extends React.Component {
   }
 }
 
-export default PetList;
+export default ProjectList;

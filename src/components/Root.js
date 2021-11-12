@@ -4,7 +4,7 @@ import axios from 'axios';
 
 // We'll render these sample Projects for now. Later, we'll instead fetch the list
 // of Projects from the server! We won't need sampleProjects after that.
-import sampleProjects from '../../projectdata';
+import projects from '../../projectdata';
 
 class Root extends React.Component {
   constructor() {

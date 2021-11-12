@@ -1,30 +1,40 @@
 const projects = [
   {
     id: 1,
-    name: 'Portfolio',
+    title: 'Portfolio',
     short_description: 'This portfolio',
-    imageUrl: './images/portfolio-big.png',
+    image_url: './images/portfolio-big.png',
+    stack: 'Front End',
+    technology: ['React', 'Node', 'Express', 'Postgres', 'Sequelize', 'JavaScript', 'HTML', 'CSS', 'Responsive Layout'],
+    include: true,
+    github: 'https://github.com/Taylor-H/portfolio.git',
+    deployed: 'https://www.htmlartist.net/projects/'
   },
   {
     id: 2,
-    name: 'Robots and Projects',
-    short_description: 'Robots need projects and projects need robots',
-    imageUrl: './images/mtv-big.png',
+    title: 'Robots and Projects',
+    short_description: 'Robots need projects and projects need robots.',
+    include: true,
+    image_url: './images/mtv-big.png',
   },
   {
     id: 3,
-    name: 'Coffee Clicker',
+    title: 'Coffee Clicker',
     short_description: 'Build the coffee empire you\'ve always wanted',
-    imageUrl: './images/mtv-big.png',
+    image_url: './images/mtv-big.png',
+
   },
   {
     id: 4,
-    name: 'Pixelate',
+    title: 'Pixelate',
     short_description: 'Pixelate your world.',
-    imageUrl: './images/mtv-big.png',
+    image_url: './images/mtv-big.png',
   },
 ];
-
+technology=[
+ 'UI/Graphic Design', 'Responsive Layout', 'HTML, CSS', 'JavaScript', 'Express'
+]
+skillExamples = ['Front End', 'Back End', 'Full Stack', 'Data Science', 'UI/Graphic Design', 'Responsive Layout', 'HTML, CSS', 'Code Example'];
 let nextId = projects.length + 1;
 
 const getProjects = () => [...projects];

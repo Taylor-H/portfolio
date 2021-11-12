@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import DeletePet from './DeletePet';
-// class SinglePet extends React.Component {
+import DeleteProject from './DeleteProject';
+// class SingleProject extends React.Component {
 
 //   render() {
 //     // console.log('What are props?: ', this.props);
@@ -14,36 +14,38 @@ import DeletePet from './DeletePet';
 //   }
 // }
 
-class SinglePet extends React.Component {
+class SingleProject extends React.Component {
   constructor() {
     super();
     this.state = {
-      adopted: false,
+      included: false,
     };
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
-    this.setState((prevState) => ({ adopted: !prevState.adopted }));
+    this.setState((prevState) => ({ included: !prevState.included }));
   }
 
   render() {
-    const { adopted } = this.state;
-    const { pet, handleDelete } = this.props;
-    const { id, name, description, species } = pet;
-    // console.log('What are props?: ', this.props);
-    // console.log('What is state?:', this.state);
+    const { included } = this.state;
+    const { project, handleDelete } = this.props;
+    const { id, title, short_description, image_url} = project;
+    console.log('What are props?: ', this.props);
+    console.log('What is state?:', this.state);
     return (
-      <div className={`single-pet ${adopted ? 'adopted' : ''}`}>
-      <h2>{name}</h2>
-      <div>{species}</div>
-      <div>{description}</div>
-      <hr />
-      <div>{adopted ? 'Adopted!' : 'Available'}</div>
-      <button onClick={this.handleClick}>Toggle Status</button>
-      <DeletePet petId={id} handleDelete={handleDelete} />
-    </div>
+      <div className={`single-project ${included ? 'included' : ''}`}>
+        <div>{included ? 'Included!' : 'Excluded'}</div>
+<button onClick={this.handleClick}>Toggle Status</button>
+<DeleteProject projectId={id} handleDelete={handleDelete} />
+        <h2>{title}</h2>
+        <div>{short_description}</div>
+        <div>
+          <img src={image_url} />
+        </div>
+      </div>
     );
   }
 }
-export default SinglePet;
+export default SingleProject;
 // onClick={()=> this.props.changeClass(this.props.className)}
+

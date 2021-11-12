@@ -22,8 +22,8 @@ app.get('/api/projects', (req, res) => {
 // POST a new project
 app.post('/api/projects', (req, res) => {
   console.log('server received this request body:\n', req.body);
-  const { name, short_description, imageUrl } = req.body;
-  const newProject = { name, short_description, imageUrl };
+  const { title, short_description, imageUrl } = req.body;
+  const newProject = { title, short_description, imageUrl };
   addProject(newProject);
   res.json(newProject);
 });
@@ -31,7 +31,7 @@ app.post('/api/projects', (req, res) => {
 // DELETE project with the given id
 app.delete('/api/projects/:id', (req, res) => {
   const id = Number(req.params.id);
-  removePet(id);
+  removeProject(id);
   res.sendStatus(204);
 });
 
