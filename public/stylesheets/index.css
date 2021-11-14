@@ -1,8 +1,7 @@
 @import "style.css";
 @import "projects.css";
 @import "about.css";
-@import "normalize.css";
-@import "reset.css";
+
 
 .code-bg {
   position: absolute;

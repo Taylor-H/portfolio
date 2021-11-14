@@ -2,7 +2,12 @@ import React, { Component, useState } from 'react';
 import ProjectList from './ProjectList';
 import SingleProject from './SingleProject';
 import About from './About';
-import { HashRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import axios from 'axios';
 import projects from '../../projectdata';
 
@@ -32,7 +37,6 @@ class Root extends React.Component {
     const { error, loading, projects } = this.state;
     return (
     <div id="app">
-      <Router>
           {error && <div>Error: {error}</div>}
           {loading && <div>Loading</div>}
           <header>
@@ -57,7 +61,6 @@ class Root extends React.Component {
             <Route path="/projects/:id" component={SingleProject} />
             <Route exact path="/about" component={About} />
         </Switch>
-      </Router>
     </div>
 
 
