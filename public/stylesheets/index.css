@@ -1,6 +1,378 @@
-@import "style.css";
-@import "projects.css";
-@import "about.css";
+/* @import "/stylesheets/style.css"; */
+@import "/stylesheets/projects.css";
+@import "/stylesheets/about.css";
+/* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,700;1,400&family=Libre+Franklin:wght@400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&display=swap');
+
+#app{
+  font-family: 'Space Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+html {
+  scroll-behavior: smooth;
+  padding: 0;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body {
+  background-color: #ffffff;
+  max-width: 1599px;
+  background-image:  url("../images/light-purple-bg@3x.png");
+}
+main{
+
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+header {
+  background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  min-width: 295px;
+  box-sizing: border-box;
+  z-index: 4;
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+  /* color: white; */
+}
+
+.header {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  border-top: 4px solid #000000;
+  border-right: 4px solid #000000;
+  border-left: 4px solid #000000;
+  border-bottom: 4px solid #000000;
+
+}
+
+.header ul {
+  margin: 0 auto;
+  text-align: right;
+  list-style: none;
+  overflow: hidden;
+}
+
+.header li a {
+  position: -webkit-sticky;
+  position: sticky;
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+  display: inline;
+  font-size: 1.5rem;
+  text-decoration: none;
+  line-height: 2.8rem;
+  z-index:1;
+
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  color: #99ADB4;
+}
+/* #d9d1c9 */
+.header .logo a {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: 'monotalic', sans-serif;
+  /* font-family: 'Cabin Sketch'; */
+  font-weight: 300;
+  background-color: #a999ab;
+  box-sizing: border-box;
+  text-align: center;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.name-container {
+  display: block;
+  box-sizing: border-box;
+  height: 100%;
+  width: 30%;
+  padding-top: 20px;
+  text-align: center;
+  border-right: 4px solid black;
+  overflow: hidden;
+  background-color: #a999ab;
+}
+/* menu */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.header .menu {
+  position: relative;
+  max-height: 0;
+  padding-top: 15px;
+  /* transition: max-height .2s ease-in; */
+  z-index: 1;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  padding: 1rem;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+
+}
+
+.header .menu-icon .navicon {
+  background: #000;
+  display: block;
+  height: 2px;
+  position: relative;
+  -webkit-transition: background .2s ease-out;
+  transition: background .2s ease-out;
+  width: 24px;
+  margin-top: 20px;
+
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #000;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+  margin-top: 30px;
+
+}
+
+.header .menu-btn:checked ~ .menu {
+  position: absolute;
+  top: 76px;
+  right: 0;
+  max-height: 600px;
+  height: 300px;
+  width: 200px;
+  background-color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: .5rem;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  border-top: 6px solid black;
+  border-right: 4px solid black;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: white;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+/* ---------------------end header and nav----------------- */
+
+
+/* ----------------------site wide styles------------------- */
+#links {
+  font-family: 'Space Mono', monospace;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: transparent;
+    /* margin: 0 auto; */
+    margin-bottom: 2vh;
+    margin-top: 1vh;
+    margin-right: 1vw;
+    text-align: right;
+    align-self: baseline;
+    align-self: flex-end;
+  }
+
+  #section-title {
+  font-family: 'Space Mono', monospace;
+   font-size: 1.2rem;
+    font-weight: 400;
+    min-width: 100%;
+    text-transform: uppercase;
+    padding-top: .3rem;
+    margin-left: .2rem;
+    text-align: left;
+    white-space: nowrap;
+  }
+  #detail-header{
+      font-family: 'Libre Franklin', sans-serif;
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: #000;
+      border-bottom: 2px solid black;
+  }
+  #summary-header {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 1.2rem;
+    padding: 0 0;
+  /* border: 1px dotted pink; */
+  }
+  #summary-text {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 400;
+    margin-top: 3vh;
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.5rem;
+    color: #565656;
+
+    /* border: 1px dotted darkgrey; */
+  }
+
+  /* ------------------end site wide style--------------------------- */
+  /*media queries for header and nav on tablets and phones*/
+
+  @media (min-width: 1025px) {
+    .header ul {
+      margin: 0;
+      margin-top: 0px;
+    }
+
+    .header li {
+      float: right;
+      margin-right: 1vw;
+    }
+
+    .header li a {
+      padding-top: 1rem;
+      padding-left: 1vw;
+    }
+
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+
+    .header .menu-icon {
+      display: none;
+    }
+  }
+
+  @media (max-width: 800px) {
+
+    header {
+      height: 64px;
+    }
+
+    .header .logo a {
+      padding-right: 1rem;
+      padding-left: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .name-container {
+      height: 100%;
+      width: 30%;
+      padding-top: 15px;
+    }
+
+    .header .menu-btn:checked ~ .menu {
+      top: 62px;
+      right: 0;
+      width: 220px;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      padding-right: .5rem;
+      border-top: 4px solid black;
+    }
+
+    .header .menu-icon {
+      padding: .8rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .code-bg {
+      width: 100%;
+      max-width: 1599;
+      margin-top: 48vh;
+      height: 100vh;
+    }
+    .name-container {
+      height: 100%;
+      width: 30%;
+      font-size: .5rem;
+
+      padding-top: 15px;
+    }
+    .header .menu-icon {
+      padding-top: .8rem;
+      padding-right: .7rem;
+    }
+    .header .menu-btn:checked ~ .menu {
+      width: 180px;
+
+  }
+  }
+  @media (max-width: 350px) {
+    .name-container {
+      font-size: .7rem;
+  }
+
+  }
+
+
 
 
 .code-bg {
@@ -15,7 +387,7 @@
 
 .code-bg2 {
   position: absolute;
-  background-image: url("../images/purple-bg@3x.png");
+  background-image: url("../images/purple-bg.png");
   z-index: -1000;
   width: 100%;
   max-width: 1599;
@@ -30,7 +402,7 @@
   margin-right: 5px;
 }
 
-.portriat {
+.portrait {
   background-image: url("../images/port1.jpg");
   grid-area: port;
   background-position: center;
@@ -332,9 +704,9 @@ li.slick-active button {
 
 .connect-container {
   display: flex;
-          justify-content: flex-start;
+  justify-content: flex-start;
   height: 100%;
-  width: 80%;
+  width: 100%;
   flex-wrap: nowrap;
           flex-direction: column;
   margin: 0 auto;
@@ -502,7 +874,6 @@ font-family: 'Libre Franklin', sans-serif;
 }
   /* --------------------------end contact form styling---------------------------- */
 .con-h {
-  grid-area: con-h;
   width: 100%;
   height: 100%;
   display: flex;
@@ -514,7 +885,7 @@ font-family: 'Libre Franklin', sans-serif;
   border-bottom: 0px;
   box-sizing: border-box;
   background-color: #D8E3E8;
-  font-family: 'ibm-plex-mono', sans-serif;
+  font-family: 'Space Mono', monospace;
   font-size: 1rem;
   text-align: left;
   overflow:hidden;
@@ -523,14 +894,14 @@ font-family: 'Libre Franklin', sans-serif;
 .con-h p {
   margin-left: 1.5rem;
   margin-top: .3rem;
-  width: 80%;
+  width: 100%;
   color: #666666;
 }
 
 .con-h #detail-header {
   color: #666666;
   border-bottom: 2px solid #000;
-  width: 80%;
+  width: 100%;
   margin-top: 2rem;
 }
 
@@ -640,7 +1011,7 @@ font-family: 'Libre Franklin', sans-serif;
   border-left: 2px solid black;
   box-sizing: border-box;
   background-color: #D8E3E8;
-  font-family: 'ibm-plex-mono', sans-serif;
+  font-family: 'Space Mono', monospace;
   text-align: center;
   display: flex;
           flex-direction: row;
@@ -660,11 +1031,11 @@ font-family: 'Libre Franklin', sans-serif;
           flex-direction: column;
           justify-content: flex-end;
   width: 100%;
-  height: 100%;
+  height: 10vh;
   border: 2px solid black;
   box-sizing: border-box;
   /* background-color: white; */
-  font-family: 'ibm-plex-mono', sans-serif;
+  font-family: 'Space Mono', monospace;
   font-size: 1.5rem;
   text-align: center;
   color: #000;
@@ -699,10 +1070,8 @@ font-family: 'Libre Franklin', sans-serif;
   grid-template-areas: "port port port port hi hi hi skills skills skills"
                        "tools tools tools proj proj proj proj proj proj proj"
                        /* "blank blank blank blank blank blank blank blank blank blank" */
-                       "con-h con-h con-h con-h cont cont cont cont cont cont"
-                       "email email email email cont cont cont cont cont cont"
-                       "link link link link cont cont cont cont cont cont"
-                       "pdf pdf pdf pdf cont cont cont cont cont cont"
+                       "con-h con-h con-h con-h con-h con-h con-h con-h con-h con-h"
+                       "email email email email email link link link link link"
                        "foot foot foot foot foot foot foot foot foot foot";
           justify-content: stretch;
           align-items: stretch;

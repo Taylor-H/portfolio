@@ -5,26 +5,39 @@ class ProjectList extends React.Component {
   constructor() {
     super();
     this.state = {
-      filter: 'all',
-    };
-    this.handleSelectChange = this.handleSelectChange.bind(this);
+      projects: [],
+      error: null,
+      loading: true,
+    }
+    this.fetchProjects = this.fetchProjects.bind(this);
   }
-  handleSelectChange(evt) {
-    this.setState({ filter: evt.target.value });
+  async fetchProjects(){
+    try{
+      this.setState({loading: true})
+      const { data } = await axios.get('/api/projects');
+      this.setState({ projects: data, loading: false });
+    } catch (err) {
+      this.setState({ error: err.message, loading: false });
+    }
+  }
+  componentDidMount() {
+  this.fetchProjects();
+
   }
   render() {
-    const { filter } = this.state;
-    const { handleDelete } = this.props;
-
-    const projects = this.props.projects.filter((project) => {
-      if (filter === 'all') return project;
-      if (filter === 'Full Stack') return project.stack === 'Full Stack';
-      if (filter === 'Front End') return project.stack === 'Front End';
-    });
+const { projects, loading, error } = this.state;
+    // const { filter } = this.state;
+    // const { handleDelete } = this.props;
+console.log(projects)
+    // .map((project) => {
+      // if (filter === 'all') return project;
+      // if (filter === 'Full Stack') return project.stack === 'Full Stack';
+      // if (filter === 'Front End') return project.stack === 'Front End';
+    // });
 
     return (
       <>
-        <div>
+        {/* <div className="post">
           <label htmlFor="includedFilter">Filter by species: </label>
           <select
             onChange={this.handleSelectChange}
@@ -35,11 +48,14 @@ class ProjectList extends React.Component {
             <option>Full Stack</option>
             <option>Front End</option>
           </select>
-        </div>
+        </div> */}
         <div className="project-list">
-          {projects.map((project) => {
+          {console.log(this.projects)}
+          {this.projects.map((project) => {
             return (
-              <SingleProject key={project.title} project={project} handleDelete={handleDelete} />
+              {title}
+
+              // <SingleProject key={project.id} />
             );
           })}
         </div>
@@ -49,3 +65,5 @@ class ProjectList extends React.Component {
 }
 
 export default ProjectList;
+
+

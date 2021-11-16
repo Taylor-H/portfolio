@@ -5,8 +5,8 @@ const About = () => {
     return (
   <div className="about">
     <a href="/about"></a>
-    <ul class="prof">
-      <li class="flex-item one">
+    <ul className="prof">
+      <li className="flex-item one">
         <div id="para">
           <h5 id="detail-header">Front End Developer</h5>
           <p id="summary-text">I have passion for coding sites that function and look flawless. I've contributed to a diverse array of projects from static marketing sites to database driven web aplications.  I'm a naturally curious problem solver that is perpetually learning and improving one problem at a time.</p>
@@ -14,23 +14,23 @@ const About = () => {
         </div>
       </li>
 
-      <li class="flex-item two">
+      <li className="flex-item two">
         <div id="photo1">
-        {/* <img src="images/port6.jpg" class="head-shot"/>  */}
+        {/* <img src="images/port6.jpg" className="head-shot"/>  */}
         </div>
       </li>
 
-      <li class="flex-item three"><div id="graph1"><img src="images/graph.svg" class="graphs" /></div>
+      <li className="flex-item three"><div id="graph1"><img src="images/graph.svg" className="graphs" /></div>
       </li>
 
-      <li class="flex-item four">
-        <div class="creative" id="para">
+      <li className="flex-item four">
+        <div className="creative" id="para">
           <h5 id="detail-header">Creative Developer</h5>
           <p id="summary-text">Employing modern UI/UX and graphic design conventions I can go from wireframes and mockups to beautiful commercial products for businesses and end users. Please see my <a href="/projects">projects</a> for examples and more info about my skills.</p>
         </div>
      </li>
 
-      <li class="flex-item five">
+      <li className="flex-item five">
         <div id="para">
         <h5 id="detail-header">Random Facts About Me</h5>
         <p id="summary-header"></p>
@@ -39,7 +39,7 @@ const About = () => {
           My hobies include CNC laser cutting, silk screen, and abstract acrylic painting.</p>
           </div>
       </li>
-        <li class="flex-item six"><div id="photo1-plum"><img src="images/graph2.svg" class="personal" /></div></li>
+        <li className="flex-item six"><div id="photo1-plum"><img src="images/graph2.svg" className="personal" /></div></li>
     </ul>
   </div>
 

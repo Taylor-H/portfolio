@@ -1,5 +1,3 @@
-@import "style.css";
-
 .code-bg {
   position: absolute;
   background-image: url("../images/light-purple-bg@3x.png");
@@ -17,13 +15,6 @@
   max-width: 1599;
   margin-top: 0vh;
   height: 50vh;
-}
-body{
-/* border: 2px solid black; */
-}
-main{
-  border: 2px solid black;
-
 }
 
 .flex-item{
