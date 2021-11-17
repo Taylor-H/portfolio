@@ -1,3 +1,5 @@
+
+
 const projects = [
   {
     id: 1,
@@ -55,11 +57,11 @@ const projects = [
     deployed: 'https://www.htmlartist.net/projects/5'
   },
 ];
-role=[
- 'UI Design', 'Graphic Design', 'Game Design', 'Creative Development','Front End Rendering', 'JavaScript Developer', 'Back End Developer', 'Data Developer'
+const role=[
+ 'UI Design', 'Graphic Design', 'Game Design', 'Creative Development','Front End Rendering', 'JavaScript Developer', 'Back End Developer', 'Data Developer', 'Creative Developer'
 ]
-projectSkills = ['Front End', 'Back End', 'Full Stack', 'Data Science', 'UI/Graphic Design', 'Responsive Layout', 'HTML, CSS', 'Code Example'];
-projectTech=[
+
+const tech=[
   'HTML', 'CSS', 'JavaScript', 'Express', 'React', 'Node', 'Postgres', 'Sequelize', 'Responsive Layout'
 ]
 let nextId = projects.length + 1;
@@ -76,6 +78,4 @@ const removeProject = (projectId) => {
 
 module.exports = {
   getProjects,
-  addProject,
-  removeProject,
 };

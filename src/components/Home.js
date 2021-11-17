@@ -1,34 +1,15 @@
 import React from 'react';
 import ProjectList from './ProjectList';
 import skillList from './SkillList'
-import getProjects from '../../data/projectdata'
+import { getProjects } from '../../data/projectdata'
 import axios from 'axios';
 class Home extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      projects: [],
-      error: null,
-      loading: true,
-    };
-    this.fetchProjects = this.fetchProjects.bind(this);
-  }
-
-  async fetchProjects() {
-    try {
-      this.setState({ loading: true });
-      const { data } = await axios.get('/api/projects');
-      console.log(data);
-      this.setState({ projects: data, loading: false });
-    } catch (err) {
-      this.setState({ error: err.message, loading: false });
-    }
-  }
-  componentDidMount() {
-    this.fetchProjects();
+  componentWillMount() {
+   this.props.getProjects();
+   console.log(this.props.projects);
   }
   render() {
-    const { error, loading, projects } = this.state;
+    const projects = this.props.projects;
     return (
       <main>
         <div className="grid-container">
@@ -55,12 +36,12 @@ class Home extends React.Component {
             </div>
             <div className="skill-list">
     <ul>
-    {skillList.map((skill, index) => {
+    {/* {this.skillList.map((skill, index) => {
     return (
       console.log(skill),
         <li key={this.index}>{this.skill}</li>
     );
-})}
+})} */}
              </ul>
             </div>
             <div id="links">
@@ -95,8 +76,15 @@ class Home extends React.Component {
               <a href="/projects">&#8250; Projects</a>
             </h4>
             <div className="post-wrapper">
-            <ProjectList />
-              projects go here
+            <div className="project-list">
+            {/* <ProjectList /> */}
+            {projects.map((project) => {
+          <div key={project.id}>
+          <h2>project: {project.title}</h2>
+          <p>{project.description}</p>
+          </div>
+        })}
+            </div>;
             </div>
             <div id="links">
               <h5>

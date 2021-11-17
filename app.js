@@ -1,7 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const { join } = require('path');
-const { getProjects, addProject, removeProject } = require('./projectdata');
+const { getProjects, addProject, removeProject } = require('./data/projectdata');
 const webpack = require('webpack');
 const middleware = require('webpack-dev-middleware');
 const webpackConfig = require('./webpack.config');
@@ -27,20 +27,20 @@ app.get('/api/projects/:id', (req, res) => {
   }
 })
 // POST a new project
-app.post('/api/projects', (req, res) => {
-  console.log('server received this request body:\n', req.body);
-  const { id, title, short_description, image_url, stack } = req.body;
-  const newProject = { title, short_description, imageUrl };
-  addProject(newProject);
-  res.json(newProject);
-});
+// app.post('/api/projects', (req, res) => {
+//   console.log('server received this request body:\n', req.body);
+//   const { id, title, short_description, image_url, stack } = req.body;
+//   const newProject = { title, short_description, imageUrl };
+//   addProject(newProject);
+//   res.json(newProject);
+// });
 
 // DELETE project with the given id
-app.delete('/api/projects/:id', (req, res) => {
-  const id = Number(req.params.id);
-  removeProject(id);
-  res.sendStatus(204);
-});
+// app.delete('/api/projects/:id', (req, res) => {
+//   const id = Number(req.params.id);
+//   removeProject(id);
+//   res.sendStatus(204);
+// });
 
 // Webpack Dev Middleware
 const compiler = webpack(webpackConfig);

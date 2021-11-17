@@ -12,7 +12,9 @@
   border-right: 4px solid #000;
   border-bottom: 4px solid #000; */
 }
-
+.project-image-container{
+ width: 20%;
+}
 .post-wrapper2 .slick-slide {
   /* box-shadow: 2px 2px 5px -2px #565656; */
 }
