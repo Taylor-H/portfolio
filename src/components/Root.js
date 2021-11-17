@@ -12,10 +12,9 @@ const Root = () => {
       <Switch>
         <Route path="/about" component={About} />
         <Route path="/projects" component={ProjectList} />
-        <Route path="/#contact" />
-        <Route path="/">
-          <Home />
-        </Route>
+        <Route path="/projects/:id" component={ProjectList} />
+        <Route path="/contact" />
+        <Route exact path="/" component={Home} />
       </Switch>
     </>
   );

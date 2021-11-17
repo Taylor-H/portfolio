@@ -1,6 +1,6 @@
 import React from 'react';
 import SingleProject from './SingleProject';
-
+import { getProjects } from '../../data/projectdata'
 class ProjectList extends React.Component {
   constructor() {
     super();
@@ -14,22 +14,23 @@ class ProjectList extends React.Component {
   async fetchProjects(){
     try{
       this.setState({loading: true})
-      const { data } = await axios.get('/api/projects');
+      const { data: projects } = await axios.get('/api/projects');
       this.setState({ projects: data, loading: false });
     } catch (err) {
       this.setState({ error: err.message, loading: false });
     }
   }
+
   componentDidMount() {
   this.fetchProjects();
-
   }
   render() {
 const { projects, loading, error } = this.state;
     // const { filter } = this.state;
     // const { handleDelete } = this.props;
-console.log(projects)
-    // .map((project) => {
+// console.log(this.state.projects)
+<div className="project-list">
+  {this.projects.map((project) => {
       // if (filter === 'all') return project;
       // if (filter === 'Full Stack') return project.stack === 'Full Stack';
       // if (filter === 'Front End') return project.stack === 'Front End';
@@ -37,30 +38,12 @@ console.log(projects)
 
     return (
       <>
-        {/* <div className="post">
-          <label htmlFor="includedFilter">Filter by species: </label>
-          <select
-            onChange={this.handleSelectChange}
-            value={filter}
-            name="includedFilter"
-          >
-            <option>all</option>
-            <option>Full Stack</option>
-            <option>Front End</option>
-          </select>
-        </div> */}
-        <div className="project-list">
-          {console.log(this.projects)}
-          {this.projects.map((project) => {
-            return (
-              {title}
-
-              // <SingleProject key={project.id} />
-            );
-          })}
-        </div>
+        <SingleProject project={this.project} key={project.id} />
       </>
     );
+  }
+  )}
+</div>
   }
 }
 

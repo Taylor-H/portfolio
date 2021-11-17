@@ -1,6 +1,8 @@
 import React from 'react';
 import ProjectList from './ProjectList';
-
+import skillList from './SkillList'
+import getProjects from '../../data/projectdata'
+import axios from 'axios';
 class Home extends React.Component {
   constructor() {
     super();
@@ -11,10 +13,12 @@ class Home extends React.Component {
     };
     this.fetchProjects = this.fetchProjects.bind(this);
   }
+
   async fetchProjects() {
     try {
       this.setState({ loading: true });
       const { data } = await axios.get('/api/projects');
+      console.log(data);
       this.setState({ projects: data, loading: false });
     } catch (err) {
       this.setState({ error: err.message, loading: false });
@@ -25,7 +29,6 @@ class Home extends React.Component {
   }
   render() {
     const { error, loading, projects } = this.state;
-    console.log(this.state.projects);
     return (
       <main>
         <div className="grid-container">
@@ -51,61 +54,18 @@ class Home extends React.Component {
               </h4>
             </div>
             <div className="skill-list">
-              <ul>
-                <li>
-                  <img
-                    src="/images/check-circle-regular.svg"
-                    className="check"
-                  />
-                  HTML5
-                </li>
-                <li>
-                  <img
-                    src="/images/check-circle-regular.svg"
-                    className="check"
-                  />
-                  CSS3
-                </li>
-                <li>
-                  <img
-                    src="/images/check-circle-regular.svg"
-                    className="check"
-                  />
-                  JavaScript/
-                </li>
-                <li>
-                  <img
-                    src="/images/check-circle-regular.svg"
-                    className="check"
-                  />
-                  jQuery
-                </li>
-                <li>
-                  <img
-                    src="/images/check-circle-regular.svg"
-                    className="check"
-                  />
-                  Responsive Layout
-                </li>
-                <li>
-                  <img
-                    src="/images/check-circle-regular.svg"
-                    className="check"
-                  />
-                  WC3 Standards
-                </li>
-                <li>
-                  <img
-                    src="/images/check-circle-regular.svg"
-                    className="check"
-                  />
-                  CSS & JS Libraries
-                </li>
-              </ul>
+    <ul>
+    {skillList.map((skill, index) => {
+    return (
+      console.log(skill),
+        <li key={this.index}>{this.skill}</li>
+    );
+})}
+             </ul>
             </div>
             <div id="links">
               <h5>
-                <a href="/about#skills">more &#8250;</a>
+                <a href="/">more &#8250;</a>
               </h5>
             </div>
           </div>
@@ -135,7 +95,7 @@ class Home extends React.Component {
               <a href="/projects">&#8250; Projects</a>
             </h4>
             <div className="post-wrapper">
-              {/* <ProjectList /> */}
+            <ProjectList />
               projects go here
             </div>
             <div id="links">

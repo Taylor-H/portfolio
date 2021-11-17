@@ -15,31 +15,28 @@ import DeleteProject from './DeleteProject';
 // }
 
 class SingleProject extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      include: true,
-    };
-    this.handleClick = this.handleClick.bind(this);
-  }
-  handleClick() {
-    this.setState((prevState) => ({ included: !prevState.included }));
-  }
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     include: true,
+  //   };
+  //   this.handleClick = this.handleClick.bind(this);
+  // }
+  // handleClick() {
+  //   this.setState((prevState) => ({ included: !prevState.included }));
+  // }
 
   render() {
-    const { included } = this.state;
-    const { project, handleDelete } = this.props;
-    const { id, title, short_description, image_url, include} = project;
+    const { project } = this.state;
+    // const { project, handleDelete } = this.props;
+    const { id, title, short_description, image_url} = project;
     console.log('What are project props?: ', this.props.project);
     console.log('What is state?:', this.state);
     return (
-      <div className={`single-project ${included ? 'included' : ''}`}>
-        <div>{include ? 'Included!' : 'Excluded'}</div>
-<button onClick={this.handleClick}>Toggle Status</button>
-<DeleteProject projectId={id} handleDelete={handleDelete} />
+      <div className="single-project">
         <h2>{title}</h2>
         <div>{short_description}</div>
-        <div>
+        <div className={project-image-container}>
           <img src={image_url} />
         </div>
       </div>
