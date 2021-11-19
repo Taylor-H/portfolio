@@ -1,20 +1,39 @@
 import React, { useState } from 'react';
-import DeleteProject from './DeleteProject';
-// class SingleProject extends React.Component {
+import { Route, Link, useParams, useRouteMatch } from 'react-router-dom';
 
-//   render() {
-//     // console.log('What are props?: ', this.props);
-//     // console.log('What is state?:', this.state);
-//     return <div className={this.props.className} key={this.props.id}>
-// {this.props.name}{this.props.id}
-//       <button onClick= {() => this.status? false : 'Adopted'}
-//       value={this.state.adoptedStatus}>
-//         Toggle Status</button>
-//     </div>;
-//   }
+// let { path, url } = useRouteMatch();
+const SingleProject = (props) => {
+  const { id, title, short_description, image_url } = props.project
+  console.log(props.project)
+  return (
+    <div key={id}>
+      <h2>{title}</h2>
+      <div>{short_description}</div>
+      <img src={image_url} alt={title} />
+    </div>
+  )
+}
+
+// const SinglePet = props => {
+//   const { id, name, description, species } = props.pet
+//   const { handleDelete } = props
+//   const [adopted, setAdopted] = useState(false)
+//   return (
+//     <div className={`single-pet ${adopted ? "adopted" : ""}`}>
+//       <h2>{name}</h2>
+//       <div>{species}</div>
+//       <div>{description}</div>
+//       <hr />
+//       <div>{adopted ? "Adopted!" : "Available"}</div>
+//       <button onClick={() => setAdopted(!adopted)}>Toggle Status</button>
+//       {/* <DeletePet petId={id} handleDelete={deletePet} /> */}
+//       <DeletePet petId={id} handleDelete={handleDelete} />
+//     </div>
+//   )
 // }
 
-class SingleProject extends React.Component {
+
+// class SingleProject extends React.Component {
   // constructor() {
   //   super();
   //   this.state = {
@@ -26,23 +45,23 @@ class SingleProject extends React.Component {
   //   this.setState((prevState) => ({ included: !prevState.included }));
   // }
 
-  render() {
-    const { project } = this.state;
-    // const { project, handleDelete } = this.props;
-    const { id, title, short_description, image_url} = project;
-    console.log('What are project props?: ', this.props.project);
-    console.log('What is state?:', this.state);
-    return (
-      <div className="single-project">
-        <h2>{title}</h2>
-        <div>{short_description}</div>
-        <div className={project-image-container}>
-          <img src={image_url} />
-        </div>
-      </div>
-    );
-  }
-}
+//   render() {
+//     const { project } = this.state;
+//     // const { project, handleDelete } = this.props;
+//     const { id, title, short_description, image_url} = project;
+//     console.log('What are project props?: ', this.props.project);
+//     console.log('What is state?:', this.state);
+//     return (
+//       <div className="single-project">
+//         <h2>{title}</h2>
+//         <div>{short_description}</div>
+//         <div className={project-image-container}>
+//           <img src={image_url} />
+//         </div>
+//       </div>
+//     );
+//   }
+// }
 export default SingleProject;
 // onClick={()=> this.props.changeClass(this.props.className)}
 
