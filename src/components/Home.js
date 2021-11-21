@@ -1,18 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import ProjectList from './ProjectList';
+// import { getCategories, getProjects } from '../../data/projectdata'
 import axios from 'axios';
+import { Link } from "react-router-dom"
 import Accordion from './Accordion';
+import AccordionItem from './AccordionItem'
 const Home = () => {
+  const [categories, setCategories] = useState([]);
   const [projects, setProjects] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
   const [fetchCounter, setFetchCounter] = useState(0);
+
   useEffect(() => {
     (async function () {
       try {
         const { data: projects } = await axios.get('/api/projects');
-        console.log('projects', projects);
         setProjects(projects);
+        console.log('projects from useEffect func', projects);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -20,10 +25,10 @@ const Home = () => {
       }
     })();
   }, [fetchCounter]);
-
   const refetch = () => setFetchCounter(fetchCounter + 1);
 
-  // console.log('projects', props)
+
+
   return (
     <main>
       {error && <div>Error: {error}</div>}
@@ -93,7 +98,14 @@ return (
             <a href="/projects">&#8250; Projects</a>
           </div>
           <div className="post-wrapper">
-          <Accordion projects={projects} />
+          {categories.map((category, key) => {
+               console.log('before Accordion', category, projects);
+            // if (project.category === category.categoryName) {
+              return <Accordion projects={projects} category={category} key={key} />;
+          // }
+          })
+          }
+          {/* <Accordion projects={projects} /> */}
             {/* <div className="post">
               {projects.map((project) => {
                 {

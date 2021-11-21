@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const Nav = () => {
@@ -7,7 +7,7 @@ const Nav = () => {
 <header>
 <div className="header">
   <div className="name-container logo">
-    <a href="/">Taylor Hembree</a>
+    <Link href="/">Taylor Hembree</Link>
   </div>
   <input className="menu-btn" type="checkbox" id="menu-btn" />
   <label className="menu-icon" htmlFor="menu-btn">
@@ -18,7 +18,7 @@ const Nav = () => {
       <Link to="/about">About</Link>
     </li>
     <li>
-      <Link to="/projects">Projects</Link>
+      <Link to="/">Projects</Link>
     </li>
     <li>
       <Link to="/contact">Contact</Link>

@@ -1,46 +1,42 @@
 import React from 'react';
-import AccordionItem from './AccordionItem'
 
 
-const categories = [
-  {
-    categoryName: 'app',
-    displayText: 'Full Stack Web Applications'
-  },
-  {
-    categoryName: 'game',
-    displayText: 'Games'
-  },
-  {
-    categoryName: 'creative',
-    displayText: 'Creative and Front End Development'
-  },
-  {
-    categoryName: 'code',
-    displayText: 'Code Examples'
-  }
-]
-       {/* <div className="post">
-              {projects.map((project) => {
-                {
-                  console.log('project', project.id);
-                }
-                return <ProjectList key={project.id} project={project} />;
-              })}
-            </div> */}
 const Accordion = function(props) {
-  console.log('props', props);
+//   const [projects, setProjects] = useState([]);
+//   const [error, setError] = useState(null);
+//   const [loading, setLoading] = useState(true);
+//   const [fetchCounter, setFetchCounter] = useState(0);
+  // useEffect(() => {
+  //   (async function () {
+  //     try {
+  //       const { data: projects } = await axios.get('/api/projects');
+  //       console.log('projects from useEffect func', projects);
+  //       setProjects(projects);
+  //     } catch (err) {
+  //       setError(err.message);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   })();
+  // }, [fetchCounter]);
+  // const refetch = () => setFetchCounter(fetchCounter + 1);
+// const {categories} = props.categories;
+
+  console.log('from Accordion', props);
+
     return (
       <div {...{ className: 'wrapper' }}>
         <ul {...{ className: 'accordion-list' }}>
-          {catagories.map((category, key) => {
+          {projects.map((category, key) => {
             return (
+
               <li {...{ className: 'accordion-list__item', key }}>
-                {projects.map((project) => {
-                  console.log('project', project.id);
-                  // if (project.category === category.categoryName) {
-                  //   return <AccordionItem category={categoryName} key={project.id} project={project} />;
-                  // }
+                {console.log('projects from Accordion', projects, category)}
+                {props.projects.map((project) => {
+                console.log('project', project.id);
+                  if (project.category === category.categoryName) {
+                    return <AccordionItem category={category.categoryName} key={project.id} project={project} />;
+                  }
                 })}
               </li>
             )

@@ -22,7 +22,6 @@ const projects = [
     stack: 'Full',
     technology: ['React', 'Node', 'Express', 'Postgres', 'Sequelize', 'JavaScript', 'HTML', 'CSS', 'Responsive Layout'],
     include: true,
-    image_url: './images/robot-big.png',
     github: 'https://github.com/Taylor-H/robot-and-projects.git',
     deployed: 'https://www.htmlartist.net/projects/:id'
   },
@@ -34,7 +33,6 @@ const projects = [
     category: 'game',
     stack: 'Front',
     include: true,
-    image_url: './images/mtv-big.png',
     github: 'https://github.com/Taylor-H/coffeee_',
     deployed: 'https://www.htmlartist.net/projects/:id'
   },
@@ -46,7 +44,6 @@ const projects = [
     category: 'game',
     stack: 'Back',
     include: true,
-    image_url: './images/mtv-big.png',
     github: 'https://github.com/Taylor-H/robot-and-projects.git',
     deployed: 'https://www.htmlartist.net/projects/:id'
   },
@@ -58,7 +55,6 @@ const projects = [
     category: 'code',
     stack: 'Front',
     include: false,
-    image_url: './images/mtv-big.png',
     github: 'https://github.com/Taylor-H/robot-and-projects.git',
     deployed: 'https://www.htmlartist.net/projects/:id'
   },
@@ -81,7 +77,28 @@ const removeProject = (projectId) => {
   if (id < 0) throw new Error('Project Not Found');
   projects.splice(id, 1);
 };
+const categories = [
+  {
+    catName: 'app',
+    displayName: 'Full Stack Web Applications'
+  },
+  {
+    catName: 'game',
+    displayName: 'Games'
+  },
+  {
+    catName: 'creative',
+    displayName: 'Creative and Front End Development'
+  },
+  {
+    catName: 'code',
+    displayName: 'Code Examples'
+  }
+]
+const getCategories = () => [...categories];
+
 
 module.exports = {
   getProjects,
+  getCategories
 };

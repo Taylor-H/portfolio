@@ -1,31 +1,71 @@
 const express = require('express');
+const app = express();
+const Category = require('./routes/category');
+const Project = require('./routes/project');
 const morgan = require('morgan');
-const { join } = require('path');
-const { getProjects, addProject, removeProject } = require('./data/projectdata');
+const path = require('path');
 const webpack = require('webpack');
 const middleware = require('webpack-dev-middleware');
 const webpackConfig = require('./webpack.config');
+const db = require('./db/db');
 
-const app = express();
+
+// const { getProjects, addProject, removeProject } = require('./data/projectdata');
+// const { getCategories } = require('./data/categories');
 
 // Body Parsing
 app.use(express.json());
 
+
 // Request/Response Logging
 app.use(morgan('dev'));
 
-// GET all the projects
-app.get('/api/projects', (req, res) => {
-  res.json(getProjects());
+app.use('/category', Category);
+app.use('/project', Project);
+// Webpack Dev Middleware
+const compiler = webpack(webpackConfig);
+app.use(
+  middleware(compiler, {
+    // publicPath: join(__dirname, "public"),
+    publicPath: webpackConfig.output.publicPath,
+    writeToDisk: true,
+  })
+);
+
+// static file-serving middleware
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(function (err, req, res, next) {
+  console.error(err.stack);
+  res.status(500).send('Error');
 });
-app.get('/api/projects/:id', (req, res) => {
-  const project = getProjects().find(p => p.id === parseInt(req.params.id));
-  if (project) {
-    res.json(project);
-  } else {
-    res.status(404).send('Project not found');
+
+const init = async () => {
+  try {
+    await db.sync();
+    console.log('Database synced with init');
+
+    app.listen(5000, () => console.log('Server is listening on port 5000!'));
+  } catch (err) {
+    console.error(err);
   }
-})
+};
+
+init();
+// GET all the projects
+// app.get('/api/projects', (req, res) => {
+//   res.json(getProjects());
+// });
+// app.get('/api/categories', (req, res) => {
+//   res.json(getCategories());
+// });
+// app.get('/api/projects/:id', (req, res) => {
+//   const project = getProjects().find(p => p.id === parseInt(req.params.id));
+//   if (project) {
+//     res.json(project);
+//   } else {
+//     res.status(404).send('Project not found');
+//   }
+// })
 // POST a new project
 // app.post('/api/projects', (req, res) => {
 //   console.log('server received this request body:\n', req.body);
@@ -42,20 +82,3 @@ app.get('/api/projects/:id', (req, res) => {
 //   res.sendStatus(204);
 // });
 
-// Webpack Dev Middleware
-const compiler = webpack(webpackConfig);
-app.use(
-  middleware(compiler, {
-    // publicPath: join(__dirname, "public"),
-    publicPath: webpackConfig.output.publicPath,
-    writeToDisk: true,
-  })
-);
-
-// static file-serving middleware
-app.use(express.static(join(__dirname, 'public')));
-app.use(function (err, req, res, next) {
-  console.error(err.stack);
-  res.status(500).send('Error');
-});
-module.exports = app;
