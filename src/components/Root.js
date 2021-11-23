@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import CategoryList from './CategoryList';
 import SingleCategory from './SingleCategory';
-// import About from './About';
-// import Nav from './Nav';
+import About from './About';
+import Nav from './Nav';
 import axios from 'axios';
-
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 export default class Root extends Component {
   constructor(props) {
@@ -23,7 +23,6 @@ export default class Root extends Component {
     try{
       const { data } = await axios.get('/category');
       this.setState({ categories: data })
-
     } catch (err) {
       console.log(err);
     }
@@ -32,22 +31,10 @@ export default class Root extends Component {
     return this.setState({ selectedCategory: category });
   }
   render() {
+    {console.log('state in Root', this.state)}
     return (
       <div className="category-list">
-
-          {/* we pass students from our state and selectStudent method to
-          the CategoryList component, so we can access both of them in CategoryList
-          component's props */ console.log('state in Root', this.state)}
-          <CategoryList categories={this.state.categories} selectCategory={this.selectCategory} selectedCategory={this.state.selectedCategory}/>
-
-        {/* we check if selectedCategory exists, aka if we clicked on any
-        of the students. if it does, then it's going to be rendered on our page
-        since our state has changed.
-        we pass our selectedCategory object down to the SingleStudent component.*/}
-        {/* {this.state.selectedCategory.id ? (
-          <SingleCategory category={this.state.selectedCategory} />
-        ) : null} */}
-
+        <CategoryList categories={this.state.categories} selectCategory={this.selectCategory} selectedCategory={this.state.selectedCategory}/>
       </div>
     );
   }
