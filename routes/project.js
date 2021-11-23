@@ -1,6 +1,7 @@
 const router = require('express').Router();
-const Project = require('../db/models/projects');
 const Category = require('../db/models/categories');
+const Project = require('../db/models/projects');
+
 // GET /project
 router.get('/', async (req, res, next) => {
   try {
@@ -11,13 +12,13 @@ router.get('/', async (req, res, next) => {
   }
 });
 
-// GET /project/categories/:category
+// GET /project/categoryId/:categoryId
 //projects by Category
-router.get('/categories/:category', async (req, res, next) => {
+router.get('/category/:categoryId', async (req, res, next) => {
   try {
-    const projectsByCategory = await Project.findAll({
+    const projectsByCategoryId = await Project.findAll({
       where: {
-        category: req.params.category,
+        category: req.params.categoryId,
       },
     });
     res.json(projectsByCategory);

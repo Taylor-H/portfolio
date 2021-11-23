@@ -39,7 +39,7 @@ const projects = [
   {
     title: 'Pets',
     short_description: 'Adopt a pet.',
-    categoryId: 2,
+    categoryId: 3,
   },
   {
     title: 'Pixelate',

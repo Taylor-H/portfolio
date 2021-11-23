@@ -1,10 +1,10 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import CategoryList from './CategoryList';
 import SingleCategory from './SingleCategory';
-import About from './About';
+// import About from './About';
 // import Nav from './Nav';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+
 
 export default class Root extends Component {
   constructor(props) {
@@ -21,10 +21,11 @@ export default class Root extends Component {
   async getCategories(){
     console.log('fetching');
     try{
-      const {data} = await axios.get('/api/categories');
-      this.setState({categories: data})
+      const { data } = await axios.get('/category');
+      this.setState({ categories: data })
+
     } catch (err) {
-      this.setState({ error: err.message, loading: false });
+      console.log(err);
     }
   }
   selectCategory(category) {
@@ -32,28 +33,21 @@ export default class Root extends Component {
   }
   render() {
     return (
-      <div className='app'>
-        <h1>Categories</h1>
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Projects</th>
-            </tr>
-          </thead>
+      <div className="category-list">
+
           {/* we pass students from our state and selectStudent method to
           the CategoryList component, so we can access both of them in CategoryList
-          component's props */}
-          <CategoryList categories={this.state.categories} selectCategory={this.selectCategory} />
+          component's props */ console.log('state in Root', this.state)}
+          <CategoryList categories={this.state.categories} selectCategory={this.selectCategory} selectedCategory={this.state.selectedCategory}/>
 
-        </table>
         {/* we check if selectedCategory exists, aka if we clicked on any
         of the students. if it does, then it's going to be rendered on our page
         since our state has changed.
         we pass our selectedCategory object down to the SingleStudent component.*/}
-        {this.state.selectedCategory.id ? (
+        {/* {this.state.selectedCategory.id ? (
           <SingleCategory category={this.state.selectedCategory} />
-        ) : null}
+        ) : null} */}
+
       </div>
     );
   }

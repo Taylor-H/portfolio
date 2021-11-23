@@ -10,7 +10,7 @@ const Category = db.define(
     catName: {
       type: Sequelize.STRING,
       allowNull: false,
-      unique: true,
+      isUnique: true,
     },
     displayName: {
       type: Sequelize.STRING,

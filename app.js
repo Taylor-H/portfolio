@@ -4,9 +4,9 @@ const Category = require('./routes/category');
 const Project = require('./routes/project');
 const morgan = require('morgan');
 const path = require('path');
-const webpack = require('webpack');
-const middleware = require('webpack-dev-middleware');
-const webpackConfig = require('./webpack.config');
+// const webpack = require('webpack');
+// const middleware = require('webpack-dev-middleware');
+// const webpackConfig = require('./webpack.config');
 const db = require('./db/db');
 
 
@@ -23,14 +23,14 @@ app.use(morgan('dev'));
 app.use('/category', Category);
 app.use('/project', Project);
 // Webpack Dev Middleware
-const compiler = webpack(webpackConfig);
-app.use(
-  middleware(compiler, {
+// const compiler = webpack(webpackConfig);
+// app.use(
+//   middleware(compiler, {
     // publicPath: join(__dirname, "public"),
-    publicPath: webpackConfig.output.publicPath,
-    writeToDisk: true,
-  })
-);
+//     publicPath: webpackConfig.output.publicPath,
+//     writeToDisk: true,
+//   })
+// );
 
 // static file-serving middleware
 app.use(express.static(path.join(__dirname, 'public')));
