@@ -2,11 +2,11 @@ const router = require('express').Router();
 const Project = require('../db/models/projects');
 const Category = require('../db/models/categories');
 
-// GET /category/:categoryId
-router.get('/:categoryId', async (req, res, next) => {
+// GET /category/:projectId
+router.get('/:projectId', async (req, res, next) => {
   try {
-    const category = await Category.findByPk(
-      req.params.categoryId);
+    const category = await Project.findByPk(
+      req.params.projectId);
      if(!category) return res.sendStatus(404);
      res.json(category);
   } catch (error) {

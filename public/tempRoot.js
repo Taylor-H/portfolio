@@ -36,32 +36,13 @@ class Root extends React.Component {
   render() {
     const { error, loading, projects } = this.state;
     return (
-    <div id="app">
-          {error && <div>Error: {error}</div>}
-          {loading && <div>Loading</div>}
-          <header>
-            <div className="header">
-              <div className="name-container logo">
-                <Link to="/">Taylor Hembree</a>
-              </div>
-              <input className="menu-btn" type="checkbox" id="menu-btn" />
-              <label className="menu-icon" for="menu-btn">
-                <span className="navicon"></span>
-              </label>
-                <ul className="menu">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/projects">Projects</Link></li>
-                <li><Link to="/#contact">Contact</Link></li>
-              </ul>
-              </div>
-          </header>
+   <Router>
         <Switch>
-            <Route exact path="/projects" component={ProjectList} />
-            <Route path="/projects/:id" component={SingleProject} />
+            <Route path="/projects" component={ProjectList} />
+            <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
         </Switch>
-    </div>
+ </Router>
 
 
 
@@ -105,3 +86,26 @@ const Root = () => {
 };
 
 export default Root;
+
+
+{/* // const [categories, setCategories] = useState([]);
+// const [projects, setProjects] = useState([]);
+// const [error, setError] = useState(null);
+// const [loading, setLoading] = useState(true);
+// const [fetchCounter, setFetchCounter] = useState(0);
+
+// useEffect(() => {
+//   (async function () {
+//     try {
+//       const { data: projects } = await axios.get('/');
+//       setProjects(projects);
+//       console.log('projects from useEffect func', projects);
+//     } catch (err) {
+//       setError(err.message);
+//     } finally {
+//       setLoading(false);
+//     }
+//   })();
+// }, [fetchCounter]);
+// const refetch = () => setFetchCounter(fetchCounter + 1);
+*/}

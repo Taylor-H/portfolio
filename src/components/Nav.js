@@ -7,7 +7,7 @@ const Nav = () => {
 <header>
 <div className="header">
   <div className="name-container logo">
-    <Link href="/">Taylor Hembree</Link>
+    <Link to="/">Taylor Hembree</Link>
   </div>
   <input className="menu-btn" type="checkbox" id="menu-btn" />
   <label className="menu-icon" htmlFor="menu-btn">
@@ -18,7 +18,7 @@ const Nav = () => {
       <Link to="/about">About</Link>
     </li>
     <li>
-      <Link to="/">Projects</Link>
+      <Link to="/category">Projects</Link>
     </li>
     <li>
       <Link to="/contact">Contact</Link>
