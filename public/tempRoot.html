@@ -1,0 +1,98 @@
+<div className="cat-accordion">
+  <button className="cat-menu">
+    Full Stack Web Applications<span className="arrow rarrow">+</span
+    ><span className="arrow darrow">-</span>
+  </button>
+  <div className="panel close">
+    <div>
+      <a href="/projects/20">Portfolio</a><a href="/projects/24">Pets</a
+      ><a href="/projects/25">Pixelate</a>
+    </div>
+  </div>
+  <button className="cat-menu">
+    Games<span className="arrow rarrow">+</span><span className="arrow darrow">-</span>
+  </button>
+  <div className="panel close">
+    <div>
+      <a href="/projects/23">Coffee Clicker</a
+      ><a href="/project/21">Robots and Projects</a><a href="">Link 3</a
+      ><a href="">Link 4</a>
+    </div>
+  </div>
+</div>
+<script>
+  !(function () {
+    for (
+      const accordionMenu = document.querySelectorAll('.cat-accordion .cat-menu'), e = 0;
+      e < l.length;
+      e++
+    )
+      l[e].addEventListener('click', n);
+    function n() {
+      for (
+        const e = document.querySelectorAll('.cat-accordion .panel'), n = 0;
+        n < e.length;
+        n++
+      )
+        e[n].className = 'panel close';
+      if (-1 == this.className.indexOf('active')) {
+        for (n = 0; n < l.length; n++) l[n].className = 'cat-menu';
+        (this.className = 'cat-menu active'),
+          (this.nextElementSibling.className = 'panel open');
+      } else for (n = 0; n < l.length; n++) l[n].className = 'cat-menu';
+    }
+  })();
+</script>
+<style>
+
+.cat-accordion .cat-menu {
+  background-color: #d5d5d5;
+  color: #444;
+  cursor: default;
+  padding: 12px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  margin-top: 4px;
+  border-radius: 8px;
+  font-size: inherit;
+}
+.cat-accordion .panel {
+  background-color: #ffffff;
+  color: #000000;
+  overflow: hidden;
+}
+.cat-accordion .open {
+  display: block;
+}
+.cat-accordion .close {
+  display: none;
+}
+.cat-accordion .active {
+  background-color: #1b90bb;
+  color: #fff;
+}
+.cat-accordion .arrow {
+  float: right;
+  display: block;
+}
+.cat-accordion .darrow {
+  display: none;
+}
+.cat-accordion .active .darrow {
+  display: block;
+}
+.cat-accordion .active .rarrow {
+  display: none;
+}
+.cat-accordion .panel a {
+  display: block;
+  background: #808080;
+  color: #ffffff;
+  padding: 5px;
+  margin: 3px;
+  width: 100%;
+  text-decoration: none;
+}
+</style>

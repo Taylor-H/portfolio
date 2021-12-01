@@ -4,14 +4,7 @@ const Category = require('./routes/category');
 const Project = require('./routes/project');
 const morgan = require('morgan');
 const path = require('path');
-// const webpack = require('webpack');
-// const middleware = require('webpack-dev-middleware');
-// const webpackConfig = require('./webpack.config');
 const db = require('./db/db');
-
-
-// const { getProjects, addProject, removeProject } = require('./data/projectdata');
-// const { getCategories } = require('./data/categories');
 
 // Body Parsing
 app.use(express.json());
@@ -26,14 +19,15 @@ app.use('/project', Project);
 // const compiler = webpack(webpackConfig);
 // app.use(
 //   middleware(compiler, {
-    // publicPath: join(__dirname, "public"),
+//     publicPath: join(__dirname, "public"),
 //     publicPath: webpackConfig.output.publicPath,
 //     writeToDisk: true,
 //   })
 // );
 
 // static file-serving middleware
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/', express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
 app.use(function (err, req, res, next) {
   console.error(err.stack);
   res.status(500).send('Error');

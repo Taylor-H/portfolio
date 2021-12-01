@@ -1,34 +1,33 @@
 import React from 'react';
 import SingleCategory from './SingleCategory';
+
+    //we received categories and selectCategory from our parent component - Home
 const CategoryList = (props) => {
-  console.log(props);
+  const { categories }= props.categories
   return (
     <>
       <div id="section-title">
         <a href="/projects">&#8250; Projects</a>
       </div>
       <div className="post-wrapper">
-        <ul className="category-list">
-
-          {
-            //map through the categories and if this is the selected category, list the projects associated. When state in the parent component changes, so does the selected category
+          {//map through the categories and if this is the selected category, list the projects associated. When state in the parent component changes, so does the selected category
             props.categories.map((category) => (
-              <React.Fragment>
-                <li
-                  key={category.id}
-                  className={'category-item'}
-                  onClick={() => props.selectCategory(category)}
-                >
+
+                <ul key={category.id} className="accordion-item--opened category-list" onClick={() => props.selectCategory(category)}>
                   {category.displayName}
-                </li>
+                <span className="category_icon"> &#8250;</span>
+
 
                 {props.selectedCategory.id === category.id ? (
+
                   <SingleCategory projects={category.projects} />
+
                 ) : null}
-              </React.Fragment>
+              </ul>
+
             ))
           }
-        </ul>
+
       </div>
       <div id="links">
         <h5>

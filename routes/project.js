@@ -11,22 +11,18 @@ router.get('/', async (req, res, next) => {
     next(error);
   }
 });
-
-// GET /project/categoryId/:categoryId
-//projects by Category
+//projects by category
+// GET /project/category/:categoryId
 router.get('/category/:categoryId', async (req, res, next) => {
   try {
-    const projectsByCategoryId = await Project.findAll({
-      where: {
-        category: req.params.categoryId,
-      },
-    });
+    const projectsByCategory = await Project.byCategory(req.params.categoryId);
+    console.log('projectsByCategory', req.params);
     res.json(projectsByCategory);
   } catch (error) {
     next(error);
   }
 });
-
+//project by id
 // GET /project/:id
 router.get('/:id', async (req, res, next) => {
   try {

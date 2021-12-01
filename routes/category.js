@@ -2,17 +2,15 @@ const router = require('express').Router();
 const Project = require('../db/models/projects');
 const Category = require('../db/models/categories');
 
-// GET /category/:projectId
-router.get('/:projectId', async (req, res, next) => {
+router.get('/:categoryId', async (req, res, next) => {
   try {
-    const category = await Project.findByPk(
-      req.params.projectId);
-     if(!category) return res.sendStatus(404);
-     res.json(category);
-  } catch (error) {
+    const category = await Category.findByPk(req.params.categoryId);
+    if(!category) return res.sendStatus(404);
+    res.json(category);
+  }catch (error){
     next(error);
-  }
-});
+    }
+    });
 // GET /category/
 router.get('/', async (req, res, next) => {
   try {
@@ -39,7 +37,7 @@ router.put('/:id', async (req, res, next) => {
   try {
     const { catName, displayName } = req.body;
     const category = await Category.findByPk(req.params.id);
-    const updatedCategory = await Category.update({
+    const updatedCategory = await category.update({
       catName,
       displayName,
     });
@@ -70,3 +68,26 @@ router.delete('/:id', async (req, res, next) => {
 module.exports = router;
 // Student = Category
 // Test = Project
+
+
+// router.get('/', async (req, res, next) => {
+//   try {
+//     const projects = await Category.findAll({
+//       include: Project
+//     });
+//     res.json(projects);
+//   } catch (error) {
+//     next(error);
+//   }
+// });
+// GET /category/:projectId
+// router.get('/', async (req, res, next) => {
+//   try {
+//     const project = await Project.findByPk(
+//       req.params.projectId);
+//      if(!project) return res.sendStatus(404);
+//      res.json(project);
+//   } catch (error) {
+//     next(error);
+//   }
+// });

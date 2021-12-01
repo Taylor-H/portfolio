@@ -20,7 +20,7 @@ const Project = db.define(
   );
 
 
-  Project.findByCategory = function (categoryId) {
+  Project.byCategory = function (categoryId) {
     return Project.findAll({
       where: {
        categoryId: categoryId,

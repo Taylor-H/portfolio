@@ -7,25 +7,33 @@ import SingleProject from './SingleProject';
 import About from './About';
 import Home from './Home';
 import Nav from './Nav';
-import axios from 'axios';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Category from '../../db/models/categories';
 
+const Root = () => {
+  return (
 
-  const Root = () => {
-    return (
-      <>
+      <div>
         <Nav />
-        <Router>
-        <Switch>
-          <Route path="/about" component={About} />
-          <Route path="/category" component={ProjectList} />
-          <Route path="/category/:projectId" component={SingleProject} />
-          <Route path="/contact" component={Contact} />
-          <Route exact path="/" component={Home} />
-        </Switch>
-      </Router>
-      </>
-    );
-  }
+        <div>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route exact path="/project">
+            <CategoryList />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/project/:projectId">
+            <SingleProject project={this.state.project} />
+          </Route>
+          </div>
+      </div>
+  );
+};
 
 export default Root;

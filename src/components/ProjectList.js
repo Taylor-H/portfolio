@@ -4,18 +4,18 @@ import React from 'react';
 const ProjectList = (props) => {
   // const { id, title, category, image_url } = project;
   // const [filter, setFilter] = useState("all")
-  // console.log('from projectList', props.project)
-  console.log('from projectList', props)
-  const { id, title, category } = props.project;
+  console.log('from ProjectList', props);
+  props.projects.map((project) => {
   return (
-    <>
-    <div key={id} className={category}>
-      <button value={category}>{category}</button>
-      <h6>{title}</h6>
-      <div>{category}</div>
-      {/* <img src={project.image_url} alt={project.title} /> */}
+    <div key={project.id} className="project-title">
+      <button value={project.categoryId}>{project.title}</button>
+      <div>{project.short_description}</div>
     </div>
-    </>
-  );
+
+  )
 }
-export default ProjectList;
+
+)
+
+}
+export default ProjectList

@@ -15,16 +15,16 @@ const Nav = () => {
   </label>
   <ul className="menu">
     <li>
-      <Link to="/about">About</Link>
+      <NavLink to="/about">About</NavLink>
     </li>
     <li>
-      <Link to="/category">Projects</Link>
+      <NavLink to="/project">Projects</NavLink>
     </li>
     <li>
-      <Link to="/contact">Contact</Link>
+      <NavLink to="/contact">Contact</NavLink>
     </li>
     <li>
-      <Link to="/">Home</Link>
+      <NavLink to="/">Home</NavLink>
     </li>
   </ul>
 </div>

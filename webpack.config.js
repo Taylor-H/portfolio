@@ -4,6 +4,7 @@ module.exports = {
   mode: 'development',
   devtool: 'source-map',
   entry: './src/index.js',
+  target: 'node',
   output: {
     path: __dirname,
     //write the output to ./public/bundle.js

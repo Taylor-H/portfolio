@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { Route, Link, useParams, useRouteMatch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, useParams, useRouteMatch } from 'react-router-dom';
 
 // let { path, url } = useRouteMatch();
 const SingleProject = (props) => {
-  const { id, title, short_description, image_url } = props.project
-  console.log(props.project)
+  const project =
+  console.log('from singleProject', props);
+  const { projectId, title, short_description, image_url } = props.match.params
   return (
-    <div key={id}>
+    <div key={projectId}>
       <h2>{title}</h2>
       <div>{short_description}</div>
       <img src={image_url} alt={title} />
@@ -22,7 +23,6 @@ const SingleProject = (props) => {
 //     <div className={`single-pet ${adopted ? "adopted" : ""}`}>
 //       <h2>{name}</h2>
 //       <div>{species}</div>
-//       <div>{description}</div>
 //       <hr />
 //       <div>{adopted ? "Adopted!" : "Available"}</div>
 //       <button onClick={() => setAdopted(!adopted)}>Toggle Status</button>
