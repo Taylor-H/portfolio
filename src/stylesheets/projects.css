@@ -521,7 +521,7 @@ flex: 1 40%;
 .prev {
   width: 24px;
   height: 24px;
-  /* background: url("./images/left-black.svg") no-repeat; */
+  background: url("../images/left-black.svg") no-repeat;
   background-size: 20px;
   background-position: right center;
   position: relative;
@@ -540,7 +540,7 @@ flex: 1 40%;
 .next {
   width: 24px;
   height: 24px;
-  /* background: url("./images/right-black.svg") no-repeat; */
+  background: url("../images/right-black.svg") no-repeat;
   background-size: 20px;
   background-position: left center;
   position: relative;
