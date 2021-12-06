@@ -1,40 +1,35 @@
 {
-  "name": "taylor-hembree-web-developer",
-  "version": "1.0.0",
-  "description": "Examples of Taylor's expertise.",
-  "main": "index.js",
-  "directories": {
-    "example": "examples"
-  },
+  "name": "htmlartist",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "ejs": "^3.1.6",
-    "express": "^4.17.1",
-    "node": "^14.x",
-    "pg": "^8.7.1",
-    "react": "^17.0.2"
-  },
-  "devDependencies": {
-    "got": "^11.3.0",
-    "tape": "^4.7.0"
+    "@testing-library/jest-dom": "^5.15.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.0.2",
+    "react-scripts": "4.0.3"
   },
   "scripts": {
-    "test": "node test.js",
-    "start": "node index.js"
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
+    "test": "react-scripts --openssl-legacy-provider test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Taylor-H/portfolio.git"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "keywords": [
-    "node",
-    "heroku",
-    "express",
-    "React"
-  ],
-  "author": "Taylor Hembree",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Taylor-H/portfolio#issues"
-  },
-  "homepage": "https://github.com/Taylor-H/portfolio#readme"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
