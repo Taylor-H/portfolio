@@ -1,17 +1,24 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-npm-debug.log
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
 
-.DS_store
+# testing
+/coverage
 
-hide
-portfolio.code-workspace
+# production
+/build
 
-*.env
-node_modules
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.eslintcache
 
-*.env
-*.dev
-
-Dockerfile
-docker-compose.yml
-public/bundle*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
