@@ -7,7 +7,6 @@ import Contact from './components/Contact';
 import About from './components/About';
 import { Route, Routes, Link } from 'react-router-dom';
 
-
 function App() {
   const projects = taylorsProjects.projects;
   const categories = taylorsProjects.categories;
@@ -26,13 +25,19 @@ function App() {
         </div>
       </header>
       <div className="page-wrapper">
-    <Routes>
-      <Route exact path="/" element={<Home projects={projects} categories={categories} />} />
-      <Route path="/projects" element={<ProjectHome projects={projects} />} />
-      <Route exact path="/about" element={<About />} />
-      <Route exact path="/contact" element={<Contact />} />
-
-    </Routes>
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={<Home projects={projects} categories={categories} />}
+          />
+          <Route
+            path="/projects"
+            element={<ProjectHome projects={projects} />}
+          />
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="/contact" element={<Contact />} />
+        </Routes>
       </div>
     </div>
   );
