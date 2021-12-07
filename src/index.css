@@ -3,18 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,700;1,400&family=Libre+Franklin:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&display=swap');
 
-#app {
-  font-family: 'Space Mono', monospace;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.App {
+  border: 2px solid #000;
+  width: 100%;
 }
 html {
   scroll-behavior: smooth;
   padding: 0;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -24,17 +20,32 @@ html {
 }
 body {
   background-color: #ffffff;
-  max-width: 1599px;
-  background-image: url('./images/light-purple-bg@3x.png');
+  font-family: 'Space Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  background-image: url('./images/light-purple-bg@2x.png');
 }
 a {
   text-decoration: none;
   color: #000000;
 }
+.page-wrapper{
 
 
+}
+.flex-item-left {
+  flex: 65%;
+}
+.flex-item-right {
+  flex: 35%;
+}
+.space{
+  width: 98%;
+  height: 100%;
 
-
+}
 #links {
   font-family: 'Space Mono', monospace;
   font-size: 1.2rem;
@@ -83,58 +94,12 @@ a {
   color: #000;
   /* border: 1px dotted pink; */
 }
-
 .check {
   width: 1rem;
   height: 1rem;
   color: white;
   margin-right: 5px;
 }
-
-.portrait {
-  background-image: url('./images/port1.jpg');
-  grid-area: port;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  max-height: 400px;
-  /* background-clip: border-box; */
-  border: 2px solid black;
-  box-sizing: border-box;
-  /* box-shadow: inset 0 0 10px #898989; */
-}
-
-.hi {
-  background-image: url('./images/port1.jpg');
-  background-position: top;
-  background-repeat: no-repeat;
-  display: flex;
-  background-color: white;
-  grid-area: hi;
-  width: 100%;
-  font-family: 'Libre Franklin', sans-serif;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin: 0 auto;
-  text-align: center;
-  border: 2px solid black;
-  box-sizing: border-box;
-  /* box-shadow: inset 0 0 10px #cccccc; */
-}
-
-.hi h6 {
-  font-size: 1.4rem;
-  margin-bottom: 1.2rem;
-}
-
-.hi p {
-  padding-left: 0.8rem;
-  padding-right: 0.8rem;
-  padding-bottom: 2rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
 .skills {
   grid-area: skills;
   border: 2px solid black;
@@ -187,67 +152,14 @@ a {
   padding: 2px;
   line-height: 1.5rem;
 }
-
-/*---------------------- styling for project carousel-------------------- */
-.projects {
-  grid-area: proj;
-  border: 2px solid black;
-  width: 100%;
-  background-color: #99adb4;
-  height: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.projects-header {
-  font-family: 'Libre Franklin', sans-serif;
-  font-weight: 400;
-  color: #000000;
-  font-size: 0.9rem;
-  align-self: center;
-  /* position: absolute; */
-  margin-bottom: 0.3rem;
-  letter-spacing: 0.3em;
-}
-.post-wrapper {
-  width: 80%;
-  height: 100%;
-  max-width: 450px;
-  margin-top: 1%;
-  align-self: center;
-  overflow: hidden;
-}
-.spacer {
-  grid-area: blank;
-  border: 2px solid black;
-  box-sizing: border-box;
-  /* background-color: rgba(78, 99, 123, .5); */
-  box-shadow: inset 0 0 10px #565656;
-  display: flex;
-}
-.category-list {
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 1rem;
-  line-height: 1.6rem;
-  padding: 1rem 1rem 1rem 1rem;
-}
-.project-list-item {
-  font-family: 'Libre Franklin', sans-serif;
-  font-size: 0.8rem;
-  line-height: 1.2rem;
-  margin-left: 0.6rem;
-}
-
 .footer {
-  grid-area: foot;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: baseline;
   width: 100%;
-  height: 10vh;
-  border: 2px solid black;
+  min-height: 10%;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
   box-sizing: border-box;
   /* background-color: white; */
   font-family: 'Space Mono', monospace;
@@ -256,13 +168,11 @@ a {
   color: #000;
   background-color: white;
 }
-
 .footer a {
   display: block;
-  margin: 10 auto;
+  /* margin: 10 auto; */
   width: 100%;
 }
-
 .footer a:hover {
   color: #000;
 }
@@ -270,4 +180,10 @@ a {
   background-color: #000;
   width: 100%;
   height: 800px;
+}
+/* media queries */
+@media (max-width: 800px) {
+  .flex-item-right, .flex-item-left {
+    flex: 100%;
+  }
 }

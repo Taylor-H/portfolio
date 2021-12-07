@@ -1,5 +1,6 @@
 import React from 'react';
 import taylorsProjects from './data/taylorsProjects';
+import Footer from './components/Navigation/Footer';
 import Navigation from './components/Navigation';
 import ProjectHome from './components/ProjectHome';
 import Home from './components/Home';
@@ -39,7 +40,9 @@ function App() {
           <Route exact path="/contact" element={<Contact />} />
         </Routes>
       </div>
+      <div className="footer"><Footer /></div>
     </div>
+
   );
 }
 

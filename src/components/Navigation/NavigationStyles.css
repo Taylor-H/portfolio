@@ -3,7 +3,7 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  height: 80px;
+  height: 70px;
   width: 100%;
   min-width: 295px;
   box-sizing: border-box;
@@ -20,10 +20,10 @@ header {
   justify-content: space-between;
   height: 100%;
   width: 100%;
-  border-top: 4px solid #000000;
-  border-right: 4px solid #000000;
-  border-left: 4px solid #000000;
-  border-bottom: 4px solid #000000;
+  border-top: 2px solid #000000;
+  border-right: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-bottom: 2px solid black;
 }
 
 .header ul {
@@ -142,24 +142,24 @@ header {
 
 .header .menu-btn {
   display: none;
-  margin-top: 30px;
+  margin-top: 2rem;
 }
 
 .header .menu-btn:checked ~ .menu {
   position: absolute;
-  top: 76px;
+  top: 69px;
   right: 0;
   max-height: 600px;
   height: 300px;
-  width: 200px;
+  width: 20%;
   background-color: white;
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-right: 0.5rem;
-  border-left: 2px solid black;
-  border-bottom: 2px solid black;
-  border-top: 6px solid black;
-  border-right: 4px solid black;
+  border-left: 3px solid black;
+  border-bottom: 3px solid black;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
