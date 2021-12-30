@@ -95,18 +95,14 @@ font-weight: 400;
 .circle-image{
   background-image: url('../../images/port2.jpg');
   border-radius: 50%;
-height: 10rem;
-width: 10rem;
-margin-top: 2rem;
-margin-bottom: .5rem;
-background-size: 120% auto;
-
+  height: 10rem;
+  width: 10rem;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+  background-size: 120% auto;
   background-color: #4d4c4c00;
   background-position: center 10%;
   background-repeat: no-repeat;
-
-
-
   box-sizing: border-box;
 }
 .hi {

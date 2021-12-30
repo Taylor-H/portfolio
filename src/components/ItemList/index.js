@@ -4,26 +4,20 @@ import React from 'react';
 
 const ItemList = (props) => {
   const {itemName, itemList} = props;
-  return (
+  console.log('itemList', itemList, itemName);
+  return ((itemList.length > 0) ? (
     <>
       <div id="section-title">
         <h4>&#8250; {itemName}</h4>
       </div>
-      <div className="home-list">
+      <div className={itemName.concat( ' home-list')}>
         <ul>
           {itemList.map((item, key) => (
-            <li key={key}>
-              <img src="../../images/check-circle-regular.svg" className="check" alt="checkmark"/>
-               {item} </li>
+            <li key={key}>{item}</li>
           ))}
         </ul>
       </div>
-      <div id="links">
-        <h5>
-          <a href="/about">more &#8250;</a>
-        </h5>
-      </div>
     </>
-  );
+  ): null);
 };
 export default ItemList;

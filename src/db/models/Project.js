@@ -1,8 +1,8 @@
 'use strict';
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
-const db = require('../db');
-const Category = require('./categories');
+const db = require('./db');
+
 
 const Project = db.define(
   'project', {
@@ -28,8 +28,7 @@ const Project = db.define(
     });
   };
 
-  Project.belongsTo(Category);
-  Category.hasMany(Project);
+
 
   module.exports = Project;
 

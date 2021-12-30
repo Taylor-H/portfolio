@@ -27,13 +27,13 @@ const ProjectsList = (props) => {
       <Chevron className={`${setRotate}`} width={8} fill={"#000"} />
     </button>
       {projects.map((project) => (
-        <>
+        <div key={project.id}>
           {project.category === category.catName ? (
-           <button key={project.id} ref={content}  style={{ maxHeight: `${setHeight}` }} className="accordion__content"><Link to={`/projects/${project.id}`}>
+           <button ref={content}  style={{ maxHeight: `${setHeight}` }} className="accordion__content"><Link to={`/projects/${project.id}`}>
              <div className="accordion__text">{project.title}</div>
             </Link></button>
           ) : null}
-        </>
+        </div>
       ))}
     </div>
   );

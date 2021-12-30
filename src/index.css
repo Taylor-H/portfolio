@@ -95,13 +95,17 @@ a {
   /* border: 1px dotted pink; */
 }
 .check {
-  width: 1rem;
-  height: 1rem;
-  color: white;
+  width: 30px;
+  height: 30px;
+  color: rgb(0, 0, 0);
   margin-right: 5px;
+  background-image: url('./images/check-circle-regular.svg');
+  background-size: contain;
+  background-color: #4d4c4c00;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .skills {
-  grid-area: skills;
   border: 2px solid black;
   box-sizing: border-box;
   display: flex;
@@ -118,7 +122,7 @@ a {
   padding: 2px;
   line-height: 1.5rem;
 }
-.skills #section-title a {
+.skills .section-title a {
   color: #d8e3e8;
 }
 .skills #links a {

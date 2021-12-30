@@ -1,0 +1,75 @@
+.project-details {
+  width: 100%;
+  min-height: 100%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #fff;
+  /* padding-top: 10px; */
+  overflow: visible;
+}
+
+.detail {
+  display: flex;
+  flex-flow: row wrap;
+  outline: none;
+  height: auto;
+  /* overflow: hidden; */
+  /* border: 1px solid orange; */
+}
+
+.color1 {
+  background-color: #e5edf1;
+}
+
+.color2 {
+  background-color: #e5edf1;
+}
+.year {
+  font-weight: 400;
+  font-size: 1.2rem;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.detail-summary {
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: 1vh;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.summary-text {
+  text-align: left;
+  font-family: 'Libre Franklin', sans-serif;
+  padding-top: .4rem;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.page-header {
+  order: 0;
+  flex: 2 90%;
+  height: 50px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-bottom: 3rem;
+  padding-bottom: .5rem;
+  margin: 0 auto;
+  border-bottom: 1px solid #000;
+  /* box-shadow: 0px 0px 5px 0px rgba(51,51,51,0.4); */
+  /* border: 1px solid green; */
+}
+.catNav-container{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 20rem;;
+  height: 100%;
+background-color: #fff;
+  border: 1px solid rgb(0, 0, 0);
+}
