@@ -60,17 +60,7 @@ a {
   align-self: baseline;
   align-self: flex-end;
 }
-#section-title {
-  font-family: 'Space Mono', monospace;
-  font-size: 1.2rem;
-  font-weight: 400;
-  min-width: 100%;
-  text-transform: uppercase;
-  padding-top: 0.3rem;
-  margin-left: 0.2rem;
-  text-align: left;
-  white-space: nowrap;
-}
+
 #detail-header {
   font-family: 'Libre Franklin', sans-serif;
   font-weight: 500;

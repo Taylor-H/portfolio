@@ -1,9 +1,10 @@
 import { useParams, Link } from 'react-router-dom';
+import ProjectsNav from './ProjectsNav';
 import FourOFour from '../FourOFour';
 import ItemList from '../ItemList';
 import './styles.css';
 
-const SingleProject = (props) => {
+const ProjectDetail = (props) => {
 console.log(props)
 const projects = props.projects;
   let params = useParams();
@@ -11,11 +12,17 @@ const projectId = params.projectId;
 
 const project = projects.find((project) => (project.id.toString() === projectId) ? project : null)
 
-console.log('project', project);
+console.log('projectDetail', props);
 const previewName = project? project.projectName: null;
   return (project)? (
+    <div className="outer-container">
+    <div className="catNav-container">
+      {props.categories.map((category) => (
+      <ProjectsNav key={category.catId} category={category}projects={props.projects} />
+    ))}
+    </div>
     <div className="single-project">
-      <div className="x-back"><Link to="/projects">X</Link></div>
+      <div className="x-back"><Link to="/projects" alt="Back to projects">X</Link></div>
       <div className='section-title'>{project.title}</div>
       <div className='project-description'>{project.description}</div>
       <div className={previewName + ' prevImg'}></div>
@@ -30,33 +37,8 @@ const previewName = project? project.projectName: null;
       <ItemList itemName={'Role'} itemList={project.role} />
       <ItemList itemName={'Tech Stack'} itemList={project.tech} />
     </div>
-        ): (<FourOFour />)
+    </div>    ): (<FourOFour />)
     }
 
 
-export default SingleProject;
-// (project.id.toString() === projectId)? project: null);
-
-// const previewImage = () => {
-
-
-//   function importAll(r) {
-//     let images = {};
-//     r.keys().forEach((item, index) => (images[item.replace('./', '')] = r(item)));
-//   console.log('images', images);
-//     return images;
-//   }
-
-//   const images = importAll(require.context('./assets', false, /\.(png|jpe?g|JPG|svg)$/));
-// const imgNames = Object.keys(images);
-// console.log('imageNames', imgNames);
-// return (
-//   <div className='image-list'>
-//     {imgNames.map((image, index) => (
-//       <img key={index} src={`/images/preview/${image}`} alt={image} value={image}/>
-//     ))}
-//   </div>
-// )
-// }
-
-
+export default ProjectDetail;

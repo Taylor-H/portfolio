@@ -3,21 +3,25 @@ const taylorsProjects ={
   {
     "catId": 1,
     "catName": "app",
+    "shortDisplay": "Apps",
     "displayName": "Full Stack Web Applications"
   },
   {
     "catId": 2,
     "catName": "game",
+    "shortDisplay": "Games",
     "displayName": "Games"
   },
   {
     "catId": 3,
     "catName": "creative",
+    "shortDisplay": "Creative",
     "displayName": "Creative Development"
   },
   {
     "catId": 4,
     "catName": "code",
+    "shortDisplay": "Code",
     "displayName": "Code Examples"
   }
 ],
@@ -39,12 +43,12 @@ const taylorsProjects ={
     "id": 6,
     "projectName": "robot",
     "title": "Robot Boss",
-    "tagLine": "Robots need work and work needs robots.",
+    "tagLine": "Assigning tasks with React and Express.",
     "tech": ["React", "Node", "HTML5", "CSS", "Javascript", "Express", "Git", "Heroku"],
     "role": ["Front End Developer", "UI/UX Design", "Graphic Design"],
     "gitHub": "https://github.com/Taylor-H/portfolio",
     "live": "https://www.htmlartist.net/",
-    "prevImg": "portfolio.png",
+    "prevImg": "js-big.png",
     "category": "app",
   },
   {
@@ -93,12 +97,13 @@ const taylorsProjects ={
     "gitHub": "https://github.com/Taylor-H/portfolio",
     "live": "https://www.htmlartist.net/",
     "prevImg": "relaxr-big.png",
+    "images": [{"file": "relaxr_phone.jpg"}, {"file": "relaxr_tablet.jpg"}, {"file": "relaxr_desktop.jpg}"}, {"file": "relaxr_desktop_2.jpg"}],
     "category": "creative",
   },
     {
     "id": 11,
-    "projectName": "popArt",
-    "title": "popArt",
+    "projectName": "pop!",
+    "title": "pop!",
     "tagLine": "A silk screen lover's dream.",
     "tech": ["React", "Node", "HTML5", "CSS", "Javascript", "Express", "Git", "Heroku"],
     "role": ["Game Developer", "UI/UX Design", "Graphic Design"],
