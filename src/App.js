@@ -6,8 +6,9 @@ import Projects from './components/Projects';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import About from './components/About';
+import Test from './components/Test';
 import { Route, Routes, Link } from 'react-router-dom';
-
+import './index.css';
 
 function App() {
   const projects = taylorsProjects.projects;
@@ -26,7 +27,7 @@ function App() {
           <Navigation />
         </div>
       </header>
-      <div className="page-wrapper">
+       <div className="page-wrapper">
         <Routes>
           <Route path="/" element={<Home projects={projects} categories={categories} />} />
           <Route
@@ -34,6 +35,7 @@ function App() {
             element={<Projects projects={projects} categories={categories}/>} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="test" element={<Test />} />
         </Routes>
       </div>
       <div className="footer"><Footer /></div>

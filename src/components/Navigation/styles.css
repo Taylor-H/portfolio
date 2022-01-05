@@ -1,5 +1,5 @@
 header {
-  background-color: white;
+  /* background-color: white; */
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -10,7 +10,7 @@ header {
   z-index: 4;
   font-family: 'Space Mono', monospace;
   font-weight: 400;
-  /* color: white; */
+  background-color: white;
 }
 
 .header {
@@ -20,10 +20,11 @@ header {
   justify-content: space-between;
   height: 100%;
   width: 100%;
-  border-top: 2px solid #000000;
-  border-right: 2px solid #000000;
-  border-left: 2px solid #000000;
-  border-bottom: 2px solid black;
+  border-top: 4px solid #000000;
+  border-right: 4px solid #000000;
+  border-left: 4px solid #000000;
+  border-bottom: 4px solid #000000;
+
 }
 
 .header ul {
@@ -47,7 +48,7 @@ header {
 
 .header li a:hover,
 .header .menu-btn:hover {
-  color: #99adb4;
+  color: #91b9c8;
 }
 /* #d9d1c9 */
 .header .logo a {
@@ -58,13 +59,16 @@ header {
   font-family: 'monotalic', sans-serif;
   /* font-family: 'Cabin Sketch'; */
   font-weight: 300;
-  background-color: #a999ab;
+  /* background-color: #4e637b; */
+  background-color: #91b9c8;
+  /* background-color: #a999ab; */
   box-sizing: border-box;
   text-align: center;
   display: block;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+
 }
 
 .name-container {
@@ -76,7 +80,7 @@ header {
   text-align: center;
   border-right: 4px solid black;
   overflow: hidden;
-  background-color: #a999ab;
+  background-color: #91b9c8;
 }
 /* menu */
 .clearfix::after {
@@ -224,6 +228,7 @@ header {
     height: 100%;
     width: 35%;
     padding-top: 15px;
+
   }
 
   .header .menu-btn:checked ~ .menu {

@@ -6,7 +6,7 @@ const ItemList = (props) => {
   const {itemName, itemList} = props;
   console.log('itemList', itemList, itemName);
   return ((itemList.length > 0) ? (
-    <>
+    <div className='column'>
       <div id="section-title">
         <h4>&#8250; {itemName}</h4>
       </div>
@@ -17,7 +17,7 @@ const ItemList = (props) => {
           ))}
         </ul>
       </div>
-    </>
+    </div>
   ): null);
 };
 export default ItemList;

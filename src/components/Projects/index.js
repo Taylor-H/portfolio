@@ -17,7 +17,8 @@ import './styles.css';
     </div>
   <div class="projects-container">
     <div className="projects-header">
-    <h4 className='section-title'><Link to="/projects">&lt; projects</Link></h4>
+    <h4 className='breadcrumb-link'><Link to="../../">&lt; Home</Link></h4>
+
     </div>
 
 

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ProjectsList from '../ProjectsList';
 import Hi from './Hi';
 import './styles.css';
@@ -9,9 +10,7 @@ const Home = (props) => {
   return (
     <div className="home-container">
       <div className="projects flex-item-left">
-        <div id="section-title">
-          <a href="/projects">&#8250; Projects</a>
-        </div>
+      <h4 className='breadcrumb-link'><Link to="projects" className="white">Projects &#8250;</Link></h4>
         <div className="post-wrapper">
           {categories.map((category) => {
             return (
@@ -25,7 +24,7 @@ const Home = (props) => {
         </div>
         <div id="links">
           <h5>
-            <a href="/projects">more &#8250;</a>
+            <Link to="projects" className="white">more &#8250;</Link>
           </h5>
         </div>
       </div>

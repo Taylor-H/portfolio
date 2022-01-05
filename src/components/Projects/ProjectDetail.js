@@ -21,12 +21,17 @@ const previewName = project? project.projectName: null;
       <ProjectsNav key={category.catId} category={category}projects={props.projects} />
     ))}
     </div>
+
+
+
     <div className="single-project">
-      <div className="x-back"><Link to="/projects" alt="Back to projects">X</Link></div>
-      <div className='section-title'>{project.title}</div>
+    <h4 className='breadcrumb-link'><Link to="/">&lt; Home</Link></h4>
+      <div className="x-back"><Link to="/projects" alt="Back">X</Link></div>
+      <div className="row">
+      <div className='prevImg'><img src={`./images/preview/${project.prevImg}`} alt={project.title}></img></div>
+      <div className='column'>
+      <div className='project-title'>{project.title}</div>
       <div className='project-description'>{project.description}</div>
-      <div className={previewName + ' prevImg'}></div>
-      {/* <ImageList projects={projects} /> */}
       <div className='project-links'>
         <h6>Open in a new tab.</h6>
         <ul>
@@ -34,9 +39,16 @@ const previewName = project? project.projectName: null;
           <li><a href={project.live} target="_blank" rel="noopener noreferrer">Live</a></li>
         </ul>
         </div>
+      </div>
+
+      </div>
+
+        <div className="row">
       <ItemList itemName={'Role'} itemList={project.role} />
       <ItemList itemName={'Tech Stack'} itemList={project.tech} />
+      </div>
     </div>
+
     </div>    ): (<FourOFour />)
     }
 

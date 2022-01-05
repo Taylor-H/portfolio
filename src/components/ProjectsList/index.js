@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import './styles.css';
+
 import Chevron from './Chevron'
 import React, { useState, useRef } from "react";
 
@@ -24,13 +24,13 @@ const ProjectsList = (props) => {
     <div className="accordion__section">
     <button className={`accordion ${setActive}`} onClick={toggleAccordion}>
       <p className="accordion__title">{category.displayName}</p>
-      <Chevron className={`${setRotate}`} width={8} fill={"#000"} />
+      <Chevron className={`${setRotate}`} width={8} fill={"#fff"} />
     </button>
       {projects.map((project) => (
         <div key={project.id}>
           {project.category === category.catName ? (
            <button ref={content}  style={{ maxHeight: `${setHeight}` }} className="accordion__content"><Link to={`/projects/${project.id}`}>
-             <div className="accordion__text">{project.title}</div>
+             <div className="accordion__text white">{project.title}</div>
             </Link></button>
           ) : null}
         </div>
