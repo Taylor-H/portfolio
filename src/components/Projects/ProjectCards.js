@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
-const ProjectCards = ({ projects }) => {
+import { getProjects } from '../../data/data';
+const ProjectCards = () => {
+  const projects = getProjects();
   return(
-<>
-  {projects.map((project) => (<div key={project.Id} class="post">
+<div className="project-cards">
+  {projects.map((project) => (
+  <div key={project.Id} class="card">
       <Link to={`/projects/${project.id}`} alt={project.projectName}>
         <div className="column">
           <img
@@ -18,7 +21,7 @@ const ProjectCards = ({ projects }) => {
       </Link>
     </div>
   ))}
-  </>
+  </div>
   )
 };
 

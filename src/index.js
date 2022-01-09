@@ -2,19 +2,29 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import Contact from './components/Contact';
+import About from './components/About';
+import Projects from './components/Projects';
+import ProjectCards from './components/Projects/ProjectCards';
+import ProjectDetail from './components/Projects/ProjectDetail';
 
-
-const Root = () => {
-  return (
-    <Router>
-      <App />
-    </Router>
-  );
-}
+const rootElement = document.getElementById("root");
 ReactDOM.render(
-  <React.StrictMode>
-    <Root />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="home" element={<Home />} />
+        <Route path="projects" element={<Projects />}>
+        <Route index element={<ProjectCards />} />
+        <Route path=":projectId" element={<ProjectDetail />} />
+      </Route>
+      </Route>
+    </Routes>
+  </BrowserRouter>,
+  rootElement
 );

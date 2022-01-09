@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hi = () => {
 return(
-<>
+<div className='hi'>
 <div className="circle-image">
 </div>
 <div>
@@ -14,7 +14,7 @@ return(
 <div id="links">
   <h5>more &#8250;</h5>
 </div>
-</>
+</div>
 )
 }
 export default Hi;
