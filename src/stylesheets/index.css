@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&display=swap');
 
 #app {
-  font-family: 'Space Mono', monospace;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,9 +22,8 @@ html {
   box-sizing: border-box;
 }
 body {
-  background-color: #ffffff;
-  max-width: 1599px;
   background-image: url('../images/light-purple-bg@3x.png');
+  font-family: 'Space Mono', monospace;
 }
 a {
   text-decoration: none;

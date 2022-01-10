@@ -247,7 +247,7 @@
   border-left: 2px solid black;
 }
 .em {
-  width: 80%;
+  width: 10rem;
   text-align: right;
   margin-top: 0rem;
   display: block;
@@ -278,7 +278,7 @@
   justify-content: flex-end;
 }
 .in {
-  width: 80%;
+  width: 10rem;
   text-align: right;
   margin-top: 0rem;
   display: block;

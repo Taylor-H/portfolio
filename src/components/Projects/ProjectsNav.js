@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import './styles.css';
+
 import React, { useState, useRef } from "react";
 import Chevron from './Chevron';
 

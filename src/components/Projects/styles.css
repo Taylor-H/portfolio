@@ -342,7 +342,12 @@
   outline: none;
   background-color: #e1d9e0;
 }
+FaFileCode {
+  font-size: .5rem;
+  margin-left: 5rem;
+}
 .project__text {
+  padding: 5px;
   color: #91b9c8;
   font-weight: 500;
   font-size: 0.8rem;

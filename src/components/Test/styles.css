@@ -1,9 +1,0 @@
-.test{
-  width: 100%;
-  height: 100vh;
-  background-color: transparent;
-  border: 2px solid black;
-  background-image: url('../../images/snekky.png');
-background-repeat: repeat;
-z-index: 1000;
-}

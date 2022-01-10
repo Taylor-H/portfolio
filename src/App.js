@@ -49,7 +49,6 @@ function App() {
         </div>
         <Footer />
       </div>
-      <div className="spacer"></div>
     </div>
   );
 }

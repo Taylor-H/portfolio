@@ -1,7 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import FourOFour from '../FourOFour';
 import ItemList from '../ItemList';
-import './styles.css';
 
 const SingleProject = (props) => {
 console.log(props)
