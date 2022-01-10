@@ -40,6 +40,8 @@ a {
   /* flex: 30%; */
   flex-direction: column;
   border-right: black solid 4px;
+  /* background-color: #f8fbdb; */
+  background-color: #fef7ee;
 }
 .flex-item-right {
   /* border-left: 2px solid black; */

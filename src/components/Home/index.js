@@ -9,9 +9,9 @@ const Home = () => {
 <div className="circle-image">
 </div>
 <div>
-  <h6>Hi, I'm Taylor.</h6>
+  <h6>Hi, my name is Taylor.</h6>
   <p>
-    A Full Stack Web Developer that designs and developes dynamic scalable web applications.
+    I'm a Full Stack Web Developer that creates dynamic scalable web applications.
   </p>
 </div>
 {/* <div id="links">

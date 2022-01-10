@@ -13,7 +13,7 @@ const ItemList = (props) => {
       <div className={itemName.concat( ' home-list')}>
         <ul>
           {itemList.map((item, key) => (
-            <li key={key}>{item}</li>
+            <li key={key}>{`${item}, `}</li>
           ))}
         </ul>
       </div>

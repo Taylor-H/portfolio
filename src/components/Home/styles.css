@@ -32,8 +32,6 @@
   width: 100%;
   padding-top: 30%;
   align-self: stretch;
-
-
 }
 
 .accordion__section {
@@ -46,7 +44,8 @@
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-  color: #91b9c8;
+  /* color: #b98d53; */
+  color: #00000079;
   cursor: pointer;
   padding: 10px 0px 0px 0px;
   font-weight: bold;
@@ -54,21 +53,24 @@
   align-items: center;
   border: none;
   outline: none;
-  border-bottom: #087299 solid 4px;
-  background-color: #f8fbdb;
+  border-bottom: #00000079 solid 4px;
+  background-color: #fef7ee;
   transition: color 0.6s ease;
 }
 .bg{
-background-color: #f8fbdb;
+/* background-color: #f8fbdb; */
+background-color: #fef7ee;
 }
 .accordion button div{
-  background-color: rgba(255, 255, 255, 0.88);
+  background-color: #fef7ee;
 }
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .accordion:hover,
 .activeAccordion {
-  color: #087299;
-  border-bottom: #087299 solid 4px;
+  /* color: #087299;
+  border-bottom: #087299 solid 4px; */
+  color: #000000;
+  border-bottom: #000000 solid 4px;
 }
 
 /* Style the accordion content title */
@@ -107,12 +109,13 @@ background-color: #f8fbdb;
 .accordion__text {
   font-weight: 400;
   font-size: 1.6rem;
-  color: #91b9c8;
+  color: #00000079;
+  /* color: #91b9c8; */
   /* margin-bottom: 1rem; */
   /* line-height: 1.2rem; */
 }
 .accordion__text:hover{
-  color: #087299;
+  color: #000000;
 }
 /* Hi component */
 .portrait {

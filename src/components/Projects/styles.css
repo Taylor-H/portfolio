@@ -25,7 +25,6 @@
   height: 30%;
   width: 100%;
   align-items: center;
-  border: 1px solid red;
 }
 .end{
   align-items: flex-end;
@@ -84,7 +83,8 @@
 }
 .project-description {
   width: 100%;
-  border: 1px solid rgba(0, 21, 255, 0.5);
+  font-size: 1rem;
+  font-family: 'Space Mono', monospace;
 }
 
 .detail {
@@ -97,11 +97,11 @@
 }
 
 .color1 {
-  background-color: #e5edf1;
+  background-color: #f8fbdb;
 }
 
 .color2 {
-  background-color: #e5edf1;
+  background-color: #fcf2e3;
 }
 .projects-title {
   font-family: 'Space Mono', monospace;
@@ -197,6 +197,7 @@
   align-items: stretch;
   justify-content: space-around;
   width: 80%;
+  max-width: 900px;
   height: 100%;
 }
 .card {
@@ -232,7 +233,6 @@
   padding: 0;
   margin: 0;
   width: 100%;
-  height: fit-content;
   list-style: none;
   display: flex;
   /* justify-content: space-around; */
