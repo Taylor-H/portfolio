@@ -5,6 +5,7 @@
 html {
   scroll-behavior: smooth;
   padding: 0;
+
 }
 * {
   margin: 0;
@@ -12,22 +13,29 @@ html {
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
-};
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background-image: url('./images/snekky.png');
+  border: 4px solid black;
+}
 body {
   font-family: 'Space Mono', monospace;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: stretch;
-  background-color: slateblue;
-}
+  background: radial-gradient(rgba(255, 247, 0, 0), rgba(255, 255, 0, 0.188),rgba(0, 251, 255, 0.243), rgba(0, 0, 255, 0.1) 85%);
+  }
 a {
   text-decoration: none;
   color: #000000;
 }
 
-.page-wrapper{
-  /* background-color: #e1d9e0; */
+.page-wrapper {
   width: 100%;
   height: 100%;
   display: flex;
@@ -36,19 +44,20 @@ a {
   align-items: center;
 }
 .flex-item-left {
-  /* flex: 30%; */
+  flex: 30%;
+  min-width: 25rem;
   flex-direction: column;
   border-right: black solid 4px;
   /* background-color: #f8fbdb; */
-  /* background-color: #fef7ee; */
+  background-color: #fef7ee;
 }
 .flex-item-right {
   /* border-left: 2px solid black; */
   flex: 70%;
   background-color: rgb(245, 245, 255);
 }
-.spacer{
-  width:10rem;
+.spacer {
+  width: 10rem;
   height: 10rem;
 }
 #links {
@@ -177,28 +186,26 @@ a {
   /* border-right: rgb(0, 0, 0) solid 2px; */
   border-bottom: rgb(0, 0, 0) solid 4px;
 }
-.white{
+.white {
   color: white;
 }
 
 /* media queries */
 @media (max-width: 800px) {
   .flex-item-left {
-    display:none;
-
+    display: none;
   }
-.flex-item-right{
-  flex: 100%;
-
-}
+  .flex-item-right {
+    flex: 100%;
+  }
 }
 /* ---------------------------- Footer----------------------------- */
 /* footer */
 .footer {
-  height: 6vh;
+  height: 4vh;
   display: flex;
   justify-content: space-between;
-  border-top: 4px solid #000;
+  border: 4px solid #000;
   align-items: center;
   background-color: white;
   position: fixed;
@@ -212,7 +219,7 @@ a {
   display: block;
   width: 100%;
   box-sizing: border-box;
-/* background-color: white; */
+  /* background-color: white; */
   font-family: 'Libre Franklin', sans-serif;
   font-size: 1.4rem;
   text-align: center;
@@ -249,11 +256,10 @@ header {
   justify-content: space-between;
   height: 100%;
   width: 100%;
-  border-top: 4px solid #000000;
+  /* border-top: 4px solid #000000;
   border-right: 4px solid #000000;
-  border-left: 4px solid #000000;
+  border-left: 4px solid #000000; */
   border-bottom: 4px solid #000000;
-
 }
 
 .header ul {
@@ -297,7 +303,6 @@ header {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-
 }
 
 .name-container {
@@ -444,12 +449,10 @@ header {
 }
 
 @media (max-width: 800px) {
-
-
   .header .logo a {
     line-height: 2.8rem;
-    padding-right: .5rem;
-    padding-left: .5rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
     font-size: 1rem;
   }
 
@@ -457,7 +460,6 @@ header {
     height: 100%;
     width: 35%;
     padding-top: 15px;
-
   }
 
   .header .menu-btn:checked ~ .menu {
@@ -487,17 +489,15 @@ header {
   }
   .header .logo a {
     line-height: 1rem;
-    padding-right: .4rem;
-    padding-left: .4rem;
+    padding-right: 0.4rem;
+    padding-left: 0.4rem;
     font-size: 1rem;
   }
   .name-container {
     height: 100%;
     width: 40%;
-
   }
   .header .menu-icon {
-
     padding-top: 0.8rem;
     padding-right: 0.7rem;
   }
@@ -506,117 +506,112 @@ header {
   }
 }
 @media (max-width: 390px) {
-
   .header .logo a {
-    padding-right: .4rem;
-    padding-left: .4rem;
-    font-size: .7rem;
+    padding-right: 0.4rem;
+    padding-left: 0.4rem;
+    font-size: 0.7rem;
   }
 }
 
 /* --------------------------------- About Me -------------------------- */
 
-.flex-item{
+.flex-item {
   width: 50%;
   display: flex;
   justify-content: center;
   min-width: 425px;
-  max-width:800px;
+  max-width: 800px;
   background-color: #fff;
   min-height: 300px;
   max-height: 600px;
   /* border: 1px dotted purple; */
 }
-#para{
-width: 80%;
-/* height:400px; */
-background-color: #fff;
-/* border: 1px dotted blue; */
-align-self: center;
-text-align: left;
-margin-top: 3rem;
-margin-bottom: 3rem;
-
+#para {
+  width: 80%;
+  /* height:400px; */
+  background-color: #fff;
+  /* border: 1px dotted blue; */
+  align-self: center;
+  text-align: left;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
-.creative #para{
+.creative #para {
   /* margin-top:0rem; */
   align-self: flex-start;
   margin-top: 2rem;
 }
-.flex-item .creative{
+.flex-item .creative {
   min-height: 200px;
   max-height: 600px;
   /* border: 1px dotted red; */
-
 }
-#photo1{
+#photo1 {
   /* background-image: url("./images/port1.jpg"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 400px;
-  width:100%;
+  width: 100%;
   /* height: 100%; */
-  background-color: #D8E3E8;
+  background-color: #d8e3e8;
 }
 /* --------------------------------professional------------------- */
-.prof{
+.prof {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
- align-items: stretch;
- max-width: 1600px;
+  align-items: stretch;
+  max-width: 1600px;
 }
-.prof #detail-header{
-margin-top:2vh;
-font-size: 1.5rem;
-background-color: transparent;
+.prof #detail-header {
+  margin-top: 2vh;
+  font-size: 1.5rem;
+  background-color: transparent;
 }
 
-.head-shot{
+.head-shot {
   /* box-sizing: border-box; */
-max-height: 80%;
+  max-height: 80%;
   min-width: 100%;
   /* min-width: 280px; */
   /* max-width: 400px; */
   /* min-height: 200px;
   max-height:500px; */
 }
-#graph1{
+#graph1 {
   display: flex;
-justify-content: center;
-align-items: center;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   width: 100%;
-  background-color: #D8E3E8;
+  background-color: #d8e3e8;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.graphs{
-width: 90%;
-max-width: 505px;
-display: block;
-
+.graphs {
+  width: 90%;
+  max-width: 505px;
+  display: block;
 }
-#photo1-plum{
+#photo1-plum {
   display: flex;
   justify-content: center;
-  width:100%;
+  width: 100%;
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  background-color: #D8E3E8;
+  background-color: #d8e3e8;
 }
-.personal{
+.personal {
   width: 80%;
   max-width: 397px;
 }
-.contact{
+.contact {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
 }
-
 
 /* ---------------------------- Contact Me ---------------------- */
 
@@ -655,7 +650,7 @@ display: block;
   outline: none;
   line-height: 1.5rem;
 }
-.connect-form{
+.connect-form {
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -869,7 +864,6 @@ display: block;
   border-left: 2px solid black;
 }
 .em {
-  width: 10rem;
   text-align: right;
   margin-top: 0rem;
   display: block;
@@ -900,11 +894,11 @@ display: block;
   justify-content: flex-end;
 }
 .in {
-  width: 10rem;
+  width: 41.38px;
+  height: 27.71px;
   text-align: right;
   margin-top: 0rem;
   display: block;
-  height: 36px;
 }
 
 #linkedin-link {
@@ -987,7 +981,7 @@ display: block;
   display: block;
   width: 100%;
   box-sizing: border-box;
-/* background-color: white; */
+  /* background-color: white; */
   font-family: 'Libre Franklin', sans-serif;
   font-size: 1.4rem;
   text-align: center;
@@ -1009,9 +1003,7 @@ display: block;
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
-  border-right: 4px solid black;
   border-bottom: 4px solid black;
-  border-left: 4px solid black;
   /* background-image: url('./images/snekky.png'); */
 }
 .projects {
@@ -1043,7 +1035,6 @@ display: block;
   font-weight: 600;
   display: flex;
   flex-direction: column;
-
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
@@ -1061,11 +1052,11 @@ display: block;
   background-color: #fef7ee;
   transition: color 0.6s ease;
 }
-.bg{
-/* background-color: #f8fbdb; */
-background-color: #fef7ee;
+.bg {
+  /* background-color: #f8fbdb; */
+  background-color: #fef7ee;
 }
-.accordion button div{
+.accordion button div {
   background-color: #fef7ee;
 }
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -1092,7 +1083,7 @@ background-color: #fef7ee;
 /* Style the accordion chevron icon */
 .accordion__icon {
   margin-right: 1rem;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   transition: transform 0.6s ease;
 }
 
@@ -1112,14 +1103,41 @@ background-color: #fef7ee;
 
 /* Style the accordion content text */
 .accordion__text {
+  display: flex;
+  max-width: 90%;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #00000079;
+  word-wrap: normal;
+  /* color: #91b9c8; */
+  /* margin-bottom: 1rem; */
+  line-height: 2rem;
+}
+.accordion__text:hover {
+  color: #000000;
+}
+
+.file-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  white-space: nowrap;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   font-weight: 600;
   font-size: 1rem;
   color: #00000079;
-  /* color: #91b9c8; */
-  /* margin-bottom: 1rem; */
-  line-height: 1.2rem;
+
 }
-.accordion__text:hover{
+.file-icon {
+  width: 20px;
+  color: #00000079;
+    margin-left: 20px;
+    margin-right: 5px;
+}
+.file-icon:hover {
   color: #000000;
 }
 /* Hi component */
@@ -1216,9 +1234,8 @@ background-color: #fef7ee;
   width: 100%;
   align-items: center;
 }
-.end{
+.end {
   align-items: flex-end;
-
 }
 .column {
   display: flex;
@@ -1227,15 +1244,12 @@ background-color: #fef7ee;
   min-width: 50%;
 }
 .prevImg {
-  /* border: 1px solid red; */
-  background-position: contain;
-  background-repeat: no-repeat;
   align-self: center;
-  /* max-height: 100%; */
+  max-width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border: 1px solid red; */
+  margin-bottom: .5rem;;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -1380,7 +1394,7 @@ background-color: #fef7ee;
   border-left: 2px solid black; */
   /* border-bottom: 2px solid black; */
 }
-.project-card{
+.project-card {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1533,7 +1547,7 @@ background-color: #fef7ee;
   background-color: #e1d9e0;
 }
 FaFileCode {
-  font-size: .5rem;
+  font-size: 0.5rem;
   margin-left: 5rem;
 }
 .project__text {
@@ -1548,5 +1562,3 @@ FaFileCode {
 .activeProject {
   color: #91b9c8;
 }
-
-

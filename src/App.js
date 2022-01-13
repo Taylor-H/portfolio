@@ -2,12 +2,8 @@ import React from 'react';
 import { getProjects, getCategories } from './data/data.js';
 import Footer from './components/Navigation/Footer';
 import Navigation from './components/Navigation';
-// import ProjectsNav from './components/Projects/ProjectsNav';
-// import Projects from './components/Projects';
-// import ProjectDetail from './components/Projects/ProjectDetail';
 import ProjectsList from './components/ProjectsList';
-import FourOFour from './components/FourOFour';
-import { Route, Routes, Link, Outlet } from 'react-router-dom';
+import {  Link, Outlet } from 'react-router-dom';
 import './index.css';
 
 function App() {
@@ -34,14 +30,8 @@ function App() {
           </div>
             <div className="post-wrapper">
               {categories.map((category) => (
-                <ProjectsList
-                  key={category.catId}
-                  projects={projects}
-                  category={category}
-                />
-                // <h1 >{category.shortDisplay}</h1>
+                <ProjectsList key={category.catId} projects={projects} category={category} />
               ))}
-
           </div>
         </div>
         <div className="flex-item-right">
