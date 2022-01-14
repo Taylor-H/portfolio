@@ -189,4 +189,12 @@ export const getProjects = () => {
 export const getCategories = () => {
   return data.categories
 }
+export function getCategoriesFromProjects(projects) {
+  return projects
+  .reduce((acc, project) => {
+      console.log(acc, project.category)
+      return [...new Set([...acc, ...([project.category] || [])])];
+    }, [])
+    .sort();
+}
 export default data;
