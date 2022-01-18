@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Contact from './components/Contact';
@@ -18,7 +19,6 @@ ReactDOM.render(
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="home" element={<Home />} />
         <Route path="projects" element={<Projects />}>
         <Route index element={<ProjectCards />} />
         <Route path=":projectId" element={<ProjectDetail />} />

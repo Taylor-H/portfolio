@@ -1,8 +1,10 @@
 import React from 'react';
+import {  Container } from 'react-bootstrap';
 import { getProjects, getCategories } from './data/data.js';
 import Footer from './components/Navigation/Footer';
 import Navigation from './components/Navigation';
-import ProjectsList from './components/ProjectsList';
+// import ProjectsList from './components/ProjectsList';
+import ProjectNav from './components/ProjectNav';
 import {  Link, Outlet } from 'react-router-dom';
 import './index.css';
 
@@ -28,11 +30,13 @@ function App() {
         <div className="flex-item-left">
           <div className="projects">
           </div>
-            <div className="post-wrapper">
-              {categories.map((category) => (
+            {/* <div className="post-wrapper"> */}
+              {/* {categories.map((category) => (
                 <ProjectsList key={category.catId} projects={projects} category={category} />
-              ))}
-          </div>
+              ))} */}
+          {/* </div> */}
+            <ProjectNav projects={projects} categories={categories} />
+
         </div>
         <div className="flex-item-right">
           <Outlet />

@@ -5,7 +5,6 @@
 html {
   scroll-behavior: smooth;
   padding: 0;
-
 }
 * {
   margin: 0;
@@ -20,7 +19,12 @@ html {
   align-items: center;
   justify-content: flex-start;
   min-height: 100vh;
-  background-image: url('./images/snekky.png');
+  background: rgba(95, 137, 190, 0.188);
+  background: linear-gradient(
+    125deg,
+    rgba(116, 146, 186, 0.126) 0%,
+    rgba(255, 255, 255, 0.421) 120%
+  );
   border: 4px solid black;
 }
 body {
@@ -28,11 +32,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: radial-gradient(rgba(255, 247, 0, 0), rgba(255, 255, 0, 0.188),rgba(0, 251, 255, 0.243), rgba(0, 0, 255, 0.1) 85%);
-  }
+}
 a {
   text-decoration: none;
-  color: #000000;
+  color: #000000 !important;
 }
 
 .page-wrapper {
@@ -53,8 +56,12 @@ a {
 }
 .flex-item-right {
   /* border-left: 2px solid black; */
-  flex: 70%;
-  background-color: rgb(245, 245, 255);
+  width: 70%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: rgba(245, 245, 255, 0.205); */
+  background-image: url('./images/snekky.png');
 }
 .spacer {
   width: 10rem;
@@ -1026,8 +1033,7 @@ header {
 }
 .post-wrapper {
   width: 100%;
-  padding-top: 30%;
-  align-self: stretch;
+  display: flex;
 }
 
 .accordion__section {
@@ -1036,22 +1042,49 @@ header {
   display: flex;
   flex-direction: column;
 }
-
+.card-header {
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 600;
+  background-color: none;
+  width: 100%;
+  line-height: 2.5rem;
+  padding: 0 !important;
+}
+.card {
+  display: flex;
+  background-color: none;
+  min-width: 100% !important;
+  max-width: 400px;
+  padding: 0;
+  border: 0;
+}
+.card-body {
+  min-width: 100%;
+  padding: 0 !important;
+}
+.card-body a:hover {
+  color: black;
+}
+.collapse {
+  padding: 0;
+}
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-  /* color: #b98d53; */
+  min-width: 100%;
   color: #00000079;
   cursor: pointer;
-  padding: 10px 0px 0px 0px;
   font-weight: bold;
   display: flex;
-  align-items: center;
-  border: none;
+  flex-direction: column;
+  align-items: flex-start;
   outline: none;
-  border-bottom: #00000079 solid 4px;
+  padding: 0;
+}
+.accordion button {
   background-color: #fef7ee;
   transition: color 0.6s ease;
 }
+
 .bg {
   /* background-color: #f8fbdb; */
   background-color: #fef7ee;
@@ -1065,19 +1098,17 @@ header {
   /* color: #087299;
   border-bottom: #087299 solid 4px; */
   color: #000000;
-  border-bottom: #000000 solid 4px;
+  /* border-bottom: #000000 solid 4px; */
 }
 
 /* Style the accordion content title */
 .accordion__title {
-  white-space: nowrap;
   display: flex;
-  /* overflow: visible; */
-  /* color: #91b9c8; */
+  border: none;
   font-weight: 600;
   font-family: 'Libre Franklin', sans-serif;
   font-size: 1.6rem;
-  line-height: 1rem;
+  line-height: 2rem;
 }
 
 /* Style the accordion chevron icon */
@@ -1103,43 +1134,50 @@ header {
 
 /* Style the accordion content text */
 .accordion__text {
-  display: flex;
-  max-width: 90%;
+  max-width: 100%;
   font-weight: 400;
   font-size: 1rem;
-  color: #00000079;
-  word-wrap: normal;
-  /* color: #91b9c8; */
-  /* margin-bottom: 1rem; */
-  line-height: 2rem;
+  /* color: #00000079; */
+  line-height: 1rem;
+  margin-left: 0.5rem;
 }
 .accordion__text:hover {
   color: #000000;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
 .file-div {
   display: flex;
+  color: #00000079;
   flex-direction: row;
+  align-items: baseline;
   flex-wrap: nowrap;
-  justify-content: space-between;
-  white-space: nowrap;
-  align-items: center;
-  width: 100%;
+  min-width: 100%;
   height: 100%;
   font-weight: 600;
   font-size: 1rem;
-  color: #00000079;
-
+  /* line-height: 1rem; */
+  /* margin-top: .2rem; */
+}
+.file-div:hover {
+  color: #000000;
 }
 .file-icon {
   width: 20px;
-  color: #00000079;
-    margin-left: 20px;
-    margin-right: 5px;
+  margin-left: 0.2rem;
+  margin-top: 0.1rem;
 }
-.file-icon:hover {
+.proj-link {
+  color: #00000079;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.proj-link:hover {
   color: #000000;
 }
+
 /* Hi component */
 .portrait {
   background-color: none;
@@ -1163,40 +1201,53 @@ header {
 .circle-image {
   background-image: url('./images/port2.jpg');
   border-radius: 50%;
-  height: 10rem;
-  width: 10rem;
-  margin-top: 2rem;
+  min-height: 300px;
+  min-width: 300px;
+  margin-top: 3rem;
   margin-bottom: 0.5rem;
-  background-size: 120% auto;
+  background-size: 100% auto;
   background-color: #4d4c4c00;
   background-position: center 10%;
   background-repeat: no-repeat;
   box-sizing: border-box;
-}
-.hi {
   background-repeat: no-repeat;
   background-size: cover;
+
+  max-width: 900px;
+}
+.hi {
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
-  height: 100%;
-  width: 100%;
-  font-family: 'Libre Franklin', sans-serif;
-  flex-direction: column;
   justify-content: center;
+  background-color: rgb(255, 255, 255);
+  font-family: 'Libre Franklin', sans-serif;
+  padding: 5rem;
+  /* border: 2px solid rgba(15, 183, 244, 0.137); */
   margin: 0 auto;
-  text-align: center;
-  /* border: 2px solid black; */
-  box-sizing: border-box;
-  /* box-shadow: inset 0 0 10px #cccccc; */
 }
 
 .hi h6 {
-  font-size: 1.4rem;
-  margin-bottom: 1.2rem;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-top: 2rem;
+  text-align: center;
 }
-
+.h1 p {
+  font-size: 2rem;
+  line-height: 1.5rem;
+  margin: 0;
+}
+#projects-link {
+  text-decoration: underline;
+}
+.more-link {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: left;
+}
 .hi p {
   padding-left: 0.8rem;
   padding-right: 0.8rem;
@@ -1227,7 +1278,7 @@ header {
 .popArt {
   background-image: url(./images/preview/pop-big.png);
 }
-.row {
+.single-proj-row {
   display: flex;
   flex-direction: row;
   height: 30%;
@@ -1237,7 +1288,7 @@ header {
 .end {
   align-items: flex-end;
 }
-.column {
+.single-proj-column {
   display: flex;
   flex-direction: column;
   height: auto;
@@ -1249,7 +1300,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: .5rem;;
+  margin-bottom: 0.5rem;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -1382,18 +1433,7 @@ header {
   background-repeat: repeat;
   z-index: 3;
 }
-.project-cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: space-around;
-  width: 80%;
-  height: 100%;
-  /* border-right: 2px solid black;
-  border-left: 2px solid black; */
-  /* border-bottom: 2px solid black; */
-}
+
 .project-card {
   display: flex;
   flex-direction: row;
@@ -1404,7 +1444,8 @@ header {
   max-width: 900px;
   height: 100%;
 }
-.card {
+
+.proj-card {
   display: flex;
   align-items: center;
   width: 30%;
@@ -1419,8 +1460,28 @@ header {
   padding: 5px;
   box-shadow: -4px 4px 0px 0px rgba(51, 51, 51, 0.4);
 }
-.card:hover {
+.proj-card:hover {
   box-shadow: -4px 4px 0px 0px rgb(51, 51, 51);
+}
+
+.project-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-around;
+  width: 80%;
+  height: 100%;
+  /* border-right: 2px solid black;
+  border-left: 2px solid black; */
+  /* border-bottom: 2px solid black; */
+}
+
+.proj-column {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-width: 50%;
 }
 .x-back {
   width: 100%;
@@ -1439,11 +1500,7 @@ header {
   width: 100%;
   list-style: none;
   display: flex;
-  /* justify-content: space-around; */
-  /* border-right: 2px solid black; */
-  /* border: 2px solid black; */
   flex-direction: row;
-  /* align-content: flex-start; */
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
@@ -1474,6 +1531,25 @@ header {
   max-height: 170px;
   display: block;
 }
+.slide {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  min-width: 350px;
+  max-width: 400px;
+  /* height: 300px; */
+  text-align: center;
+  background-color: #fff;
+  /*border: 1px solid rgb(0, 0, 0); #565656; */
+  outline: none;
+  margin: 15px 15px;
+  padding: 5px;
+  box-shadow: -4px 4px 0px 0px rgba(51, 51, 51, 0.4);
+}
+.card:hover {
+  box-shadow: -4px 4px 0px 0px rgb(51, 51, 51);
+}
+
 .slide-info {
   text-align: left;
   /* background-color: #e1d9e0; */
@@ -1506,9 +1582,12 @@ header {
 .port-header {
   font-family: 'Libre Franklin', sans-serif;
   font-weight: 600;
-  font-size: 0.8rem;
+  display: inline;
+  font-size: 1rem;
   align-self: flex-start;
   margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  margin-bottom: 0;
 }
 /* Style the accordion chevron icon */
 .project-accordion__icon {
@@ -1546,17 +1625,19 @@ header {
   outline: none;
   background-color: #e1d9e0;
 }
-FaFileCode {
-  font-size: 0.5rem;
-  margin-left: 5rem;
+
+.category-button {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  height: 4rem;
+  text-align: left;
 }
 .project__text {
-  padding: 5px;
-  color: #91b9c8;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 0.8rem;
-  margin-left: 1rem;
-  line-height: 1.8rem;
+  line-height: 1rem;
 }
 .project__accordion:hover,
 .activeProject {

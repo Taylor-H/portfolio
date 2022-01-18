@@ -1,3 +1,18 @@
+# Portfolio
+- [ ] More copy on Home
+- [ ] Fix the links in footer
+- [ ] Add more to footer like GitHub, link to contact
+
+Projects with githubs
+CSS templates
+
+Portfolio
+Robot Tasks
+Chat/White Board:	/Users/taylorpell/FA/Labs/2109-GHP-NY-WEB-FT/01-junior-phase/20-sockets
+					collaboration App with User accounts and one time session login sessions sockets
+
+
+
 
 # Create React App Template
 

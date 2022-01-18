@@ -3,11 +3,11 @@ import { getProjects } from '../../data/data';
 const ProjectCards = () => {
   const projects = getProjects();
   return(
-<div className="project-cards">
+<div className="project-card">
   {projects.map((project) => (
-  <div key={project.Id} class="card">
+  <div key={project.Id} class="proj-card">
     <Link to={`/projects/${project.id}`} alt={project.projectName}>
-    <div className="column">
+    <div className="proj-column">
       <img src={`/images/preview/${project.prevImg}`} class="project-image" alt={project.projectName} />
     </div>
     <div class="slide-info">
