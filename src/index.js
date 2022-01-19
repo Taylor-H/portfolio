@@ -1,48 +1,30 @@
-<<<<<<< HEAD
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { BrowserRouter as Router } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import Contact from './components/Contact';
+import About from './components/About';
+import Projects from './components/Projects';
+import ProjectCards from './components/Projects/ProjectCards';
+import ProjectDetail from './components/Projects/ProjectDetail';
 
-
-const Root = () => {
-  return (
-    <Router>
-      <App />
-    </Router>
-  );
-}
+const rootElement = document.getElementById("root");
 ReactDOM.render(
-  <React.StrictMode>
-    <Root />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="projects" element={<Projects />}>
+        <Route index element={<ProjectCards />} />
+        <Route path=":projectId" element={<ProjectDetail />} />
+      </Route>
+      </Route>
+    </Routes>
+  </BrowserRouter>,
+  rootElement
 );
-=======
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
-
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Root from './components/Root';
-import { BrowserRouter } from "react-router-dom";
-
-
-ReactDOM.render(
-<BrowserRouter>
-<Root />
-</BrowserRouter>, document.getElementById('app'));
-
-
-
-
-// const App = () => {
-//   return <Root />
-// };
-
-// ReactDOM.render(
-// <BrowserRouter>
-//   <App />
-// </BrowserRouter>, document.getElementById('app'));
->>>>>>> 2417fae9fe2671122163a051e3bae8b8b24cc67f

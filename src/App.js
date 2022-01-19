@@ -1,18 +1,20 @@
 import React from 'react';
-import taylorsProjects from './data/taylorsProjects';
+import {  Container } from 'react-bootstrap';
+import { getProjects, getCategories } from './data/data.js';
+import Footer from './components/Navigation/Footer';
 import Navigation from './components/Navigation';
-import ProjectHome from './components/ProjectHome';
-import Home from './components/Home';
-import Contact from './components/Contact';
-import About from './components/About';
-import { Route, Routes, Link } from 'react-router-dom';
-
+// import ProjectsList from './components/ProjectsList';
+import ProjectNav from './components/ProjectNav';
+import {  Link, Outlet } from 'react-router-dom';
+import './index.css';
 
 function App() {
-  const projects = taylorsProjects.projects;
-  const categories = taylorsProjects.categories;
+  const featured = getProjects().filter((project) => project.featured);
+  let projects = getProjects();
+  let categories = getCategories();
+  console.log(' from App', projects, categories);
   return (
-    <div className="App">
+    <div className="page-wrapper">
       <header>
         <div className="header">
           <div className="name-container logo">
@@ -25,14 +27,17 @@ function App() {
           <Navigation />
         </div>
       </header>
-      <div className="page-wrapper">
-    <Routes>
-      <Route exact path="/" element={<Home projects={projects} categories={categories} />} />
-      <Route path="/projects" element={<ProjectHome projects={projects} />} />
-      <Route exact path="/about" element={<About />} />
-      <Route exact path="/contact" element={<Contact />} />
+      <div className="home-container">
+        <div className="flex-item-left">
+          <div className="spacer">
+          </div>
+            <ProjectNav projects={projects} categories={categories} />
 
-    </Routes>
+        </div>
+        <div className="flex-item-right">
+          <Outlet />
+        </div>
+        <Footer />
       </div>
     </div>
   );
