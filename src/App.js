@@ -9,6 +9,7 @@ import {  Link, Outlet } from 'react-router-dom';
 import './index.css';
 
 function App() {
+  const featured = getProjects().filter((project) => project.featured);
   let projects = getProjects();
   let categories = getCategories();
   console.log(' from App', projects, categories);
@@ -28,13 +29,8 @@ function App() {
       </header>
       <div className="home-container">
         <div className="flex-item-left">
-          <div className="projects">
+          <div className="spacer">
           </div>
-            {/* <div className="post-wrapper"> */}
-              {/* {categories.map((category) => (
-                <ProjectsList key={category.catId} projects={projects} category={category} />
-              ))} */}
-          {/* </div> */}
             <ProjectNav projects={projects} categories={categories} />
 
         </div>

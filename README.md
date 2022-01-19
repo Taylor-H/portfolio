@@ -1,18 +1,36 @@
 # Portfolio
-- [ ] More copy on Home
-- [ ] Fix the links in footer
-- [ ] Add more to footer like GitHub, link to contact
-
-Projects with githubs
-CSS templates
-
-Portfolio
-Robot Tasks
-Chat/White Board:	/Users/taylorpell/FA/Labs/2109-GHP-NY-WEB-FT/01-junior-phase/20-sockets
-					collaboration App with User accounts and one time session login sessions sockets
+- More content on Home
+- Display a small slider on home
+- Fix the links in footer
+- Add more to footer like GitHub, link to contact
 
 
 
+
+## Apps - Dynamic data driven apps that demonstrate my backend development skills.
+- Portfolio - Single page app that uses React Router for navigating UI end-points. Responsive.
+- Medflow Clinic - Group project that behaves similar to Stack Overflow. It has multiple User Stories, Authentication, ability to +/- vote. Uses Express and Sequelize for backend.
+- Robot Tasks
+Chat/White Board: collaboration App with User accounts and one time session login sessions sockets.
+[local directory](http:///Users/taylorpell/FA/Labs/2109-GHP-NY-WEB-FT/01-junior-phase/20-sockets)
+- todo list: todo list app that uses a sequel database and Express server.[local directory](/Users/taylorpell/FA/Labs/2109-GHP-NY-WEB-FT/01-junior-phase/19-forms/PairExercise.TodoList.V2.Solution)
+- Media Browser: Membership based media delivery system  social/community component
+- RioPort: Precursor to iTunes.
+- HomePages:
+
+## Games - Using Forms and user interaction to manipulate the Dom for fun and profit.
+- Form Masterpiece: Make a unique art piece using forms. Graphic representation of data.
+- Tic Tac Toe
+- Rock Paper Scissors
+- Memory Game
+- Hangman
+- Minesweeper
+- Coffee Baron
+- Pixelate
+
+## Creative - UI/UX and Graphic Design examples.
+Projects that I designed the UI/UX, page layout or graphic elements.
+CSS Project
 
 # Create React App Template
 
@@ -20,7 +38,7 @@ A no-frills template from which to create React applications with
 [Create React App](https://github.com/facebook/create-react-app).
 
 ```sh
-npx create-react-app my-app --template @appacademy/simple --use-npm
+npx create-react-app my-app
 ```
 
 ## Available Scripts

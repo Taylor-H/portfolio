@@ -53,6 +53,7 @@ const data = {
         shortDisplay: 'Apps',
         displayName: 'Full Stack Applications',
       },
+      featured: true,
     },
     {
       id: 6,
@@ -69,7 +70,7 @@ const data = {
         'Git',
         'Heroku',
       ],
-      role: ['Front End Developer', 'UI/UX Design', 'Graphic Design'],
+      role: ['Full Stack Developer', 'UI/UX Design', 'Creative Design'],
       description:
         'This app displays a collection of projects. It is a single page application that allows you to view projects by category, skill, or individually. It uses Express Server for back end routing and Rest operations. It is built using React, and uses the react-router library to navigate between pages.',
       gitHub: 'https://github.com/Taylor-H/portfolio',
@@ -81,6 +82,7 @@ const data = {
         shortDisplay: 'Apps',
         displayName: 'Full Stack Applications',
       },
+      featured: true,
     },
     {
       id: 7,
@@ -99,7 +101,7 @@ const data = {
       ],
       role: ['Game Developer', 'UI/UX Design', 'Graphic Design'],
       description:
-        'This app displays a collection of projects. It is a single page application that allows you to view projects by category, skill, or individually. It uses Express Server for back end routing and Rest operations. It is built using React, and uses the react-router library to navigate between pages.',
+        'A javascript game for ',
       gitHub: 'https://github.com/Taylor-H/portfolio',
       live: 'https://www.htmlartist.net/',
       prevImg: 'js-big.png',
@@ -108,7 +110,8 @@ const data = {
       catName: 'game',
       shortDisplay: 'Games/UI',
       displayName: 'Games',
-    },
+      },
+      featured: true,
     },
     {
       id: 8,
