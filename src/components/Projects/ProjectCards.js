@@ -5,7 +5,7 @@ const ProjectCards = () => {
   return(
 <div className="project-card">
   {projects.map((project) => (
-  <div key={project.Id} class="proj-card">
+  <div key={project.id.toString()} class="proj-card">
     <Link to={`/projects/${project.id}`} alt={project.projectName}>
     <div className="proj-column">
       <img src={`/images/preview/${project.prevImg}`} class="project-image" alt={project.projectName} />

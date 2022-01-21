@@ -47,7 +47,7 @@ const data = {
       gitHub: 'https://github.com/Taylor-H/portfolio',
       live: 'https://www.htmlartist.net/',
       prevImg: 'portfolio-big.png',
-      category: ['app'],
+      categories: ['app'],
       featured: true,
     },
     {
@@ -71,7 +71,7 @@ const data = {
       gitHub: 'https://github.com/Taylor-H/robot-boss',
       live: 'https://www.htmlartist.net/',
       prevImg: 'js-big.png',
-      category: ['app'],
+      categories: ['app'],
       featured: true,
     },
     {
@@ -94,7 +94,7 @@ const data = {
       gitHub: 'https://github.com/Taylor-H/portfolio',
       live: 'https://www.htmlartist.net/',
       prevImg: 'js-big.png',
-      category: ['game'],
+      categories: ['game'],
       featured: true,
     },
     {
@@ -118,7 +118,7 @@ const data = {
       gitHub: 'https://github.com/Taylor-H/art-gallery',
       live: 'https://www.htmlartist.net/',
       prevImg: 'js-big.png',
-      category: ['app','creative'],
+      categories: ['app', 'creative'],
     },
     {
       id: 9,
@@ -141,7 +141,7 @@ const data = {
       gitHub: 'https://github.com/Taylor-H/pixelate',
       live: 'https://www.htmlartist.net/pixelate',
       prevImg: 'pixel-big.png',
-      category: ['game', 'code'],
+      categories: ['game', 'code'],
     },
     {
       id: 10,
@@ -150,8 +150,7 @@ const data = {
       tagLine: 'CSS and HTML for a blog.',
       tech: ['HTML5', 'CSS'],
       role: ['Front End Developer'],
-      description:
-        'This is an example of old school CSS',
+      description: 'This is an example of old school CSS',
       gitHub: 'https://github.com/Taylor-H/relaxr',
       live: 'https://www.htmlartist.net/relaxr',
       prevImg: 'relaxr-big.png',
@@ -161,7 +160,7 @@ const data = {
         { file: 'relaxr_desktop.jpg}' },
         { file: 'relaxr_desktop_2.jpg' },
       ],
-      category: ['creative'],
+      categories: ['creative'],
     },
     {
       id: 11,
@@ -186,7 +185,7 @@ const data = {
       gitHub: 'https://github.com/southwestmogrown/MedFlowClinic',
       live: 'https://www.htmlartist.net/',
       prevImg: 'medFlowClinic.png',
-      category: ['app'],
+      categories: ['app'],
     },
     {
       id: 12,
@@ -207,7 +206,7 @@ const data = {
       gitHub: 'https://github.com/Taylor-H/pop',
       live: 'https://www.htmlartist.net/',
       prevImg: 'pop-big.png',
-      category: ['creative'],
+      categories: ['creative'],
     },
     {
       id: 13,
@@ -228,7 +227,7 @@ const data = {
       gitHub: 'https://github.com/Taylor-H/candy-tracker',
       live: 'https://www.htmlartist.net/candy-tracker',
       prevImg: 'pop-big.png',
-      category: ['app'],
+      categories: ['app'],
     },
     {
       id: 14,
@@ -246,18 +245,18 @@ const data = {
         'Heroku',
       ],
       role: ['Developer', 'UI/UX Design', 'Graphic Design'],
-      description:
-        'Whiteboard and chat over any website with invited friends.',
+      description: 'Whiteboard and chat over any website with invited friends.',
       gitHub: 'https://github.com/Taylor-H/collaboration',
       live: 'https://www.htmlartist.net/collaboration',
       prevImg: 'portfolio-big.png',
-      category: ['App'],
+      categories: ['app'],
     },
     {
       id: 15,
       projectName: 'data-art',
       title: 'Data Artist',
-      tagLine: 'In goes the data, out comes the art. Use a form to alter the data and see the results.',
+      tagLine:
+        'In goes the data, out comes the art. Use a form to alter the data and see the results.',
       tech: [
         'React',
         'Node',
@@ -274,7 +273,7 @@ const data = {
       gitHub: 'https://github.com/Taylor-H/data-art',
       live: 'https://www.htmlartist.net/',
       prevImg: 'js-big.png',
-      category: ['app', 'code', 'creative'],
+      categories: ['app', 'code', 'creative'],
     },
     {
       id: 16,
@@ -297,20 +296,25 @@ const data = {
       gitHub: 'https://github.com/Taylor-H/flower-shop',
       live: 'https://www.htmlartist.net/flower-shop',
       prevImg: 'js-big.png',
-      category: ['game'],
+      categories: ['game'],
     },
   ],
 };
 export const getProjects = () => {
-  return data.projects
-}
+  return data.projects;
+};
 export const getCategories = () => {
-  return data.categories
-}
+  return data.categories;
+};
+export const getCategoryDisplayNames = () => {
+  const catArray = [];
+  data.categories.forEach((category) => catArray.push(category.displayName));
+  return catArray;
+};
 export function getCategoriesFromProjects(projects) {
   return projects
-  .reduce((acc, project) => {
-      console.log(acc, project.category)
+    .reduce((acc, project) => {
+      console.log(acc, project.category);
       return [...new Set([...acc, ...([project.category] || [])])];
     }, [])
     .sort();

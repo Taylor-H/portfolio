@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
-import { Container, Row, useAccordionButton, Card, AccordionContext  } from 'react-bootstrap';
+import { useAccordionButton, Card, AccordionContext  } from 'react-bootstrap';
 import ProjectsByCategory from './ProjectsByCategory';
 
 

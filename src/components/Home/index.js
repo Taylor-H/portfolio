@@ -12,9 +12,8 @@ console.log(winHeight)
           <h6>Hi, I'm Taylor.</h6>
           <p>
             I'm a Full Stack Web Developer based near Boston, MA. This is a
-            collection of
+            collection of{' '}
             <Link id="projects-link" to="projects">
-              {' '}
               projects
             </Link>{' '}
             I've created. I make dynamic web applications, and games.
@@ -25,28 +24,31 @@ console.log(winHeight)
           </p>
         </div>
       </div>
-      <div className="container row">
+      <div className="mini-slide flex-row">
         {/* <h6>
           <Link to="projects">Featured Projects</Link>
         </h6> */}
         <div className="container flex-row">
-          <div className="flex-col featured">
-            <Link className="more-link" to="about">
+          <div className="mini-slide flex-col">
+            <Link className="more-link" to={`/projects`}>
               Project Name 1
             </Link>
           </div>
-          <div className="featured">
-            <Link className="more-link" to="about">
+          <div className="mini-slide flex-col">
+            <Link className="more-link" to={`/projects`}>
               Project Name 2
             </Link>
           </div>
-          <div className="column featured">
-            <Link className="more-link" to="about">
+          <div className="mini-slide flex-col">
+            <Link className="more-link" to={`/projects`}>
               Project Name 3
             </Link>
           </div>
         </div>
-        <Link className="more-link" to="about">
+        <Link
+          className="mini-slide more-link"
+          to="/projects"
+        >
           Projects &#8250;
         </Link>
       </div>

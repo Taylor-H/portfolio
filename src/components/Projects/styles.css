@@ -346,14 +346,7 @@ FaFileCode {
   font-size: .5rem;
   margin-left: 5rem;
 }
-.project__text {
-  padding: 5px;
-  color: #91b9c8;
-  font-weight: 500;
-  font-size: 0.8rem;
-  margin-left: 1rem;
-  line-height: 1.8rem;
-}
+
 .project__accordion:hover,
 .activeProject {
   color: #91b9c8;

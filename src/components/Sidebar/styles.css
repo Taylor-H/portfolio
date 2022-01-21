@@ -1,0 +1,158 @@
+.sidebar .categories {
+  background: #fef7ee;
+  margin-top: 35px;
+}
+
+.sidebar button.collapse-categories {
+  height: 35px;
+  border: 0px;
+  background: #fef7ee;
+    font-size: 2rem;
+}
+
+.sidebar button.collapse-categories:hover {
+  background-color: #ffe8c4;
+}
+
+.sidebar button.collapse-categories div {
+  border: none;
+  line-height: 0;
+  padding: 1px 3px;
+  font-size: 2rem;
+}
+/*
+.sidebar button.collapse-categories svg rect {
+
+} */
+.sidebar div.title {
+    display: flex;
+    width: 100%;
+    height: 20rem;
+    text-align: left;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: flex-end;
+}
+.sidebar button.category {
+  display: grid;
+  grid-template-columns: 1.5rem auto;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  background: #fef7ee;
+  border: 0px;
+  margin-bottom: 1px;
+  padding: 0.75rem 1rem;
+  color: #00000079;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: sticky;
+  top: 35px;
+  z-index: 7;
+}
+
+.sidebar button.category:hover {
+  background: #ffe8c4;
+  color: black;
+}
+
+.sidebar button.category:focus-visible {
+  outline: none;
+  background: #00000097;
+    background: #ffe8c4;
+  border-bottom: none;
+  color: #000;
+}
+
+.sidebar button.category:focus {
+  outline: none;
+  color: black;
+}
+
+.sidebar button.category svg {
+  margin-right: 0.5rem;
+}
+
+.sidebar button.category svg path {
+  stroke: black;
+}
+
+.sidebar button.category:focus svg path {
+  stroke: black;
+}
+
+.sidebar button.category:focus-visible svg path {
+  stroke: rgb(0, 0, 0);
+}
+
+.sidebar nav {
+  width: 100%;
+}
+
+.sidebar nav.collapsed {
+  display: none;
+}
+
+.sidebar a {
+  display: grid;
+  grid-template-columns: 2rem auto;
+  align-items: center;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  border-bottom: 1px solid #00000038;
+  color: #00000097;
+  padding: 0.4rem 1rem;
+  font-family: 'Libre Franklin', sans-serif;
+  border-left: 3px solid transparent;
+}
+
+/* .sidebar a svg path {
+  filter: var(--icon-filter);
+} */
+
+.sidebar a:hover {
+  background: #ffe8c4;
+  color: black;
+}
+
+.sidebar a.active,
+.sidebar a:focus {
+  outline: none;
+  border-left: 3px solid #ff8c00;
+  color: #000 !important;
+  background:#ffe8c4;
+}
+.sidebar a.active div,
+.sidebar a:focus div{
+  color: #000 !important;
+
+}
+.sidebar a.active svg path {
+  fill: #00000097;
+}
+
+.project__text {
+  min-width: 20rem;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+.sidebar div.file-div {
+  display: flex;
+  color: #00000079;
+  flex-direction: row;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  /* margin-top: .2rem; */
+}
+.sidebar div.file-div:hover, .sidebar div.file-div:focus {
+  color: #000000;
+}
+.sidebar project__text:focus, .sidebar project__text:active {
+  outline: none;
+  border: 3px solid black;
+  color: black;
+}

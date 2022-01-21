@@ -14,7 +14,7 @@ console.log('project', project);
 const previewName = project? project.projectName: null;
   return (project)? (
     <div className="single-project">
-      <div className="x-back"><Link to="/projects">X</Link></div>
+      <div className="x-back"><Link to={}>X</Link></div>
       <div className='section-title'>{project.title}</div>
       <div className='project-description'>{project.description}</div>
       <div className={previewName + ' prevImg'}></div>

@@ -1,18 +1,41 @@
 import { Link } from 'react-router-dom';
+import { AiFillGithub, AiOutlineMail, AiOutlineLinkedin } from 'react-icons/ai';
 
-const footer = () => {
+const Footer = () => {
   return (
     <div className="footer">
-          <Link to="mailto: taylor@htmlartist.net" id="mailto" alt="email me">
-        <div className="em">
+      <a
+        href="mailto: taylor@htmlartist.net"
+        target="_blank"
+        rel="noreferrer"
+        id="mailto"
+        alt="email me"
+      >
+        <div>
+          <AiOutlineMail />
         </div>
-          </Link>
-          <Link id="linkedin-link" target="_blank" to="http://www.linkedin.com/in/taylor-hembree-pell"
-            alt="my linked in profile" rel="noreferrer">
-        <div className="in">
+      </a>
+      <a
+        id="linkedin-link"
+        target="_blank"
+        href="http://www.linkedin.com/in/taylor-hembree-pell"
+        alt="my linked in profile"
+        rel="noreferrer"
+      >
+        <div>
+          <AiOutlineLinkedin />
         </div>
-          </Link>
+      </a>
+      <a
+        id="github-link"
+        target="_blank"
+        href="https://github.com/Taylor-H"
+        alt="Link to my github."
+        rel="noreferrer"
+      >
+        <div><AiFillGithub /></div>
+      </a>
     </div>
   );
 };
-export default footer;
+export default Footer;

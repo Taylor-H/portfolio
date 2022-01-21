@@ -1,18 +1,14 @@
 import React from 'react';
-import {  Container } from 'react-bootstrap';
 import { getProjects, getCategories } from './data/data.js';
 import Footer from './components/Navigation/Footer';
 import Navigation from './components/Navigation';
 // import ProjectsList from './components/ProjectsList';
-import ProjectNav from './components/ProjectNav';
-import {  Link, Outlet } from 'react-router-dom';
-import './index.css';
+import Sidebar from './components/Sidebar';
+import { Link, Outlet } from 'react-router-dom';
+
 
 function App() {
-  const featured = getProjects().filter((project) => project.featured);
-  let projects = getProjects();
-  let categories = getCategories();
-  console.log(' from App', projects, categories);
+  // const featured = getProjects().filter((project) => project.featured);
   return (
     <div className="page-wrapper">
       <header>
@@ -29,16 +25,13 @@ function App() {
       </header>
       <div className="home-container">
         <div className="flex-item-left">
-          <div className="spacer">
-          </div>
-            <ProjectNav projects={projects} categories={categories} />
-
+            <Sidebar />
         </div>
         <div className="flex-item-right">
           <Outlet />
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }
