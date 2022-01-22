@@ -69,18 +69,7 @@
   /* padding-top: 10px; */
   overflow: visible;
 }
-.project-image {
-  max-width: 70%;
-  min-width: 200px;
-  /*min-height: 200px; */
-  background-size: cover;
-  align-self: center;
-  max-height: 100%;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .project-description {
   width: 100%;
   font-size: 1rem;
@@ -190,16 +179,6 @@
   border-left: 2px solid black; */
   /* border-bottom: 2px solid black; */
 }
-.project-card{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: space-around;
-  width: 80%;
-  max-width: 900px;
-  height: 100%;
-}
 .card {
   display: flex;
   align-items: center;
@@ -227,7 +206,6 @@
   padding-right: 2rem;
   padding-top: 1rem;
   text-align: right;
-  /* border-top: 4px solid rgb(0, 0, 0); */
 }
 .projects-container {
   padding: 0;
@@ -235,13 +213,9 @@
   width: 100%;
   list-style: none;
   display: flex;
-  /* justify-content: space-around; */
-  /* border-right: 2px solid black; */
-  /* border: 2px solid black; */
-  flex-direction: row;
-  /* align-content: flex-start; */
   flex-wrap: wrap;
   justify-content: space-evenly;
+    border-bottom: 4px solid rgb(0, 0, 0);
 }
 .projects-header {
   width: 100%;
@@ -341,10 +315,6 @@
   border: none;
   outline: none;
   background-color: #e1d9e0;
-}
-FaFileCode {
-  font-size: .5rem;
-  margin-left: 5rem;
 }
 
 .project__accordion:hover,

@@ -93,7 +93,7 @@ export const Sidebar = () => {
                     return (
                       <Link
                         key={project.projectName}
-                        className={project.id === projectId ? 'active' : ''}
+                        className={project.id === projectId ? 'active' : 'notactive'}
                         to={`/projects/${project.id}`}
                         onClick={() => onToggleHeader(category.catName)}
                       >

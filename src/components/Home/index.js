@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
+ import { getProjects } from '../../data/data-test.js';
 
 
 const Home = () => {
-const winHeight = window.innerHeight;
-console.log(winHeight)
+  const projects = getProjects();
+
+
   return (
     <>
       <div className="hi">
@@ -28,12 +30,13 @@ console.log(winHeight)
         {/* <h6>
           <Link to="projects">Featured Projects</Link>
         </h6> */}
-        <div className="container flex-row">
-          <div className="mini-slide flex-col">
+        <div className="container flex-row wrap">
+          {projects.map((project) => (<div key={project.id.toString()} className="mini-slide flex-col">
             <Link className="more-link" to={`/projects`}>
-              Project Name 1
+              {project.title}
             </Link>
-          </div>
+          </div>))}
+
           <div className="mini-slide flex-col">
             <Link className="more-link" to={`/projects`}>
               Project Name 2
