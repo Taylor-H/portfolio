@@ -14,16 +14,11 @@ function App() {
           <div className="name-container logo">
             <Link to="/">Taylor Hembree</Link>
           </div>
-          <input className="menu-btn" type="checkbox" id="menu-btn" />
-          <label className="menu-icon" htmlFor="menu-btn">
-            <span className="navicon"></span>
-          </label>
-          <Navigation />
         </div>
       </header>
       <div className="home-container">
         <div className="flex-item-left">
-            <Sidebar />
+          <Navigation />
         </div>
         <div className="flex-item-right">
           <Outlet />
@@ -35,3 +30,8 @@ function App() {
 }
 
 export default App;
+
+            /* <input className="menu-btn" type="checkbox" id="menu-btn" />
+          <label className="menu-icon" htmlFor="menu-btn">
+            <span className="navicon"></span>
+          </label> */

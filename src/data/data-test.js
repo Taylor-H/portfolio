@@ -2,32 +2,64 @@ const data = {
   categories: [
     {
       catId: 1,
-      catName: 'app',
-      shortDisplay: 'Apps',
-      displayName: 'Full Stack Applications',
+      catName: 'projects',
+      shortDisplay: 'Projects',
+      displayName: 'Projects',
+      subCategory: false,
     },
     {
       catId: 2,
-      catName: 'game',
-      shortDisplay: 'Games',
-      displayName: 'Games',
+      catName: 'app',
+      shortDisplay: 'Apps',
+      displayName: 'Full Stack Applications',
+      subCategory: true,
     },
     {
       catId: 3,
-      catName: 'creative',
-      shortDisplay: 'Creative',
-      displayName: 'Creative Development',
+      catName: 'game',
+      shortDisplay: 'Games',
+      displayName: 'Games',
+      subCategory: true,
     },
     {
       catId: 4,
+      catName: 'creative',
+      shortDisplay: 'Creative',
+      displayName: 'Creative Development',
+      subCategory: true,
+    },
+    {
+      catId: 5,
       catName: 'code',
       shortDisplay: 'Code',
       displayName: 'Code Examples',
+      subCategory: true,
+    },
+    {
+      catId: 6,
+      catName: 'about',
+      shortDisplay: 'About',
+      displayName: 'About',
+      subCategory: false,
+    },
+    {
+      catId: 7,
+      catName: 'contact',
+      shortDisplay: 'Contact',
+      displayName: 'Contact',
+      subCategory: false,
+    },
+    {
+      catId: 8,
+      catName: '',
+      shortDisplay: 'home',
+      displayName: 'Home',
+      subCategory: false,
     },
   ],
   projects: [
     {
-      id: 5,
+      id: 15,
       projectName: 'portfolio',
       title: 'Portfolio',
       tagLine: 'A React app to showcase my skills through projects',
@@ -51,7 +83,7 @@ const data = {
       featured: true,
     },
     {
-      id: 6,
+      id: 16,
       projectName: 'robot-boss',
       title: 'Robot Boss',
       tagLine: 'Assigning tasks with React and Express.',
@@ -75,7 +107,7 @@ const data = {
       featured: true,
     },
     {
-      id: 7,
+      id: 17,
       projectName: 'coffee',
       title: 'Coffee Clicker',
       tagLine: 'Dominate the coffee market.',
@@ -98,7 +130,7 @@ const data = {
       featured: true,
     },
     {
-      id: 8,
+      id: 18,
       projectName: 'art-gallery',
       title: 'Art Gallery',
       tagLine: 'A gallery app made with data from Harvard Art Museum.',
@@ -121,7 +153,7 @@ const data = {
       categories: ['app', 'creative'],
     },
     {
-      id: 9,
+      id: 19,
       projectName: 'pixelate',
       title: 'Pixelate',
       tagLine: 'Pixelate your world.',
@@ -144,7 +176,7 @@ const data = {
       categories: ['game', 'code'],
     },
     {
-      id: 10,
+      id: 20,
       projectName: 'relaxr',
       title: 'relaxr',
       tagLine: 'CSS and HTML for a blog.',
@@ -163,7 +195,7 @@ const data = {
       categories: ['creative'],
     },
     {
-      id: 11,
+      id: 21,
       projectName: 'MedFlowClinic',
       title: 'MedFlow Clinic',
       tagLine: 'Ask, answer, comment, and vote on medical based questions.',
@@ -188,7 +220,7 @@ const data = {
       categories: ['app'],
     },
     {
-      id: 12,
+      id: 22,
       projectName: 'pop!',
       title: 'pop!',
       tagLine: "A silk screen lover's dream.",
@@ -209,7 +241,7 @@ const data = {
       categories: ['creative'],
     },
     {
-      id: 13,
+      id: 23,
       projectName: 'candy-tracker',
       title: 'Candy Tracker',
       tagLine: 'A data driven React App to track your candy supply.',
@@ -252,7 +284,7 @@ const data = {
       categories: ['app'],
     },
     {
-      id: 15,
+      id: 25,
       projectName: 'data-art',
       title: 'Data Artist',
       tagLine:
@@ -276,7 +308,7 @@ const data = {
       categories: ['app', 'code', 'creative'],
     },
     {
-      id: 16,
+      id: 26,
       projectName: 'flower-shop',
       title: 'Flower Shop',
       tagLine: 'See how many flowers you can snip to create a bouquet.',

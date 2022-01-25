@@ -1,7 +1,7 @@
 {
-  "short_name": "React Template",
-  "name": "Create React App Template",
-  "start_url": ".",
+  "short_name": "Taylor Hembree",
+  "name": "Web Developer",
+  "start_url": "%PUBLIC_URL%",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"

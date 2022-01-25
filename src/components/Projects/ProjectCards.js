@@ -1,5 +1,6 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { getProjects } from '../../data/data';
+import { getProjects } from '../../data/data-test';
 const ProjectCards = () => {
   const projects = getProjects();
   return(

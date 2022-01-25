@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
  import { getProjects } from '../../data/data-test.js';
 
@@ -7,7 +8,6 @@ const Home = () => {
 
 
   return (
-    <>
       <div className="hi">
         <div className="circle-image"></div>
         <div className="container">
@@ -25,37 +25,18 @@ const Home = () => {
             </Link>
           </p>
         </div>
+        <div className="mini-slide flex-row wrap">
+          {projects.map((project) => (
+            project.featured ?
+            <div key={project.id.toString()} className="mini-slide flex-col">
+              <Link to={`/projects/${project.id}`}>{project.title}</Link>
+            </div>  : null
+          ))}
+          <Link className="mini-slide more-link" to="/projects">
+            More Projects &#8250;
+          </Link>
+</div>
       </div>
-      <div className="mini-slide flex-row">
-        {/* <h6>
-          <Link to="projects">Featured Projects</Link>
-        </h6> */}
-        <div className="container flex-row wrap">
-          {projects.map((project) => (<div key={project.id.toString()} className="mini-slide flex-col">
-            <Link className="more-link" to={`/projects`}>
-              {project.title}
-            </Link>
-          </div>))}
-
-          <div className="mini-slide flex-col">
-            <Link className="more-link" to={`/projects`}>
-              Project Name 2
-            </Link>
-          </div>
-          <div className="mini-slide flex-col">
-            <Link className="more-link" to={`/projects`}>
-              Project Name 3
-            </Link>
-          </div>
-        </div>
-        <Link
-          className="mini-slide more-link"
-          to="/projects"
-        >
-          Projects &#8250;
-        </Link>
-      </div>
-    </>
   );
   };
   export default Home;

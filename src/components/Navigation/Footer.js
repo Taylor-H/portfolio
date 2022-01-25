@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { AiFillGithub, AiOutlineMail, AiOutlineLinkedin } from 'react-icons/ai';
 
@@ -33,7 +34,9 @@ const Footer = () => {
         alt="Link to my github."
         rel="noreferrer"
       >
-        <div><AiFillGithub /></div>
+        <div>
+          <AiFillGithub />
+        </div>
       </a>
     </div>
   );
