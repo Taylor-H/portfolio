@@ -1,41 +1,13 @@
 import React, { useState } from 'react';
 import Sidebar from '../Sidebar';
 import { NavLink } from 'react-router-dom';
-import { MdClose } from 'react-icons/md';
-import { FiMenu } from 'react-icons/fi';
+
 
 
 const Navigation = () => {
-
-  const [navbarOpen, setNavbarOpen] = useState(true);
-  const handleToggle = () => setNavbarOpen(!navbarOpen);
-    const closeMenu = () => setNavbarOpen(false);
-
-
   return (
-    <aside className={`sidebar ${navbarOpen? 'open' : 'closed' }`}>
-      {navbarOpen ? (
-      <button className="hamburg-icon" onClick={closeMenu}>
-        <MdClose style={{
-              background: 'transparent',
-              color: '#000000',
-              width: '40px',
-              height: '40px',
-            }} />
-      </button>
-      ) : (
-      <button className="hamburg-icon" onClick={handleToggle}>
-        <FiMenu style={{
-              background: 'transparent',
-              color: '#000000',
-              width: '40px',
-              height: '40px',
-            }} />
-      </button>
-      )}
-
+    <aside className="sidebar">
       <div className="categories">
-
         <Sidebar />
       </div>
     </aside>

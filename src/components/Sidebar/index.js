@@ -1,12 +1,12 @@
 import React, { useState, useEffect  } from 'react';
 import { NavLink, Link, useParams } from 'react-router-dom';
 import { getProjects, getCategories } from '../../data/data-test.js';
-import { MdClose } from 'react-icons/md';
-import { BsChevronContract, BsChevronExpand } from 'react-icons/bs';
-import { FiMenu } from 'react-icons/fi';
-import { IconContext } from 'react-icons';
-import { Caret } from './Caret';
-import { File } from './File';
+import {
+  CheveronIconRight,
+  CheveronIconDown,
+  ChevronIconRTrans,
+  FileIcon,
+  CaretIconBlack} from '../Styled';
 import './styles.css';
 
 export const Sidebar = () => {
@@ -57,13 +57,13 @@ export const Sidebar = () => {
         category.subCategory ? (
           <React.Fragment key={category.catName}>
             <button
-              className="category nowrap title border-bottom"
+              className="category nowrap title"
               onClick={() => onToggleHeader(category)}
             >
-              <Caret
+              <CaretIconBlack
                 position={dropdownOpen[category.catName] ? 'down' : 'right'}
               />
-              <div>{category.displayName}</div>
+              <div className="sub-category">{category.displayName}</div>
             </button>
             <nav
               className={
@@ -82,7 +82,7 @@ export const Sidebar = () => {
                       to={`/projects/${project.id}`}
                       onClick={() => onToggleHeader(category.catName)}
                     >
-                      <File className="file-icon" />
+                      <FileIcon />
                       <div className="file-div">
                         <span className="project__text">
                           <b className="nowrap">{project.title}</b>&nbsp;
@@ -97,22 +97,20 @@ export const Sidebar = () => {
         ) : (
           <React.Fragment key={category.catName}>
             <button
-              className="category nowrap title"
+              className="category nowrap border-bottom"
               onClick={() => onToggleHeader(category)}
             >
+              <div className="site-link">
                 <NavLink to={`/${category.catName}`}>
-                  <IconContext.Provider value={{ color: '#00000000'  }}>
-                  <Caret />
-                    </IconContext.Provider>
-                  <div>{category.displayName}</div>
-                  </NavLink>
+                  {category.displayName}
+                </NavLink>
+              </div>
             </button>
           </React.Fragment>
         )
       )}
     </>
   );
-
 }
 export default Sidebar;
 

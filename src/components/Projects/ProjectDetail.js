@@ -23,7 +23,7 @@ project.id.toString() === projectId ? project : null
       </Link>
     </div> */}
       <section className="projects">
-        <div className="single-proj-row end">
+        <div className="row end">
           <span className="project-title">{project.title}</span>
           <div className="prevImg">
             <img
@@ -32,10 +32,10 @@ project.id.toString() === projectId ? project : null
             />
           </div>
         </div>
-        <div className="single-proj-row">
-          <div className="single-proj-column">
+
+          <div className="column">
             <div className="project-description">{project.description}</div>
-            <div className="single-proj-row ">
+            <div className="row">
               <div>
                 <Link
                   to={project.gitHub}
@@ -55,7 +55,7 @@ project.id.toString() === projectId ? project : null
                 </Link>
               </div>
             </div>
-          </div>
+
         </div>
 
         <div className="single-proj-row">

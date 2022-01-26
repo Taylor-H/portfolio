@@ -7,7 +7,7 @@
 /public/images
 # testing
 /coverage
-
+/hide
 # production
 /build
 
