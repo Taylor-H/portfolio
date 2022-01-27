@@ -2,12 +2,9 @@ import React, { useState, useEffect  } from 'react';
 import { NavLink, Link, useParams } from 'react-router-dom';
 import { getProjects, getCategories } from '../../data/data-test.js';
 import {
-  CheveronIconRight,
-  CheveronIconDown,
-  ChevronIconRTrans,
   FileIcon,
   CaretIconBlack} from '../Styled';
-import './styles.css';
+
 
 export const Sidebar = () => {
   const params = useParams();

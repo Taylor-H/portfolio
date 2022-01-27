@@ -16,11 +16,8 @@ function App() {
           <div className="name-container logo">
             <Link to="/">Taylor Hembree</Link>
           </div>
-        </div>
-      </header>
-      <div className="home-container">
-        <div className="flex-item-right">
           <div className="hamburg-icon">
+            {' '}
             {navbarOpen ? (
               <button className="hamburg-icon closeIcon" onClick={closeMenu}>
                 <MdCloseIcon />
@@ -31,6 +28,10 @@ function App() {
               </button>
             )}
           </div>
+        </div>
+      </header>
+      <div className="home-container">
+        <div className="flex-item-right">
           <Outlet />
         </div>
         <div className={`flex-item-left ${navbarOpen ? 'open' : 'closed'}`}>

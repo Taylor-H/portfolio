@@ -3,7 +3,9 @@ import { useParams, Link } from 'react-router-dom';
 import { getProjects } from '../../data/data-test';
 import FourOFour from '../FourOFour';
 import ItemList from '../ItemList';
-import { ImNewTab } from 'react-icons/im';
+import { NewTab, GithubSmallIcon } from '../Styled';
+
+
 const ProjectDetail = () => {
 const projects = getProjects();
 let params = useParams();
@@ -16,53 +18,37 @@ project.id.toString() === projectId ? project : null
 // console.log('projectDetail', project);
 // const previewName = project ? project.projectName : null;
   return project ? (
-    <React.Fragment>
-      {/* <div className="x-back">
-      <Link to="../../projects" alt="Back">
-        X
-      </Link>
-    </div> */}
-      <section className="projects">
-        <div className="row end">
-          <span className="project-title">{project.title}</span>
-          <div className="prevImg">
-            <img
-              src={`./images/preview/${project.prevImg}`}
-              alt={project.title}
-            />
-          </div>
+    <div className="single-project">
+      <div className="column">
+        <div className="row">
+          <img
+            src={`./images/preview/${project.prevImg}`}
+            alt={project.title}
+            className="project-image"
+          />
         </div>
-
-          <div className="column">
-            <div className="project-description">{project.description}</div>
-            <div className="row">
-              <div>
-                <Link
-                  to={project.gitHub}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Github
-                </Link>
-              </div>
-              <div>
-                <Link
-                  to={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Live <ImNewTab />
-                </Link>
-              </div>
-            </div>
-
+        <span className="slide-header">{project.title}</span>
+        <p className="slide-text">{project.description}</p>
+        <div className="row">
+          <Link to={project.gitHub} target="_blank" rel="noopener noreferrer">
+            <h3>
+              Github
+              <GithubSmallIcon />
+            </h3>
+          </Link>
+          <Link to={project.live} target="_blank" rel="noopener noreferrer">
+            <h3>
+              Live
+              <NewTab />
+            </h3>
+          </Link>
         </div>
+      </div>
 
-        <div className="single-proj-row">
-          <ItemList itemName={'Tech Used'} itemList={project.tech} />
-        </div>
-      </section>
-    </React.Fragment>
+      {/* <div className="row">
+          <ItemList itemName={'Tech Stack'} itemList={project.tech} />
+        </div> */}
+    </div>
   ) : (
     <FourOFour />
   );
