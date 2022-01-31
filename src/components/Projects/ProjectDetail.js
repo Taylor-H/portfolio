@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { getProjects } from '../../data/data-test';
 import FourOFour from '../FourOFour';
 import ItemList from '../ItemList';
-import { NewTab, GithubSmallIcon } from '../Styled';
+import { NewTab, GithubIconSmall, } from '../Styled';
 
 
 const ProjectDetail = () => {
@@ -15,14 +15,14 @@ const project = projects.find((project) =>
 project.id.toString() === projectId ? project : null
 );
 
-// console.log('projectDetail', project);
+console.log('project.links', project.links.gitHub ? 'true': project.id);
 // const previewName = project ? project.projectName : null;
   return project ? (
     <div className="single-project">
       <div className="column">
         <div className="row">
           <img
-            src={`./images/preview/${project.prevImg}`}
+            src={`./images/preview/${project.images.prevImg}`}
             alt={project.title}
             className="project-image"
           />
@@ -30,18 +30,24 @@ project.id.toString() === projectId ? project : null
         <span className="slide-header">{project.title}</span>
         <p className="slide-text">{project.description}</p>
         <div className="row">
-          <Link to={project.gitHub} target="_blank" rel="noopener noreferrer">
+          <a
+            href={project.links.gitHub}
+            target="_blank"
+            rel="noopener noreferrer"
+            alt={`${project.title} repo on github`}
+          >
             <h3>
               Github
-              <GithubSmallIcon />
+              <GithubIconSmall />
             </h3>
-          </Link>
-          <Link to={project.live} target="_blank" rel="noopener noreferrer">
+          </a>
+          <Link to={project.links.live} target="_blank" rel="noopener noreferrer">
             <h3>
               Live
               <NewTab />
             </h3>
           </Link>
+
         </div>
       </div>
 

@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import{ init } from '@emailjs/browser';
+import { init } from '@emailjs/browser';
+// import { StyledSlideMenu, CloseMenuIcon, FaGithubIcon } from '../Styled/';
 
 
 init(process.env.REACT_APP_USER_ID);
@@ -103,8 +104,6 @@ const formHTML = (
       <div id="connect-page" className="con-h">
         {formResult === 'OK' ? successHTML : formHTML}
       </div>
-
-
     </>
   );
 }

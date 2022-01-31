@@ -1,9 +1,7 @@
 import React, { useState, useEffect  } from 'react';
 import { NavLink, Link, useParams } from 'react-router-dom';
 import { getProjects, getCategories } from '../../data/data-test.js';
-import {
-  FileIcon,
-  CaretIconBlack} from '../Styled';
+import { SiteIcon, PageIcon, CaretIconBlack } from '../Styled';
 
 
 export const Sidebar = () => {
@@ -79,8 +77,11 @@ export const Sidebar = () => {
                       to={`/projects/${project.id}`}
                       onClick={() => onToggleHeader(category.catName)}
                     >
-                      <FileIcon />
                       <div className="file-div">
+                        <div className="icon">
+                          <SiteIcon />
+                        </div>
+
                         <span className="project__text">
                           <b className="nowrap">{project.title}</b>&nbsp;
                           {project.tagLine}
@@ -93,12 +94,10 @@ export const Sidebar = () => {
           </React.Fragment>
         ) : (
           <React.Fragment key={category.catName}>
-            <button
-              className="category nowrap border-bottom"
-              onClick={() => onToggleHeader(category)}
-            >
+            <button className="category nowrap border-bottom"
+              onClick={() => onToggleHeader(category)}>
               <div className="site-link">
-                <NavLink to={`/${category.catName}`}>
+                <NavLink to={`/${category.catName === 'home'? '' : category.catName}`}>
                   {category.displayName}
                 </NavLink>
               </div>
