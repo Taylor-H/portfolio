@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { MdOutlineSchema } from 'react-icons/md';
 import { BsChevronContract, BsChevronExpand } from 'react-icons/bs';
@@ -62,17 +61,6 @@ const iconFamilies = {
   FontAwesome: FAIcons,
 };
 
-// export const StyledIcon = styled(({ family, name, ...rest }) =>
-//   React.createElement(iconFamilies[family][name], rest)
-// )`
-//   width: ${({ theme, size }) => theme.sizing[size]};
-//   height: ${({ theme, size }) => theme.sizing[size]};
-//   fill: ${({ theme, color }) => theme.colors[color]};
-// `;
-// console.log('StyledIcon', iconFamilies['Grommet']['GrMenu']);
-// export const Icon = ({ family, name, ...rest }) => (
-//   <StyledIcon {...{ family, name, rest }} />
-// );
 export const PageIcon = styled(GrArticle)`
 width: theme.sizing.medium;
 height: theme.sizing.medium;
@@ -119,56 +107,6 @@ export const OpenMenuIcon = styled(GrMenu)`
   color: green;
   font-size: 3rem;
 `;
-// const ButtonMachine = styled()
-// export const CloseMenuButton = styled.button`
-//   ${GrClose} {
-//   padding: 0;
-//   position: absolute;
-//   right: 0;
-//   top: 0;
-//   z-index: 1000;
-//   &:hover {
-//     color: ${theme.colors.primary};
-//   }
-// `;
-// export const OpenMenuButton = styled.button`
-//   margin: 0 auto;
-//   background: transparent;
-//   border: none;
-//   color: ${theme.colors.primary};
-//   cursor: pointer;
-//   font-size: 1.5rem;
-//   padding: 0;
-//   position: absolute;
-//   left: 200px;
-//   top: 200px;
-//   z-index: 200000;
-//     ${GrMenu} {
-//       size: 3rem;
-//     }
-//   &:hover {
-//     color: ${theme.colors.primaryHighlight};
-//   }
-// `;
-
-// export const IconButton = (icon) => styled.button`
-//   background: transparent;
-//   border: none;
-//   color: ${theme.colors.primary};
-//   cursor: pointer;
-//   padding: 0;
-//   position: absolute;
-//   right: 0;
-//   top: 0;
-//   z-index: 1000;
-//   ${icon} {
-//     size: ${theme.sizing.xxlarge};
-//     color: ${theme.colors.primary};
-//   }
-//   &:hover {
-//     color: ${theme.colors.primaryHighlight};
-//   }
-// `;
 
 export const NewTab = styled(ImNewTab)`
   color: black;
@@ -322,61 +260,3 @@ export const StyledNavContainerCol = styled.div`
     width: 5%;
   }
 `;
-
-export const StyledNavHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 10vh;
-  padding: 0 2rem;
-  background: ${theme.colors.primary};
-  @media (max-width: 768px) {
-    height: 10vh;
-  }
-  @media (min-width: 769px) {
-    height: 10vh;
-  }
-  @media (min-width: 1024px) {
-    height: 10vh;
-  }
-  @media (min-width: 1440px) {
-    height: 10vh;
-  }
-  @media (min-width: 1920px) {
-    height: 10vh;
-  }
-  @media (min-width: 2560px) {
-    height: 10vh;
-  }
-  @media (min-width: 3840px) {
-    height: 10vh;
-  }
-`;
-export const StyledNavHeaderTitle = styled.h1`
-  font-size: 2rem;
-  font-weight: bold;
-  color: ${theme.colors.secondary};
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
-  }
-  @media (min-width: 769px) {
-    font-size: 1.5rem;
-  }
-  @media (min-width: 1024px) {
-    font-size: 1.5rem;
-  }
-  @media (min-width: 1440px) {
-    font-size: 1.5rem;
-  }
-  @media (min-width: 1920px) {
-    font-size: 1.5rem;
-  }
-  @media (min-width: 2560px) {
-    font-size: 1.5rem;
-  }
-  @media (min-width: 3840px) {
-    font-size: 1.5rem;
-  }
-`;
-

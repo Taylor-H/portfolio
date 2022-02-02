@@ -69,13 +69,13 @@ const data = {
         'html5',
         'css3',
         'JavaScript',
-        'Express',
-        'Git',
         'Heroku',
       ],
       role: ['Developer', 'UI/UX Design', 'Graphic Design'],
       description:
-        'This app displays a collection of projects. It is a single page React application that sorts projects by category. It has a message feature that uses Node.',
+        `This is a version of my portfolio that I built using React. It is a single page application that allows you to view my projects and see a brief description of each. It has a messaging feature that I set up using emailJS. I've separated the information from the app itself. It has categories that allow you to filter through the projects. I set up front end routing with React Router. `,
+      design:
+        `I designed the graphics and the layout for this site. I used a combination of Adobe Illustrator and Adobe Photoshop to create the graphics. I used a combination of Styled Components and CSS to style the site. I wanted a clean simple aesthetic that didn't annoy my fellow developers and distract from the sites purpose. I believe this design accomplishes my goals.`,
       links: { gitHub: 'https://github.com/Taylor-H/portfolio', live: '/'},
       images: {prevImg: 'portfolio-big.png'},
       categories: ['app'],
@@ -153,10 +153,10 @@ const data = {
       projectName: 'pixelate',
       title: 'Pixelate',
       tagLine:
-        'A pixel art tool originally built with JavaScript and then remade into a React app.',
+        'A pixel art tool that allows the user to color blocks to make art.',
       tech: ['React', 'JavaScript', 'html5', 'css3', 'Git', 'Heroku'],
       role: ['Game Developer', 'UI/UX Design', 'Graphic Design'],
-      description: `I originally made Pixel as a exercise in Javascript. When learning to use React I thought it would be interesting to refactor it into a React app. I plan to add a feature that allows the user upload a background image to trace over and export as .png as a fun way to make a custom pixelated profile picture. Please see the JavaScript branch.`,
+      description: `I originally made Pixel when learning Javascript. When learning to use React I thought it would be interesting to refactor it into a React app. I plan to add a feature that allows the user tp upload a background image to trace over and export as .png as a fun way to make a custom pixelated profile picture. I put the original plain javascript code in a separate branch on github.`,
       links:
         { gitHub: 'https://github.com/Taylor-H/pixelate', live: '/projects/pixelate' },
       images: { prevImg: 'pixel-desktop.png'},
@@ -169,8 +169,8 @@ const data = {
       tagLine: 'CSS and HTML for a blog.',
       tech: ['html5', 'css3'],
       role: ['Front End Developer'],
-      description: `As a Frontend Web Developer, part of my regular workflow would include making templates from a detailed image file like you see here. My role was to integrate the styles and HTML with data to dynamically display the page as intended. This is an example of old school CSS and HTML. It's an exercise in being precise in an imprecise environment(the internet).<br>
-      These days there are many great tools to streamline and simplify this process but I am glad that I have an expert understanding of the underlying technologies. Having extensive experience with CSS and HTML has made learning to use libraries like Sass and Styled Components in React very exciting.`,
+      description: `As a Frontend Web Developer, part of my regular workflow would include making templates from detailed image file like you see here. My role was to integrate the styles and HTML with data to dynamically display the page as intended. This is an example of old school CSS and HTML. It's an exercise in being precise in an chaotic environment.<br>
+      These days there are many great tools to streamline and simplify this process but I am glad that I have an expert understanding of the underlying way the browser renders the page. Having extensive experience with CSS and HTML has made learning to use libraries like Sass and Styled Components in React very exciting.`,
       links: { gitHub: 'https://github.com/Taylor-H/relaxr', live: '/projects/relaxr' },
       images:
         { prevImg: 'relaxr-big.png', phone: 'relaxr_phone.jpg', tablet: 'relaxr_tablet.jpg', desktop: 'relaxr_desktop.jpg}', file: 'relaxr_desktop_2.jpg' },
@@ -180,7 +180,7 @@ const data = {
       id: 21,
       projectName: 'MedFlowClinic',
       title: 'MedFlow Clinic',
-      tagLine: 'Ask, answer, comment, and vote on medical based questions.',
+      tagLine: 'Get answers to your most pressing issues.',
       tech: [
         'Pug',
         'Node',
@@ -196,9 +196,9 @@ const data = {
         'Javascript',
       ],
       role: ['Web Developer', 'Creative Development'],
-      description: `A group project in a course I took. Myself and fellow students worked together to plan, develop, and deploy a Full Stack Web Application from start to finish in less than a week. We used GitHub Projects. With a focus on the user experience, we defined our User Stories. There are users that answer questions and users that can only ask and comment on answers. All users are allowed to up vote and down vote. We set up a demo user so perspective users can see how it works.
-      Check out our github Wiki to see very detailed documentation of User Stories, Database Schema, API/Frontend Routes, and a Feature List.
-      A fun exploration of GitHub workflow and project planning. I played an active roll in each stage of planning and development.`,
+      description: `Myself and fellow students worked together to plan, develop, and deploy a Full Stack Web Application from start to finish in less than a week. We used GitHub Projects. We defined our User Stories. Set up our database schema. We implemented authentication. We set up a demo user so perspective users can check it out.
+      Please see our github Wiki for detailed documentation of User Stories, Database Schema, API/Frontend Routes, and a Feature List.
+      A fun exploration of GitHub workflow and project planning. Me and my team did great.`,
       links:
         { gitHub: 'https://github.com/southwestmogrown/MedFlowClinic', live: 'https://medflow-clinic.herokuapp.com/', wiki: 'https://github.com/southwestmogrown/MedFlowClinic/wiki' },
       images: { prevImg: 'med-flow-clinic.png'},
@@ -220,8 +220,8 @@ const data = {
         'Heroku',
       ],
       role: ['Game Developer', 'UI/UX Design', 'Graphic Design'],
-      description: `VSC Copilot suggested the tagline and I thought it was too funny to change.<br>
-      I wanted to explore media queries and make a site that dynamically adjusted to look great at any screen size width. This site is an example of what I call Creative Development. I designed the site with a focus on the user experience. I used React and React Router to create a single page application.`,
+      description: `VSC Copilot suggested the tagline and I thought it was better than the one I was going write. I wanted to set up media queries and make a site that dynamically adjusted to look great at any screen size width.`,
+      design:` This site is an example of what I call Creative Development. I used a CSS grid and Flex-box to create a responsive design. I used media queries to adjust the site to fit any screen size. `,
       links: { gitHub: 'https://github.com/Taylor-H/pop' , live: '/projects/pop' },
       images: { prevImg: 'pop-big.png'},
       categories: ['creative'],

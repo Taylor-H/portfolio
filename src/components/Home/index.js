@@ -8,7 +8,7 @@ const Home = () => {
 
 
   return (
-      <div className="hi">
+      <div className="con-h">
         <div className="circle-image"></div>
         <div className="container">
           <h6>Hi, I'm Taylor.</h6>

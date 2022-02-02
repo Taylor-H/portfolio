@@ -101,7 +101,7 @@ const formHTML = (
 );
   return (
     <>
-      <div id="connect-page" className="con-h">
+      <div className="con-h">
         {formResult === 'OK' ? successHTML : formHTML}
       </div>
     </>
