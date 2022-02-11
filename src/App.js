@@ -1,4 +1,4 @@
-import React,{ useState} from 'react';
+import React, { useState } from 'react';
 import Footer from './components/Navigation/Footer';
 import Navigation from './components/Navigation';
 import { Link, Outlet } from 'react-router-dom';
@@ -6,8 +6,11 @@ import { CloseMenuIcon, OpenMenuIcon, Button } from './components/Styled';
 
 function App() {
   const [navbarOpen, setNavbarOpen] = useState(true);
-  const openMenu = () => setNavbarOpen(true);
-  const closeMenu = () => setNavbarOpen(false);
+  function handleChange(newValue) {
+    setNavbarOpen(newValue);
+  }
+
+
   // const winHeight = window.innerHeight;
   return (
     <>
@@ -18,11 +21,17 @@ function App() {
           </div>
           <div className="hamburg-icon">
             {navbarOpen ? (
-              <Button onClick={closeMenu}>
+              <Button
+                navbarOpen={navbarOpen}
+                onClick={(navbarOpen) => setNavbarOpen(navbarOpen)}
+              >
                 <CloseMenuIcon />
               </Button>
             ) : (
-              <Button onClick={openMenu}>
+              <Button
+                navbarOpen={navbarOpen}
+                onClick={(navbarOpen) => setNavbarOpen(navbarOpen)}
+              >
                 <OpenMenuIcon />
               </Button>
             )}
@@ -30,15 +39,15 @@ function App() {
         </div>
       </header>
       <div className="home-container">
-        <div className="flex-item-right">
+        <div className={'flex-item-left open'}>
           <Outlet />
         </div>
         <div
           className={` ${
-            navbarOpen ? 'flex-item-left open' : 'flex-item-left closed'
+            navbarOpen ? 'flex-item-right open' : 'flex-item-right closed'
           }`}
         >
-          <Navigation />
+          <Navigation navbarOpen={navbarOpen} />
         </div>
       </div>
       <Footer />

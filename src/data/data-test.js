@@ -63,21 +63,12 @@ const data = {
       projectName: 'portfolio',
       title: 'Portfolio',
       tagLine: 'A React app to showcase my skills through projects',
-      tech: [
-        'React',
-        'Node',
-        'html5',
-        'css3',
-        'JavaScript',
-        'Heroku',
-      ],
+      tech: ['React', 'Node', 'html5', 'css3', 'JavaScript', 'Heroku'],
       role: ['Developer', 'UI/UX Design', 'Graphic Design'],
-      description:
-        `This is a version of my portfolio that I built using React. It is a single page application that allows you to view my projects and see a brief description of each. It has a messaging feature that I set up using emailJS. I've separated the information from the app itself. It has categories that allow you to filter through the projects. I set up front end routing with React Router. `,
-      design:
-        `I designed the graphics and the layout for this site. I used a combination of Adobe Illustrator and Adobe Photoshop to create the graphics. I used a combination of Styled Components and CSS to style the site. I wanted a clean simple aesthetic that didn't annoy my fellow developers and distract from the sites purpose. I believe this design accomplishes my goals.`,
-      links: { gitHub: 'https://github.com/Taylor-H/portfolio', live: '/'},
-      images: {prevImg: 'portfolio-big.png'},
+      description: `This is a version of my portfolio that I built with React. My portfolio app allows you to view my projects and see a brief description of each. It has a messaging feature that I set up using emailJS. I've separated the information from the app itself. When I get more projects up I will add a database. It has categories that allow you to filter through the projects. I set up front end routing with React Router.`,
+      design: `I designed the Navigation to be representative of the site structure. I decided minimal and succinct was the way to go. I used a combination of Styled Components and CSS to style the site. I wanted a clean simple aesthetic that didn't distract from the sites purpose. I believe this design accomplishes my goals.`,
+      links: { gitHub: 'https://github.com/Taylor-H/portfolio', live: '/' },
+      images: { prevImg: 'portfolio-big.png' },
       categories: ['app'],
       featured: true,
     },
@@ -99,8 +90,11 @@ const data = {
       role: ['Full Stack Developer', 'UI/UX Design', 'Creative Design'],
       description:
         "Robots are great but if you don't tell them what to do they they just sit around doing nothing. This app is a robot boss. It allows you to assign your team of robots to your todo list. It is a single page React application with an Express server to handle CRUD operations.",
-      links: { gitHub: 'https://github.com/Taylor-H/robot-boss' , live: '/projects/robots' },
-      images: {prevImg: 'js-big.png'},
+      links: {
+        gitHub: 'https://github.com/Taylor-H/robot-boss',
+        live: '/projects/robots',
+      },
+      images: { prevImg: 'js-big.png' },
       categories: ['app'],
       featured: true,
     },
@@ -121,8 +115,11 @@ const data = {
       ],
       role: ['Game Developer', 'UI/UX Design', 'Graphic Design'],
       description: 'A javascript game for ',
-      links: { gitHub: 'https://github.com/Taylor-H/portfolio', live: '/projects/coffee-clicker'},
-      images: {prevImg: 'js-big.png'},
+      links: {
+        gitHub: 'https://github.com/Taylor-H/portfolio',
+        live: '/projects/coffee-clicker',
+      },
+      images: { prevImg: 'js-big.png' },
       categories: ['game'],
       featured: true,
     },
@@ -144,8 +141,11 @@ const data = {
       role: ['Game Developer', 'UI/UX Design', 'Graphic Design'],
       description:
         'Harvard Art Museum has provided an abbreviated version of their collection of art for developers to use. This app allows you to browse the collection and search for specific art pieces or collections. It uses React and React Router.',
-      links: { gitHub: 'https://github.com/Taylor-H/art-gallery' , live: '/projects/art-gallery' },
-      images: { prevImg: 'js-big.png'},
+      links: {
+        gitHub: 'https://github.com/Taylor-H/art-gallery',
+        live: '/projects/art-gallery',
+      },
+      images: { prevImg: 'js-big.png' },
       categories: ['app', 'creative'],
     },
     {
@@ -157,9 +157,11 @@ const data = {
       tech: ['React', 'JavaScript', 'html5', 'css3', 'Git', 'Heroku'],
       role: ['Game Developer', 'UI/UX Design', 'Graphic Design'],
       description: `I originally made Pixel when learning Javascript. When learning to use React I thought it would be interesting to refactor it into a React app. I plan to add a feature that allows the user tp upload a background image to trace over and export as .png as a fun way to make a custom pixelated profile picture. I put the original plain javascript code in a separate branch on github.`,
-      links:
-        { gitHub: 'https://github.com/Taylor-H/pixelate', live: '/projects/pixelate' },
-      images: { prevImg: 'pixel-desktop.png'},
+      links: {
+        gitHub: 'https://github.com/Taylor-H/pixelate',
+        live: '/projects/pixelate',
+      },
+      images: { prevImg: 'pixel-desktop.png' },
       categories: ['app', 'code'],
     },
     {
@@ -171,9 +173,17 @@ const data = {
       role: ['Front End Developer'],
       description: `As a Frontend Web Developer, part of my regular workflow would include making templates from detailed image file like you see here. My role was to integrate the styles and HTML with data to dynamically display the page as intended. This is an example of old school CSS and HTML. It's an exercise in being precise in an chaotic environment.<br>
       These days there are many great tools to streamline and simplify this process but I am glad that I have an expert understanding of the underlying way the browser renders the page. Having extensive experience with CSS and HTML has made learning to use libraries like Sass and Styled Components in React very exciting.`,
-      links: { gitHub: 'https://github.com/Taylor-H/relaxr', live: '/projects/relaxr' },
-      images:
-        { prevImg: 'relaxr-big.png', phone: 'relaxr_phone.jpg', tablet: 'relaxr_tablet.jpg', desktop: 'relaxr_desktop.jpg}', file: 'relaxr_desktop_2.jpg' },
+      links: {
+        gitHub: 'https://github.com/Taylor-H/relaxr',
+        live: '/projects/relaxr',
+      },
+      images: {
+        prevImg: 'relaxr-big.png',
+        phone: 'relaxr_phone.jpg',
+        tablet: 'relaxr_tablet.jpg',
+        desktop: 'relaxr_desktop.jpg}',
+        file: 'relaxr_desktop_2.jpg',
+      },
       categories: ['creative'],
     },
     {
@@ -196,12 +206,17 @@ const data = {
         'Javascript',
       ],
       role: ['Web Developer', 'Creative Development'],
-      description: `Myself and fellow students worked together to plan, develop, and deploy a Full Stack Web Application from start to finish in less than a week. We used GitHub Projects. We defined our User Stories. Set up our database schema. We implemented authentication. We set up a demo user so perspective users can check it out.
+      description: `I worked with fellow students to plan, develop, and deploy a Full Stack Web Application from start to finish. We planned our site utilizing GitHub Projects. We defined our User Stories. Set up our database schema. We implemented authentication. We set up a demo user so perspective users can check it out.
       Please see our github Wiki for detailed documentation of User Stories, Database Schema, API/Frontend Routes, and a Feature List.
-      A fun exploration of GitHub workflow and project planning. Me and my team did great.`,
-      links:
-        { gitHub: 'https://github.com/southwestmogrown/MedFlowClinic', live: 'https://medflow-clinic.herokuapp.com/', wiki: 'https://github.com/southwestmogrown/MedFlowClinic/wiki' },
-      images: { prevImg: 'med-flow-clinic.png'},
+`,
+      design: `We all played a part in all stages of the project but I think my biggest contribution was when we were planning the database schema and setting up API routes.
+      All in all a fun exploration of state of the art Web Development.GitHub workflow and project planning.`,
+      links: {
+        gitHub: 'https://github.com/southwestmogrown/MedFlowClinic',
+        live: 'https://medflow-clinic.herokuapp.com/',
+        wiki: 'https://github.com/southwestmogrown/MedFlowClinic/wiki',
+      },
+      images: { prevImg: 'med-flow-clinic.png' },
       categories: ['app'],
     },
     {
@@ -220,10 +235,13 @@ const data = {
         'Heroku',
       ],
       role: ['Game Developer', 'UI/UX Design', 'Graphic Design'],
-      description: `VSC Copilot suggested the tagline and I thought it was better than the one I was going write. I wanted to set up media queries and make a site that dynamically adjusted to look great at any screen size width.`,
-      design:` This site is an example of what I call Creative Development. I used a CSS grid and Flex-box to create a responsive design. I used media queries to adjust the site to fit any screen size. `,
-      links: { gitHub: 'https://github.com/Taylor-H/pop' , live: '/projects/pop' },
-      images: { prevImg: 'pop-big.png'},
+      description: `Just kidding, VSC Copilot suggested An Exploration of the 'pop' sound but that's not really what the site was about. I thought it was funny that it suggested that though because I know that VSC's Copilot makes suggestions based on what others have written in Git Repos. I  before so somewhare out there.This was a final project in a Front End Course I took at General assembly. I wanted to set up media queries and make a site that dynamically adjusted to look great at any screen size width.`,
+      design: ` This site is an example of what I call Creative Development. I used a CSS grid and Flex-box to create a responsive design. I used media queries to adjust the site to fit any screen size. `,
+      links: {
+        gitHub: 'https://github.com/Taylor-H/pop',
+        live: '/projects/pop',
+      },
+      images: { prevImg: 'pop-big.png' },
       categories: ['creative'],
     },
     {
@@ -242,8 +260,11 @@ const data = {
         'Heroku',
       ],
       role: ['Full Stack Developer', 'Graphic Design'],
-      links: { gitHub: 'https://github.com/Taylor-H/candy-tracker', live: '/projects/candy-tracker' },
-      images: { prevImg: 'js-big.png'},
+      links: {
+        gitHub: 'https://github.com/Taylor-H/candy-tracker',
+        live: '/projects/candy-tracker',
+      },
+      images: { prevImg: 'js-big.png' },
       categories: ['app'],
     },
     {
@@ -263,8 +284,11 @@ const data = {
       ],
       role: ['Developer', 'UI/UX Design', 'Graphic Design'],
       description: 'Whiteboard and chat over any website with invited friends.',
-      links: { gitHub: 'https://github.com/Taylor-H/collaborate' , live: '/projects/collaborate' },
-      images: { prevImg: 'js-big.png'},
+      links: {
+        gitHub: 'https://github.com/Taylor-H/collaborate',
+        live: '/projects/collaborate',
+      },
+      images: { prevImg: 'js-big.png' },
       categories: ['app'],
     },
     {
@@ -286,8 +310,11 @@ const data = {
       role: ['Front End Developer', 'UI/UX Design', 'Graphic Design'],
       description:
         'Alter the data to make a masterpiece. Using forms to change the parameters and data points, the user can generate an infinite amount of art. This app demonstrates the power of data visualization and CSS.',
-      links: { 'gitHub': 'https://github.com/Taylor-H/data-art' , live: '/projects/data-art' },
-      images:  {prevImg: 'js-big.png'},
+      links: {
+        gitHub: 'https://github.com/Taylor-H/data-art',
+        live: '/projects/data-art',
+      },
+      images: { prevImg: 'js-big.png' },
       categories: ['app', 'code', 'creative'],
     },
     {
@@ -308,8 +335,11 @@ const data = {
       role: ['Game Developer', 'UI/UX Design', 'Graphic Design'],
       description:
         'A new take on Whack a Mole type games. The user must click on the flowers to snip them. you can then drag and drop the flowers to create a bouquet. Originally built with plain old JavaScript this app was converted to React.',
-      links: {gitHub: 'https://github.com/Taylor-H/flower-shop', live: '/projects/flower-shop' },
-      images: { prevImg: 'js-big.png'},
+      links: {
+        gitHub: 'https://github.com/Taylor-H/flower-shop',
+        live: '/projects/flower-shop',
+      },
+      images: { prevImg: 'js-big.png' },
       categories: ['game'],
     },
   ],

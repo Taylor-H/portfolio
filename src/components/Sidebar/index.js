@@ -1,17 +1,21 @@
-import React, { useState, useEffect  } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useParams } from 'react-router-dom';
 import { getProjects, getCategories } from '../../data/data-test.js';
-import { SiteIcon, PageIcon, CaretIconBlack } from '../Styled';
+import { SiteIcon, PageIcon, CaretIconBlack, CloseMenuIcon } from '../Styled';
 
-
-export const Sidebar = () => {
+export const Sidebar = props => {
+console.log('navbarOpen', props.navbarOpen);
   const params = useParams();
   const { projectId } = params;
   const [dropdownOpen, setDropdownOpen] = useState({});
+    // const [sidebarOpen, setSidebarOpen] = useState(true);
+    // const openSidebar = () => setSidebarOpen(true);
+    // const closeSidebar = () => setSidebarOpen(false);
   const categories = getCategories();
   const projects = getProjects();
   const onToggleHeader = (category) => {
     if (dropdownOpen[category.catName]) {
+
       setDropdownOpen((prev) => ({
         ...prev,
         [category.catName]: false,
@@ -23,18 +27,18 @@ export const Sidebar = () => {
       }));
     }
   };
-
+//   function handleChange() {
+//   console.log('handleChange event: ', event.target.value);
+//   navbarOpen.handlechange(event.target.value);
+// }
   const onCollapseCategories = () => {
     setDropdownOpen({});
   };
 
   useEffect(() => {
-    const currentProject = projects.find(
-      (project) => project.id === projectId
-    );
+    const currentProject = projects.find((project) => project.id === projectId);
     if (currentProject?.categories) {
-      const currentCategories = currentProject.categories
-      console.log('currentCat', currentCategories);
+      const currentCategories = currentProject.categories;
       currentCategories.reduce(
         (acc, val) => console.log(acc, val)({ ...acc, [val]: true }),
         {}
@@ -53,12 +57,16 @@ export const Sidebar = () => {
           <React.Fragment key={category.catName}>
             <button
               className="category nowrap title"
-              onClick={() => onToggleHeader(category)}
+              onClick={() => {
+                onToggleHeader(category);
+              }}
             >
               <CaretIconBlack
                 position={dropdownOpen[category.catName] ? 'down' : 'right'}
               />
-              <div className="sub-category">{category.displayName}</div>
+              <div className="sub-category" onClick={event => event.target.value}>
+                {category.displayName}
+              </div>
             </button>
             <nav
               className={
@@ -94,10 +102,14 @@ export const Sidebar = () => {
           </React.Fragment>
         ) : (
           <React.Fragment key={category.catName}>
-            <button className="category nowrap border-bottom"
-              onClick={() => onToggleHeader(category)}>
+            <button
+              className="category nowrap border-bottom"
+              onClick={() => onToggleHeader(category)}
+            >
               <div className="site-link">
-                <NavLink to={`/${category.catName === 'home'? '' : category.catName}`}>
+                <NavLink
+                  to={`/${category.catName === 'home' ? '' : category.catName}`}
+                >
                   {category.displayName}
                 </NavLink>
               </div>
@@ -107,14 +119,5 @@ export const Sidebar = () => {
       )}
     </>
   );
-}
+};
 export default Sidebar;
-
-
-  /* <button
-      onClick={onCollapseCategories}
-      className={`collapse-categories ${!dropdownOpen ? 'visible' : ''}`}
-      title="Collapse Categories"
-    >{dropdownOpen ? <BsChevronContract /> : <BsChevronExpand />}
-    </button> */
-
