@@ -1,17 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Footer from './components/Navigation/Footer';
-import Navigation from './components/Navigation';
+import Sidebar from './components/Sidebar';
 import { Link, Outlet } from 'react-router-dom';
 import { CloseMenuIcon, OpenMenuIcon, Button } from './components/Styled';
+// import  SwitchButton  from './components/Styled/SwitchButton';
+
 
 function App() {
-  const [navbarOpen, setNavbarOpen] = useState(true);
-  function handleChange(newValue) {
-    setNavbarOpen(newValue);
-  }
-
-
-  // const winHeight = window.innerHeight;
+  const [open, setOpen] = useState(true);
+  const viewWidth = window.innerWidth;
+  const ref = useRef();
+  useEffect(() => {
+    document.body.addEventListener('click', (event) => {
+if(ref.current && ref.current.contains(event.target)){
+  return;
+}
+    })
+  }, []);
   return (
     <>
       <header>
@@ -19,20 +24,15 @@ function App() {
           <div className="name-container logo">
             <Link to="/">Taylor Hembree</Link>
           </div>
+
           <div className="hamburg-icon">
-            {navbarOpen ? (
-              <Button
-                navbarOpen={navbarOpen}
-                onClick={(navbarOpen) => setNavbarOpen(navbarOpen)}
-              >
+            {open ? (
+              <Button onClick={() => setOpen(!open)}>
                 <CloseMenuIcon />
               </Button>
             ) : (
-              <Button
-                navbarOpen={navbarOpen}
-                onClick={(navbarOpen) => setNavbarOpen(navbarOpen)}
-              >
-                <OpenMenuIcon />
+              <Button onClick={() => setOpen(true)}>
+                  <OpenMenuIcon />
               </Button>
             )}
           </div>
@@ -42,12 +42,10 @@ function App() {
         <div className={'flex-item-left open'}>
           <Outlet />
         </div>
-        <div
-          className={` ${
-            navbarOpen ? 'flex-item-right open' : 'flex-item-right closed'
-          }`}
-        >
-          <Navigation navbarOpen={navbarOpen} />
+        <div ref={ref}
+          className={`flex-item-right ${open ? 'open' : 'closed'
+          }`}>
+          <Sidebar setOpen={setOpen} />
         </div>
       </div>
       <Footer />
