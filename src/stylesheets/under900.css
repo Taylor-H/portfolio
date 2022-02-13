@@ -1,0 +1,18 @@
+
+@media (max-width: 900px) {
+  .home-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .flex-item-left {
+    width: 100%;
+  }
+  .open {
+    position: sticky;
+    top: 5rem;
+  }
+  .flex-item-right {
+    min-width: 100%;
+    align-self: flex-start;
+  }
+}

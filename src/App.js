@@ -12,10 +12,10 @@ function App() {
   const ref = useRef();
   useEffect(() => {
     document.body.addEventListener('click', (event) => {
-if(ref.current && ref.current.contains(event.target)){
-  return;
-}
-    })
+      if (ref.current && ref.current.contains(event.target)) {
+        return;
+      }
+    });
   }, []);
   return (
     <>
@@ -32,7 +32,7 @@ if(ref.current && ref.current.contains(event.target)){
               </Button>
             ) : (
               <Button onClick={() => setOpen(true)}>
-                  <OpenMenuIcon />
+                <OpenMenuIcon />
               </Button>
             )}
           </div>
@@ -43,8 +43,7 @@ if(ref.current && ref.current.contains(event.target)){
           <Outlet />
         </div>
         <div ref={ref}
-          className={`flex-item-right ${open ? 'open' : 'closed'
-          }`}>
+          className={`flex-item-right ${open ? 'open' : 'closed'}`}>
           <Sidebar setOpen={setOpen} />
         </div>
       </div>
