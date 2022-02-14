@@ -31,34 +31,43 @@ const ProjectDetail = () => {
       <div className="single-project">
         <div className="column">
           <div className="row">
-            <img src={`./images/preview/${project.images.prevImg}`} alt={project.title} className="project-image" />
+            <img
+              src={`./images/preview/${project.images.prevImg}`}
+              alt={project.title}
+              className="project-image"
+            />
           </div>
-          <span className="slide-header">{project.title}</span>
-          <div className="project-link-container">
-            <div className="link-box">
-              {project.links.live}
-              <a
-                href={project.links.live}
-                target="_blank"
-                rel="noopener noreferrer">
-                <NewTab />
-              </a>
-            </div>
-            <a
-              href={project.links.gitHub}
-              target="_blank"
-              rel="noopener noreferrer"
-              alt={`${project.title} repo on github`}>
+          <div className="slide-header">
+            <h1>{project.title}</h1>
+
+            <div className="project-link-container">
               <div className="link-box">
+                <a
+                  href={project.links.live}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Live
+                  <NewTab />
+                </a>
+              </div>
+            </div>
+            <div className="link-box">
+              <a
+                href={project.links.gitHub}
+                target="_blank"
+                rel="noopener noreferrer"
+                alt={`${project.title} repo on github`}>
                 Github
                 <GithubIconSmall />
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
           <p className="slide-text">{project.description}</p>
           <div className="icon-row">
-          {project.tech.map(item => techIcons[item]? <div key={item}>{techIcons[item]}</div> : null)}</div>
-
+            {project.tech.map((item) =>
+              techIcons[item] ? <div key={item}>{techIcons[item]}</div> : null
+            )}
+          </div>
         </div>
         {/* <div className="row">
           <ItemList itemName={'Tech Stack'} itemList={project.tech} />

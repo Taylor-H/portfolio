@@ -218,13 +218,11 @@ div.mini-slide {
 .project-link-container{
     display: flex;
     justify-content: space-around;
-    min-width: 100%;
-    align-content: center;
-    align-items: baseline;
+    width: 50%;
+    align-items: flex-end;
+    flex-direction: column-reverse;
 }
-.project-link-container a{
-align-self: ;
-}
+
 #links {
   font-family: 'Space Mono', monospace;
   font-size: 1.2rem;
@@ -1303,12 +1301,10 @@ div.make-light-blue {
 }
 
 .project-image {
-  width: 50%;
-  max-width: 600px;
+  width: 100%;
   height: auto;
   background-size: cover;
   align-self: flex-end;
-  max-height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1562,29 +1558,28 @@ div.project-description {
 
 .slide-text {
 font-family: 'Libre Franklin', sans-serif;
-
-  font-size: 1.2rem;
-  padding: 1rem;
+  font-size: 1rem;
   color: #242424;
+  margin-bottom: .5rem;
 }
 .link-box{
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
 .icon-row{
     display: flex;
+    width: 60%;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .slide-header {
+display: flex;
   font-family: 'Libre Franklin', sans-serif;
-  font-weight: bold;
-  margin-top: 0.4rem;
-  font-size: 0.8rem;
   color: #000000;
+  margin-top:.5rem;
+  justify-content: space-between;
+      align-items: baseline;
 }
 
 .column span.slide-header {

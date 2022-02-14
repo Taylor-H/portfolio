@@ -6,7 +6,6 @@ import { techList } from '../../data/data-test.js';
 const Home = () => {
   const projects = getProjects();
   const tech = techList;
-  console.log(tech['javascript'].icon);
   return (
   <div className="con-h">
     <div className="circle-image"></div>

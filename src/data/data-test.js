@@ -63,7 +63,7 @@ const data = {
       projectName: 'portfolio',
       title: 'Portfolio',
       tagLine: 'A React app to showcase my skills through projects',
-      tech: ['reactJS', 'Node', 'html5', 'css3', 'javascript', 'heroku'],
+      tech: ['reactJS', 'Node', 'html5', 'css3', 'heroku'],
       role: ['Developer', 'UI/UX Design', 'Graphic Design'],
       description: `My portfolio app allows you to view my projects and see a brief description of each. It has a messaging feature that I set up using emailJS. I've separated the information from the app itself. When I get more projects up I will add a database. It has categories that allow you to filter through the projects. I set up front end routing with React Router.`,
       design: `I designed the Navigation to be representative of the site structure. I decided minimal and succinct was the way to go. I used a combination of Styled Components and CSS to style the site. I wanted a clean simple aesthetic that didn't distract from the sites purpose. I believe this design accomplishes my goals.`,
@@ -77,7 +77,7 @@ const data = {
       projectName: 'robot-boss',
       title: 'Robot Boss',
       tagLine: 'Assigning tasks with React and Express.',
-      tech: ['reactJS', 'Node', 'html5', 'css3', 'javascript', 'heroku'],
+      tech: ['reactJS', 'Node', 'html5', 'css3', 'heroku'],
       role: ['Full Stack Developer', 'UI/UX Design', 'Creative Design'],
       description:
         "Robots are great but if you don't tell them what to do they they just sit around doing nothing. This app is a robot boss. It allows you to assign your team of robots to your todo list. It is a single page React application with an Express server to handle CRUD operations.",
@@ -94,7 +94,7 @@ const data = {
       projectName: 'coffee',
       title: 'Coffee Clicker',
       tagLine: 'Dominate the coffee market.',
-      tech: ['reactJS', 'Node', 'html5', 'css3', 'javascript', 'heroku'],
+      tech: ['reactJS', 'Node', 'html5', 'css3', 'heroku'],
       role: ['Game Developer', 'UI/UX Design', 'Graphic Design'],
       description: 'A javascript game for ',
       links: {
@@ -110,7 +110,7 @@ const data = {
       projectName: 'art-gallery',
       title: 'Art Gallery',
       tagLine: 'A gallery app made with data from Harvard Art Museum.',
-      tech: ['reactJS', 'Node', 'html5', 'css3', 'javascript', 'heroku'],
+      tech: ['reactJS', 'Node', 'html5', 'css3', 'heroku'],
       role: ['Game Developer', 'UI/UX Design', 'Graphic Design'],
       description:
         'Harvard Art Museum has provided an abbreviated version of their collection of art for developers to use. This app allows you to browse the collection and search for specific art pieces or collections. It uses React and React Router.',
@@ -123,16 +123,16 @@ const data = {
     },
     {
       id: 19,
-      projectName: 'pixelate',
-      title: 'Pixelate',
+      projectName: 'pixelclick',
+      title: 'Pixelclick',
       tagLine:
         'A pixel art tool that allows the user to color blocks to make art.',
       tech: ['reactJS', 'Node', 'html5', 'css3', 'javascript', 'heroku'],
       role: ['Game Developer', 'UI/UX Design', 'Graphic Design'],
       description: `I originally made Pixel when learning Javascript. When learning to use React I thought it would be interesting to refactor it into a React app. I plan to add a feature that allows the user tp upload a background image to trace over and export as .png as a fun way to make a custom pixelated profile picture. I put the original plain javascript code in a separate branch on github.`,
       links: {
-        gitHub: 'https://github.com/Taylor-H/pixelate',
-        live: '/projects/pixelate',
+        gitHub: 'https://github.com/Taylor-H/pixeclick',
+        live: '/projects/pixelclick',
       },
       images: { prevImg: 'pixel-desktop.png' },
       categories: ['app', 'code'],
@@ -183,7 +183,7 @@ const data = {
       id: 22,
       projectName: 'pop!',
       title: 'pop!',
-      tagLine: "An expoloration of the 'pop' sound.",
+      tagLine: "A front end design challenge.",
       tech: [
         'react',
         'node',
@@ -195,13 +195,14 @@ const data = {
         'heroku',
       ],
       role: ['Game Developer', 'UI/UX Design', 'Graphic Design'],
-      description: `Just kidding, VSC Copilot suggested An Exploration of the 'pop' sound but that's not really what the site was about. I thought it was funny that it suggested that though because I know that VSC's Copilot makes suggestions based on what others have written in Git Repos. I  before so somewhare out there.This was a final project in a Front End Course I took at General assembly. I wanted to set up media queries and make a site that dynamically adjusted to look great at any screen size width.`,
+      description: `This was a final project in a Front End Course I took at General assembly. I wanted to set up media queries and make a site that dynamically adjusted to look great at any screen size width.`,
       design: ` This site is an example of what I call Creative Development. I used a CSS grid and Flex-box to create a responsive design. I used media queries to adjust the site to fit any screen size. `,
+      features: ['Dropdown Navigation', 'Responsive Design', 'Media Queries'],
       links: {
         gitHub: 'https://github.com/Taylor-H/pop',
         live: '/projects/pop',
       },
-      images: { prevImg: 'pop-big.png' },
+      images: { prevImg: 'pop_desktop.jpg' },
       categories: ['creative'],
     },
     {
