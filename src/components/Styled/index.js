@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { MdOutlineSchema } from 'react-icons/md';
+import { IoLogoJavascript } from 'react-icons/io';
 import { BsChevronContract, BsChevronExpand } from 'react-icons/bs';
 import { FiMenu } from 'react-icons/fi';
 import {
@@ -26,8 +27,6 @@ import {
   SiSequelize,
   SiExpress,
 } from 'react-icons/si';
-
-
 import { Caret } from './Caret';
 import { File } from './File';
 import { ImNewTab } from 'react-icons/im';
@@ -55,7 +54,7 @@ const theme = {
     xxlarge: '5rem',
   },
 };
-// console.log('theme', GithubIconAlt);
+
 const iconFamilies = {
   Grommet: GrommetIcons,
   FontAwesome: FAIcons,
@@ -83,22 +82,6 @@ export const Button = styled.button`
   color: ${theme.colors.primary};
   font-size: 1.5rem;
 `;
-// export const IconDiv = (props) => styled.div`
-// width: 50px;
-// height: 50px;
-//   ${props} {
-//     color: '#91b9c8';
-//     &:hover {
-//     color: ${theme.colors.primary};
-//   }
-// `;
-// export const IconButtonMaker = styled(({ family, name, size, color, ...rest }) => {
-//   return (
-//     <Button  {...rest}>
-//       <Icon {...{ family, name, size, color }} />
-//     </Button>
-//   );
-// })``
 export const CloseMenuIcon = styled(GrClose)`
   color: green;
   font-size: 3rem;
@@ -110,7 +93,9 @@ export const OpenMenuIcon = styled(GrMenu)`
 
 export const NewTab = styled(ImNewTab)`
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  vertical-align: bottom;
+  margin-left: 0.5rem;
 `;
 export const CaretIconBlack = styled(Caret)`
   color: "black";
@@ -119,21 +104,18 @@ export const FileIcon = styled(File)`
   color: "#000";
   font-size: 1.5rem;
   `;
-
 export const BsChevronContractIcon = styled(BsChevronContract)`
   color: ${theme.colors.primary};
   font-size: 1.5rem;`;
 export const BsChevronExpandIcon = styled(BsChevronExpand)`
   color: ${theme.colors.primary};
   font-size: 1.5rem;`
-// export const { GithubIconAlt } = styled(FAIcons.FaGithubAlt)`
-//   color: ${theme.colors.primary};
-//   font-size: 3rem;`;
-
 const GithubAlt = iconFamilies.FontAwesome.FaGithubAlt;
 export const GithubIconSmall = styled(GithubAlt)`
   color: ${theme.colors.primary};
-  font-size: 2rem;
+  font-size: 1.2rem;
+  vertical-align: bottom;
+  margin-left: 0.5rem;
 `;
 export const FaGithubIcon = styled(GrGithub)`
   color: black;
@@ -149,20 +131,6 @@ export const MdCloseIcon = styled(GrClose)`
   color: #000000;
   width: 1.5rem;
   height: 1.5rem;`;
-// export const ChevronIconRight = styled(FaChevronRight)`
-//   color: #000000;
-//   width: 1.5rem;
-//   height: 1.5rem;
-// `;
-// export const ChevronIconDown = styled(FaChevronDown)`
-//   color: #000000;
-//   font-size: 1.5rem;
-// `;
-// export const ChevronIconRTrans = styled(FaChevronRight)`
-//   color: #00000000;
-//   width: 1.5rem;
-//   height: 1.5rem;
-// `;
 export const MenuIcon = styled(FiMenu)`
   color: #000000;
   width: 1.5rem;
@@ -199,7 +167,10 @@ export const ExpressIcon = styled(SiExpress)`
   color: #000000;
   width: 1.5rem;
   height: 1.5rem;`;
-
+export const Javascript = styled(IoLogoJavascript)`
+  color: #000000;
+  width: 1.5rem;
+  height: 1.5rem;`;
 export const SchemaIcon = styled(MdOutlineSchema)`
   color: #000000;
   width: 1.5rem;
@@ -223,40 +194,4 @@ export const StyledSlideMenu = styled.div`
   z-index: 100;
   transition: transform 0.3s ease-in-out;
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
-`;
-
-
-
-
-
-
-
-
-
-export const StyledNavContainerCol = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-  @media (min-width: 769px) {
-    width: 50%;
-  }
-  @media (min-width: 1024px) {
-    width: 25%;
-  }
-  @media (min-width: 1440px) {
-    width: 20%;
-  }
-  @media (min-width: 1920px) {
-    width: 15%;
-  }
-  @media (min-width: 2560px) {
-    width: 10%;
-  }
-  @media (min-width: 3840px) {
-    width: 5%;
-  }
 `;

@@ -3,56 +3,62 @@ import { useParams, Link } from 'react-router-dom';
 import { getProjects } from '../../data/data-test';
 import FourOFour from '../FourOFour';
 import ItemList from '../ItemList';
-import { NewTab, GithubIconSmall, } from '../Styled';
-
+import { NewTab, GithubIconSmall } from '../Styled';
+import { NodeJS, Javascript, HTML5, CSS, ExpressIcon, FaGithubIcon, HerokuIcon, SequelizeIcon, SchemaIcon, ReactJS } from "../Styled/index.js";
 
 const ProjectDetail = () => {
-const projects = getProjects();
-let params = useParams();
-const projectId = params.projectId;
+  const projects = getProjects();
+  const techIcons = {
+    node: <NodeJS />,
+    html5: <HTML5 />,
+    css3: <CSS />,
+    javascript: <Javascript />,
+    express: <ExpressIcon />,
+    git: <FaGithubIcon />,
+    heroku: <HerokuIcon />,
+    sequelize: <SequelizeIcon />,
+    postgresql: <SchemaIcon />,
+    reactJS: <ReactJS />,
+  };
+  let params = useParams();
+  const projectId = params.projectId;
 
-const project = projects.find((project) =>
-project.id.toString() === projectId ? project : null
-);
-
-console.log('project.links', project.links.gitHub ? 'true': project.id);
-// const previewName = project ? project.projectName : null;
+  const project = projects.find((project) =>
+    project.id.toString() === projectId ? project : null
+  );
   return project ? (
-    <div className='con-h'>
+    <div className="con-h">
       <div className="single-project">
         <div className="column">
           <div className="row">
-            <img
-              src={`./images/preview/${project.images.prevImg}`}
-              alt={project.title}
-              className="project-image"
-            />
+            <img src={`./images/preview/${project.images.prevImg}`} alt={project.title} className="project-image" />
           </div>
           <span className="slide-header">{project.title}</span>
-          <p className="slide-text">{project.description}</p>
-          <div className="row">
+          <div className="project-link-container">
+            <div className="link-box">
+              {project.links.live}
+              <a
+                href={project.links.live}
+                target="_blank"
+                rel="noopener noreferrer">
+                <NewTab />
+              </a>
+            </div>
             <a
               href={project.links.gitHub}
               target="_blank"
               rel="noopener noreferrer"
-              alt={`${project.title} repo on github`}
-            >
-              <h5>
+              alt={`${project.title} repo on github`}>
+              <div className="link-box">
                 Github
                 <GithubIconSmall />
-              </h5>
+              </div>
             </a>
-            <Link
-              to={project.links.live}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <h5>
-                {project.links.live}
-                <NewTab />
-              </h5>
-            </Link>
           </div>
+          <p className="slide-text">{project.description}</p>
+          <div className="icon-row">
+          {project.tech.map(item => techIcons[item]? <div key={item}>{techIcons[item]}</div> : null)}</div>
+
         </div>
         {/* <div className="row">
           <ItemList itemName={'Tech Stack'} itemList={project.tech} />

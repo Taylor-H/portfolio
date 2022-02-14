@@ -28,9 +28,12 @@ export const Sidebar = (props) => {
   const onCollapseCategories = () => {
     setDropdownOpen({});
   };
-  const toggleClose = (category) => {
-    viewWidth < 901 ? props.setOpen(false) : props.setOpen(true);
+  const toggleSection = (category) => {
     onToggleHeader(category);
+    closeMenu();
+  };
+  const closeMenu = () => {
+    viewWidth < 901 ? props.setOpen(false) : props.setOpen(true);
   };
   useEffect(() => {
     const currentProject = projects.find((project) => project.id === projectId);
@@ -49,36 +52,36 @@ export const Sidebar = (props) => {
   <div className="categories">
     {categories.map((category) => category.subCategory ? (
     <React.Fragment key={category.catName}>
-      <button className="category nowrap title" >
+      <button className="category nowrap title" onClick={()=> onToggleHeader(category)}>
         <CaretIconBlack position={dropdownOpen[category.catName] ? 'down' : 'right' }/>
-        <div className="sub-category" onClick={()=> onToggleHeader(category)}>
+        <div className="sub-category" >
           {category.displayName}
         </div>
       </button>
       <nav className={!dropdownOpen[category.catName] ? 'collapsed' : 'active'}>
-
         {projects.filter((project) => (project.categories || []).includes(category.catName)).map((project) => {
         return (
-          <Link key={project.projectName} className={project.id === projectId ? 'active' : ''} to={`/projects/${project.id}`} onClick={() => {
-            toggleClose(category)
-          }}>
-        <div className="file-div">
-          <div className="icon">
-            <SiteIcon />
-          </div>
-          <span className="project__text">
-            <b className="nowrap">{project.title}</b>&nbsp;
-            {project.tagLine}
-          </span>
-        </div>
-        </Link>
+          <Link
+            key={project.projectName}
+            className={project.id === projectId ? 'active' : ''}
+            to={`/projects/${project.id}`} onClick={() => closeMenu()}>
+            <div className="file-div">
+              <div className="icon">
+                <SiteIcon />
+              </div>
+              <span className="project__text">
+                <b className="nowrap">{project.title}</b>&nbsp;
+                {project.tagLine}
+              </span>
+            </div>
+          </Link>
         );
         })}
       </nav>
     </React.Fragment>
     ) : (
     <React.Fragment key={category.catName}>
-      <button className="category nowrap border-bottom" onClick={()=> toggleClose(category)}>
+      <button className="category nowrap border-bottom" onClick={()=> toggleSection(category)}>
         <div className="site-link">
           <NavLink to={`/${ category.catName==='home' ? '' : category.catName }`}>
             {category.displayName}
