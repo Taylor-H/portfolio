@@ -39,14 +39,10 @@ const ProjectDetail = () => {
           </div>
           <div className="slide-header">
             <h1>{project.title}</h1>
-
             <div className="project-link-container">
               <div className="link-box">
-                <a
-                  href={project.links.live}
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  Live
+                <a href={project.links.live} target="_blank" rel="noopener noreferrer">
+                  Live&nbsp;
                   <NewTab />
                 </a>
               </div>
@@ -57,21 +53,21 @@ const ProjectDetail = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 alt={`${project.title} repo on github`}>
-                Github
+                Github&nbsp;
                 <GithubIconSmall />
               </a>
             </div>
           </div>
-          <p className="slide-text">{project.description}</p>
+          <div className='feature-section'>
+              <p className="slide-text">{project.description}</p>
+            <ul>{project.features ? project.features.map((feature, key) => <li key={key}>{feature}</li>): null }</ul>
+          </div>
           <div className="icon-row">
             {project.tech.map((item) =>
               techIcons[item] ? <div key={item}>{techIcons[item]}</div> : null
             )}
           </div>
         </div>
-        {/* <div className="row">
-          <ItemList itemName={'Tech Stack'} itemList={project.tech} />
-        </div> */}
       </div>
     </div>
   ) : (

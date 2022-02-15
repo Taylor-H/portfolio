@@ -18,6 +18,9 @@ font-family: 'Sarabun', sans-serif;
   #fef7ee;
   darker peach:
   #ffe8c4
+  Almost black:
+    color: #242424;
+
   Header:
   menu-btn:hover grey blue
 #91b9c8;
@@ -932,7 +935,7 @@ div.make-light-blue {
 }
 
 .con-h {
-  width: 80%;
+  width: 90%;
   height: 90%;
   display: flex;
   flex-direction: column;
@@ -943,7 +946,7 @@ div.make-light-blue {
   font-size: 1rem;
   text-align: left;
   overflow: hidden;
-  padding: 5rem;
+  padding: 2rem;
   margin: 5rem;
   border: 2px solid #666666;
 }
@@ -1153,8 +1156,8 @@ div.make-light-blue {
 .circle-image {
   background-image: url('./images/port2.jpg');
   border-radius: 50%;
-  min-height: 150px;
-  min-width: 150px;
+  min-height: 200px;
+  min-width: 200px;
   max-width: 600px;
   margin-top: 3rem;
   margin-bottom: 0.5rem;
@@ -1188,19 +1191,17 @@ div.make-light-blue {
   text-align: center;
 }
 
-.hi p {
-  font-size: 2rem;
+.container p {
+  color: #242424;
+  font-size: 1.2rem;
   line-height: 1.5rem;
+  font-family: 'Libre Franklin', sans-serif;
   margin: 0;
 }
 
-#projects-link {
-  text-decoration: underline;
-}
-
 .more-link {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: .9rem;
+  font-weight: 900;
   text-align: left;
   text-transform: uppercase;
   align-self: center;
@@ -1213,7 +1214,12 @@ div.make-light-blue {
   font-size: 1rem;
   line-height: 1.5rem;
 }
-
+.feature-section{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 /* ------------------------------------------ Projects --------------------------- */
 
 .portfolio {
@@ -1566,10 +1572,11 @@ font-family: 'Libre Franklin', sans-serif;
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-left: 0.5rem;
 }
 .icon-row{
     display: flex;
-    width: 60%;
+    width: 50%;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -1578,6 +1585,7 @@ display: flex;
   font-family: 'Libre Franklin', sans-serif;
   color: #000000;
   margin-top:.5rem;
+  white-space: nowrap;
   justify-content: space-between;
       align-items: baseline;
 }
@@ -1926,7 +1934,7 @@ span.project__text {
   font-weight: 400;
   font-variant: normal;
   width: 100%;
-  line-height: 1rem;
+  line-height: 1.3rem;
 }
 
 .sidebar div.file-div {

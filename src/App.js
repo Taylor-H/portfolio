@@ -3,8 +3,6 @@ import Footer from './components/Navigation/Footer';
 import Sidebar from './components/Sidebar';
 import { Link, Outlet } from 'react-router-dom';
 import { CloseMenuIcon, OpenMenuIcon, Button } from './components/Styled';
-// import  SwitchButton  from './components/Styled/SwitchButton';
-
 
 function App() {
   const [open, setOpen] = useState(true);
@@ -24,7 +22,6 @@ function App() {
           <div className="name-container logo">
             <Link to="/">Taylor Hembree</Link>
           </div>
-
           <div className="hamburg-icon">
             {open ? (
               <Button onClick={() => setOpen(!open)}>

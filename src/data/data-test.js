@@ -67,6 +67,7 @@ const data = {
       role: ['Developer', 'UI/UX Design', 'Graphic Design'],
       description: `My portfolio app allows you to view my projects and see a brief description of each. It has a messaging feature that I set up using emailJS. I've separated the information from the app itself. When I get more projects up I will add a database. It has categories that allow you to filter through the projects. I set up front end routing with React Router.`,
       design: `I designed the Navigation to be representative of the site structure. I decided minimal and succinct was the way to go. I used a combination of Styled Components and CSS to style the site. I wanted a clean simple aesthetic that didn't distract from the sites purpose. I believe this design accomplishes my goals.`,
+      features:['Accordion Navigation', 'Messaging', 'Routing', 'Clean Design', 'Responsive',],
       links: { gitHub: 'https://github.com/Taylor-H/portfolio', live: '/' },
       images: { prevImg: 'portfolio-big.png' },
       categories: ['app'],
@@ -91,12 +92,13 @@ const data = {
     },
     {
       id: 17,
-      projectName: 'coffee',
+      projectName: 'coffee-clicker',
       title: 'Coffee Clicker',
       tagLine: 'Dominate the coffee market.',
       tech: ['reactJS', 'Node', 'html5', 'css3', 'heroku'],
       role: ['Game Developer', 'UI/UX Design', 'Graphic Design'],
-      description: 'A javascript game for ',
+      description:
+        'A javascript classic. See how much coffee you can make in a day.',
       links: {
         gitHub: 'https://github.com/Taylor-H/portfolio',
         live: '/projects/coffee-clicker',
@@ -123,8 +125,8 @@ const data = {
     },
     {
       id: 19,
-      projectName: 'pixelclick',
-      title: 'Pixelclick',
+      projectName: 'pixel-click',
+      title: 'Pixel Click',
       tagLine:
         'A pixel art tool that allows the user to color blocks to make art.',
       tech: ['reactJS', 'Node', 'html5', 'css3', 'javascript', 'heroku'],
@@ -132,7 +134,7 @@ const data = {
       description: `I originally made Pixel when learning Javascript. When learning to use React I thought it would be interesting to refactor it into a React app. I plan to add a feature that allows the user tp upload a background image to trace over and export as .png as a fun way to make a custom pixelated profile picture. I put the original plain javascript code in a separate branch on github.`,
       links: {
         gitHub: 'https://github.com/Taylor-H/pixeclick',
-        live: '/projects/pixelclick',
+        live: '/projects/pixel-click',
       },
       images: { prevImg: 'pixel-desktop.png' },
       categories: ['app', 'code'],
@@ -144,8 +146,8 @@ const data = {
       tagLine: 'CSS and HTML for a blog.',
       tech: ['html5', 'css3'],
       role: ['Front End Developer'],
-      description: `As a Frontend Web Developer, part of my regular workflow would include making templates from detailed image file like you see here. My role was to integrate the styles and HTML with data to dynamically display the page as intended. This is an example of old school CSS and HTML. It's an exercise in being precise in an chaotic environment.<br>
-      These days there are many great tools to streamline and simplify this process but I am glad that I have an expert understanding of the underlying way the browser renders the page. Having extensive experience with CSS and HTML has made learning to use libraries like Sass and Styled Components in React very exciting.`,
+      description: `As a Frontend Web Developer, part of my regular workflow would include making templates from detailed image file like you see here. My role was to integrate the styles and HTML with data to dynamically display the page as intended by the Web Designer. This is an example of classic CSS and HTML. It's an exercise in being precise in an environment.
+      These days there are many great tools to streamline and simplify this process but I am glad that I have a deep understanding of CSS. Having extensive experience with CSS and HTML has made learning to use libraries like Sass and Styled Components in React very exciting.`,
       links: {
         gitHub: 'https://github.com/Taylor-H/relaxr',
         live: '/projects/relaxr',
@@ -169,8 +171,7 @@ const data = {
       description: `I worked with fellow students to plan, develop, and deploy a Full Stack Web Application from start to finish. We planned our site utilizing GitHub Projects. We defined our User Stories. Set up our database schema. We implemented authentication. We set up a demo user so perspective users can check it out.
       Please see our github Wiki for detailed documentation of User Stories, Database Schema, API/Frontend Routes, and a Feature List.
 `,
-      design: `We all played a part in all stages of the project but I think my biggest contribution was when we were planning the database schema and setting up API routes.
-      All in all a fun exploration of state of the art Web Development.GitHub workflow and project planning.`,
+      design: `We all played a part in all stages of the project but I think my biggest contribution was when we were planning the database schema and setting up API routes.`,
       links: {
         gitHub: 'https://github.com/southwestmogrown/MedFlowClinic',
         live: 'https://medflow-clinic.herokuapp.com/',
@@ -183,7 +184,7 @@ const data = {
       id: 22,
       projectName: 'pop!',
       title: 'pop!',
-      tagLine: "A front end design challenge.",
+      tagLine: 'A front end design challenge.',
       tech: [
         'react',
         'node',
@@ -221,6 +222,7 @@ const data = {
         'heroku',
       ],
       role: ['Full Stack Developer', 'Graphic Design'],
+      description: `This was a final project in a Front End Course I took at General assembly. I wanted to set up media queries and make a site that dynamically adjusted to look great at any screen size width.`,
       links: {
         gitHub: 'https://github.com/Taylor-H/candy-tracker',
         live: '/projects/candy-tracker',
@@ -229,50 +231,9 @@ const data = {
       categories: ['app'],
     },
     {
-      id: 14,
-      projectName: 'collaborate',
-      title: 'Collaborate',
-      tagLine: 'A collaboration app that uses sockets. ',
-      tech: [
-        'react',
-        'node',
-        'html5',
-        'css3',
-        'javascript',
-        'express',
-        'git',
-        'heroku',
-      ],
-      role: ['Developer', 'UI/UX Design', 'Graphic Design'],
-      description: 'Whiteboard and chat over any website with invited friends.',
-      links: {
-        gitHub: 'https://github.com/Taylor-H/collaborate',
-        live: '/projects/collaborate',
-      },
-      images: { prevImg: 'js-big.png' },
-      categories: ['app'],
-    },
-    {
-      id: 25,
-      projectName: 'data-art',
-      title: 'Data Artist',
-      tagLine:
-        'In goes the data, out comes the art. Use a form to alter the data and see the results.',
-      tech: ['reactJS', 'Node', 'html5', 'css3', 'javascript', 'heroku'],
-      role: ['Front End Developer', 'UI/UX Design', 'Graphic Design'],
-      description:
-        'Alter the data to make a masterpiece. Using forms to change the parameters and data points, the user can generate an infinite amount of art. This app demonstrates the power of data visualization and CSS.',
-      links: {
-        gitHub: 'https://github.com/Taylor-H/data-art',
-        live: '/projects/data-art',
-      },
-      images: { prevImg: 'js-big.png' },
-      categories: ['app', 'code', 'creative'],
-    },
-    {
-      id: 26,
-      projectName: 'flower-shop',
-      title: 'Flower Shop',
+      id: 24,
+      projectName: 'flower-picker',
+      title: 'Flower Picker',
       tagLine: 'See how many flowers you can snip to create a bouquet.',
       tech: [
         'react',
@@ -288,8 +249,8 @@ const data = {
       description:
         'A new take on Whack a Mole type games. The user must click on the flowers to snip them. You can then drag and drop the flowers to create a bouquet. Originally built with plain old JavaScript this app was converted to React.',
       links: {
-        gitHub: 'https://github.com/Taylor-H/flower-shop',
-        live: '/projects/flower-shop',
+        gitHub: 'https://github.com/Taylor-H/flower-picker',
+        live: '/projects/flower-picker',
       },
       images: { prevImg: 'js-big.png' },
       categories: ['game'],
