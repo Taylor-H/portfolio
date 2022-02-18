@@ -1506,31 +1506,6 @@ div.project-description {
   white-space: nowrap;
 }
 
-/* .preview {
-  max-height: 100%;
-  min-height: 167px;
-  width: 100%;
-  max-width: 266px;
-  display: block;
-}
-.preview2 {
-  max-height: 170px;
-  display: block;
-}
-.slide {
-  display: flex;
-  align-items: center;
-  width: 30%;
-  min-width: 350px;
-  max-width: 400px;
-  text-align: center;
-  background-color: #fff;
-  outline: none;
-  margin: 15px 15px;
-  padding: 5px;
-  box-shadow: -4px 4px 0px 0px rgba(51, 51, 51, 0.4);
-} */
-
 .card:hover {
   box-shadow: -4px 4px 0px 0px rgb(51, 51, 51);
 }
@@ -1587,7 +1562,7 @@ display: flex;
   margin-top:.5rem;
   white-space: nowrap;
   justify-content: space-between;
-      align-items: baseline;
+  align-items: baseline;
 }
 
 .column span.slide-header {
@@ -1910,18 +1885,18 @@ aside .sidebar {
 }
 
 .sidebar button.category:hover {
-  background: #ffe8c4;
+  background: #fef7ee;
   outline: none;
 }
 
 .sidebar button.category:active {
   outline: none;
-  background: #ffe8c4;
+  background: #fef7ee;
   border-bottom: none;
 }
 
 .sidebar button.category:focus {
-  background: #ffe8c4;
+  background: #fef7ee;
   outline: none;
 }
 
@@ -1978,16 +1953,16 @@ span.project__text {
 }
 
 .sidebar a:hover {
-  background: #ffe8c4;
+  background: #fef7ee;
   outline: none;
-  border-left: 3px solid #ffe8c4;
+
 }
 
 .sidebar a.active,
 .sidebar a:focus {
   outline: none;
   border-left: 3px solid #ff8c00;
-  background: #ffe8c4;
+  background: #fef7ee;
 }
 
 /* .sidebar a.active div,
