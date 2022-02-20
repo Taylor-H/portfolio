@@ -1,22 +1,14 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import Sidebar from '../Sidebar';
 
 
 const Navigation = () => {
-  return(
-  <ul className="menu">
-    <li>
-      <NavLink to="/about">About</NavLink>
-    </li>
-    <li>
-      <NavLink to="/projects">Projects</NavLink>
-    </li>
-    <li>
-      <NavLink to="/contact">Contact</NavLink>
-    </li>
-    <li>
-      <NavLink to="/">Home</NavLink>
-    </li>
-  </ul>
-  )};
+  return (
+    <aside className="sidebar">
+      <div className="categories">
+        <Sidebar />
+      </div>
+    </aside>
+  );
+};
 export default Navigation;

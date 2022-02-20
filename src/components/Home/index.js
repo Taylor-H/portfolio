@@ -1,56 +1,57 @@
+import React from "react";
 import { Link } from "react-router-dom";
-
+import { getProjects } from '../../data/data-test.js';
+import { techList } from '../../data/data-test.js';
 
 const Home = () => {
-const winHeight = window.innerHeight;
-console.log(winHeight)
+  const projects = getProjects();
+  const tech = techList;
   return (
-    <>
-      <div className="hi">
-        <div className="circle-image"></div>
-        <div className="container">
-          <h6>Hi, I'm Taylor.</h6>
-          <p>
-            I'm a Full Stack Web Developer based near Boston, MA. This is a
-            collection of
-            <Link id="projects-link" to="projects">
-              {' '}
-              projects
-            </Link>{' '}
-            I've created. I make dynamic web applications, and games.
-            <br />
+    <div className="con-h">
+      <div className="circle-image"></div>
+      <div className="container">
+        <p>Hi, I'm Taylor.</p>
+        <p>
+          I'm a Full Stack Web Developer based near Boston, MA. I design and develop dynamic web applications, and games. This is a collection of{' '}
+          <Link to="projects">
+            <b>projects</b>
+          </Link>{' '}
+          I've created to demonstrate my skills.
+        </p>
+        <div className="more-link-container">
+          <div>
             <Link className="more-link" to="about">
-              more &#8250;
-            </Link>
-          </p>
-        </div>
-      </div>
-      <div className="container row">
-        {/* <h6>
-          <Link to="projects">Featured Projects</Link>
-        </h6> */}
-        <div className="container flex-row">
-          <div className="flex-col featured">
-            <Link className="more-link" to="about">
-              Project Name 1
-            </Link>
-          </div>
-          <div className="featured">
-            <Link className="more-link" to="about">
-              Project Name 2
-            </Link>
-          </div>
-          <div className="column featured">
-            <Link className="more-link" to="about">
-              Project Name 3
+              About&nbsp;Taylor&#8250;
             </Link>
           </div>
         </div>
-        <Link className="more-link" to="about">
-          Projects &#8250;
-        </Link>
+        <div className="mini-slide flex-row wrap">
+          {projects.map((project) =>
+            project.featured ? (
+              <div key={project.id.toString()} className="flex-col">
+                <Link to={`/projects/${project.id}`}>
+                  <p className="slide-header">{project.title}</p>
+                  <img
+                    src={`/images/preview/${project.images.prevImg}`}
+                    className="mini-slider-img"
+                    alt={project.projectName}
+                  />
+                  <div className="slide-info">
+                    <p className="slide-summary">{project.tagLine}</p>
+                  </div>
+                </Link>
+              </div>
+            ) : null
+          )}
+          <div className="more-link-container">
+            <Link className="more-link" to="/projects">
+              More&nbsp;Projects &#8250;
+            </Link>
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
-  };
-  export default Home;
+};
+
+export default Home;

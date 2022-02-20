@@ -11,7 +11,7 @@
 - Portfolio - Single page app that uses React Router for navigating UI end-points. Responsive.
 - Medflow Clinic - Group project that behaves similar to Stack Overflow. It has multiple User Stories, Authentication, ability to +/- vote. Uses Express and Sequelize for backend.
 - Robot Tasks
-Chat/White Board: collaboration App with User accounts and one time session login sessions sockets.
+- Chat/White Board: collaboration App with User accounts and one time session login sessions sockets.
 [local directory](http:///Users/taylorpell/FA/Labs/2109-GHP-NY-WEB-FT/01-junior-phase/20-sockets)
 - todo list: todo list app that uses a sequel database and Express server.[local directory](/Users/taylorpell/FA/Labs/2109-GHP-NY-WEB-FT/01-junior-phase/19-forms/PairExercise.TodoList.V2.Solution)
 - Media Browser: Membership based media delivery system  social/community component
@@ -27,6 +27,7 @@ Chat/White Board: collaboration App with User accounts and one time session logi
 - Minesweeper
 - Coffee Baron
 - Pixelate
+- Flower Picker
 
 ## Creative - UI/UX and Graphic Design examples.
 Projects that I designed the UI/UX, page layout or graphic elements.

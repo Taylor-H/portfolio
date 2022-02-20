@@ -8,7 +8,7 @@ const About = () => {
     <ul className="prof">
       <li className="flex-item one">
         <div id="para">
-          <h5 id="detail-header">Front End Developer</h5>
+          <h5 id="detail-header">Full Stack Developer</h5>
           <p id="summary-text">I Design, develop, deploy, and support scalable software. I've contributed to a diverse array of projects from static marketing sites to database driven web applications.  I'm a naturally curious problem solver that is perpetually learning while delivering solutions.</p>
           <p id="summary-text">I am highly experienced in Front End development HTML5, CSS3 and Javascript, JS platforms. I have a very strong understanding of DOM manipulation, HTTP protocol, XML, CSS and JS libraries, accessibility and usability best practices.</p>
         </div>

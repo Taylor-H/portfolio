@@ -1,67 +1,78 @@
+import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { getProjects } from '../../data/data';
+import { getProjects } from '../../data/data-test';
 import FourOFour from '../FourOFour';
 import ItemList from '../ItemList';
+import { NewTab, GithubIconSmall } from '../Styled';
+import { NodeJS, Javascript, HTML5, CSS, ExpressIcon, FaGithubIcon, HerokuIcon, SequelizeIcon, SchemaIcon, ReactJS } from "../Styled/index.js";
 
 const ProjectDetail = () => {
-const projects = getProjects();
-let params = useParams();
-const projectId = params.projectId;
+  const projects = getProjects();
+  const techIcons = {
+    node: <NodeJS />,
+    html5: <HTML5 />,
+    css3: <CSS />,
+    javascript: <Javascript />,
+    express: <ExpressIcon />,
+    git: <FaGithubIcon />,
+    heroku: <HerokuIcon />,
+    sequelize: <SequelizeIcon />,
+    postgresql: <SchemaIcon />,
+    reactJS: <ReactJS />,
+  };
+  let params = useParams();
+  const projectId = params.projectId;
 
-const project = projects.find((project) =>
-project.id.toString() === projectId ? project : null
-);
-
-// console.log('projectDetail', project);
-// const previewName = project ? project.projectName : null;
-return project ? (
-  <div className="project-card">
-    <div className="x-back">
-      <Link to="../../projects" alt="Back">
-        X
-      </Link>
-    </div>
-    <div className="single-proj-row end">
-      <span className="project-title">{project.title}</span>
-      <div className="prevImg">
-        <img src={`./images/preview/${project.prevImg}`} alt={project.title} />
-      </div>
-    </div>
-    <div className="single-proj-row">
-      <div className="single-proj-column">
-        <div className="project-description">{project.description}</div>
-        <div className="project-links">
-          <h6>Open in a new tab.</h6>
-          <ul>
-            <li>
+  const project = projects.find((project) =>
+    project.id.toString() === projectId ? project : null
+  );
+  return project ? (
+    <div className="con-h">
+      <div className="single-project">
+        <div className="column">
+          <div className="row">
+            <img
+              src={`./images/preview/${project.images.prevImg}`}
+              alt={project.title}
+              className="project-image"
+            />
+          </div>
+          <div className="slide-header">
+            <h1>{project.title}</h1>
+            <div className="project-link-container">
+              <div className="link-box">
+                <a href={project.links.live} target="_blank" rel="noopener noreferrer">
+                  Live&nbsp;
+                  <NewTab />
+                </a>
+              </div>
+            </div>
+            <div className="link-box">
               <a
-                href={project.gitHub}
+                href={project.links.gitHub}
                 target="_blank"
                 rel="noopener noreferrer"
-              >
-                Github
+                alt={`${project.title} repo on github`}>
+                Github&nbsp;
+                <GithubIconSmall />
               </a>
-            </li>
-            <li>
-              <a href={project.live} target="_blank" rel="noopener noreferrer">
-                Live
-              </a>
-            </li>
-          </ul>
+            </div>
+          </div>
+          <div className='feature-section'>
+              <p className="slide-text">{project.description}</p>
+            <ul>{project.features ? project.features.map((feature, key) => <li key={key}>{feature}</li>): null }</ul>
+          </div>
+          <div className="icon-row">
+            {project.tech.map((item) =>
+              techIcons[item] ? <div key={item}>{techIcons[item]}</div> : null
+            )}
+          </div>
         </div>
       </div>
     </div>
-
-    <div className="single-proj-row">
-      <ItemList itemName={'Role'} itemList={project.role} />
-      <ItemList itemName={'Tech Stack'} itemList={project.tech} />
-    </div>
-    {/*
-</div> */}
-  </div>
-) : (
-  <FourOFour />
-);
+  ) : (
+    <FourOFour />
+  );
 };
 
 export default ProjectDetail;

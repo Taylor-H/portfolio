@@ -4,13 +4,12 @@ import React from 'react';
 
 const ItemList = (props) => {
   const {itemName, itemList} = props;
-  console.log('itemList', itemList, itemName);
   return ((itemList.length > 0) ? (
     <div className='column'>
-      <div id="section-title">
+      <div>
         <h4>&#8250; {itemName}</h4>
       </div>
-      <div className={itemName.concat( ' home-list')}>
+      <div className={itemName}>
         <ul>
           {itemList.map((item, key) => (
             <li key={key}>{`${item}, `}</li>
