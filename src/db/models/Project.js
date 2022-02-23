@@ -1,4 +1,3 @@
-'use strict';
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 const db = require('./db');

@@ -153,7 +153,7 @@ a {
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   border-top: 4px solid transparent;
 }
@@ -189,28 +189,35 @@ a {
 div.mini-slide {
   padding: 0;
   margin: .2rem;
-  width: 100%;
   list-style: none;
   display: flex;
   justify-content: space-evenly;
 }
 .mini-slide div.flex-col {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  width: 25%;
+  justify-content: space-evenly;
+  width: 12vw;
+  min-width: 250px;
+  min-height: 250px;
+  height: 12vw;
   border: 0.5px solid black;
   text-align: left;
   outline: none;
-  margin: 15px 15px;
+  margin: 2rem 1rem;
   padding: 5px;
   box-shadow: -4px 4px 0px 0px rgba(51, 51, 51, 0.4);
 }
 .mini-slider-img{
-    width: 80px;
-    height: auto;
+    width: 100%;
+      border: 1px solid black;
+
 }
 .mini-slide a {
-    align-self: flex-end;
+  width: fit-content;
+
 }
 .more-link-container{
     display: flex;
@@ -225,7 +232,26 @@ div.mini-slide {
     align-items: flex-end;
     flex-direction: column-reverse;
 }
+.mini-title {
+font-family: 'Libre Franklin', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+span.mini-tagline {
+font-family: 'Libre Franklin', sans-serif;
+font-size: .8rem;
+}
+.mini-project-link-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
 
+}
 #links {
   font-family: 'Space Mono', monospace;
   font-size: 1.2rem;
@@ -1154,14 +1180,15 @@ div.make-light-blue {
 }
 
 .circle-image {
-  background-image: url('./images/port2.jpg');
+  background-image: url('./images/circleTay.jpg');
   border-radius: 50%;
-  min-height: 200px;
-  min-width: 200px;
-  max-width: 600px;
+  width: 25vw;
+  height: 25vw;
+  max-width: 400px;
+  max-height: 400px;
   margin-top: 3rem;
-  margin-bottom: 0.5rem;
-  background-size: 100% auto;
+  margin-bottom: 1rem;
+  background-size: 200%;
   background-color: #4d4c4c00;
   background-position: center 10%;
   background-repeat: no-repeat;
@@ -1178,6 +1205,7 @@ div.make-light-blue {
   justify-content: center;
   background-color: rgb(255, 255, 255);
   font-family: 'Libre Franklin', sans-serif;
+  font-size: 1.5rem;
   padding: 5rem;
   margin: 5rem;
   border: 2px solid black;
@@ -1196,7 +1224,7 @@ div.make-light-blue {
   font-size: 1.2rem;
   line-height: 1.5rem;
   font-family: 'Libre Franklin', sans-serif;
-  margin: 0;
+  margin-top: 1rem;
 }
 
 .more-link {
@@ -1308,12 +1336,7 @@ div.make-light-blue {
 
 .project-image {
   width: 100%;
-  height: auto;
-  background-size: cover;
-  align-self: flex-end;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 1rem;
 }
 
 div.project-description {
@@ -1542,6 +1565,7 @@ font-family: 'Libre Franklin', sans-serif;
   font-size: 1rem;
   color: #242424;
   margin-bottom: .5rem;
+  margin-right: 5rem;
 }
 .link-box{
     display: flex;
@@ -1551,7 +1575,7 @@ font-family: 'Libre Franklin', sans-serif;
 }
 .icon-row{
     display: flex;
-    width: 50%;
+    width: fit-content;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -1609,7 +1633,13 @@ section.projects {
 .activeProject {
   color: #00bbff;
 } */
-
+.bulleted-list {
+  list-style: georgian inside circle;
+  color: #000;
+  font-size: .8rem;
+  line-height: .8rem;
+  font-weight: 900;
+}
 .rotate {
   transform: rotate(90deg);
 }

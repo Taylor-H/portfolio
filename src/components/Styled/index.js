@@ -23,7 +23,7 @@ import {
 } from 'react-icons/gr';
 
 import { DiResponsive } from 'react-icons/di';
-import {
+import { SiRedux,
   SiSequelize,
   SiExpress,
 } from 'react-icons/si';
@@ -95,7 +95,6 @@ export const NewTab = styled(ImNewTab)`
   color: black;
   font-size: 1.2rem;
   vertical-align: bottom;
-  margin-left: 0.5rem;
 `;
 export const CaretIconBlack = styled(Caret)`
   color: "black";
@@ -104,6 +103,10 @@ export const FileIcon = styled(File)`
   color: "#000";
   font-size: 1.5rem;
   `;
+export const ReduxIcon = styled(SiRedux)`
+  color: "black";
+  font-size: 1.5rem;
+`;
 export const BsChevronContractIcon = styled(BsChevronContract)`
   color: ${theme.colors.primary};
   font-size: 1.5rem;`;
@@ -115,7 +118,6 @@ export const GithubIconSmall = styled(GithubAlt)`
   color: ${theme.colors.primary};
   font-size: 1.2rem;
   vertical-align: bottom;
-  margin-left: 0.5rem;
 `;
 export const FaGithubIcon = styled(GrGithub)`
   color: black;
@@ -194,4 +196,9 @@ export const StyledSlideMenu = styled.div`
   z-index: 100;
   transition: transform 0.3s ease-in-out;
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
+`;
+export const circleImage = styled.img`
+  border-radius: 50%;
+  height: ${theme.sizing.medium};
+  width: ${theme.sizing.medium};
 `;

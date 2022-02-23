@@ -20,7 +20,9 @@ function App() {
       <header>
         <div className="header">
           <div className="name-container logo">
-            <Link to="/">Taylor Hembree</Link>
+            <Link to="/">
+              <img src="./images/taylor-H.png" alt="Taylor Hembree" />
+            </Link>
           </div>
           <div className="hamburg-icon">
             {open ? (
@@ -39,7 +41,8 @@ function App() {
         <div className={'flex-item-left open'}>
           <Outlet />
         </div>
-        <div ref={ref}
+        <div
+          ref={ref}
           className={`flex-item-right ${open ? 'open' : 'closed'}`}>
           <Sidebar setOpen={setOpen} />
         </div>
