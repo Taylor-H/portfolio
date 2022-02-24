@@ -1,7 +1,16 @@
 
 @media (max-width: 900px) {
+  #root{
+    width: 95%;
+    min-width: 300px;
+  }
+  body {
+    margin: 0;
+  }
   .home-container {
     display: flex;
+    min-width: none;
+    width: 100%;
     flex-direction: column-reverse;
   }
   .flex-item-left {
@@ -10,9 +19,27 @@
   .open {
     position: sticky;
     top: 5rem;
+    left: 0;
+    bottom: 0;
   }
   .flex-item-right {
     min-width: 100%;
     align-self: flex-start;
+  }
+  .project-container {
+
+    width: 100%;
+    min-width: none;
+  }
+  .con-h {
+    margin: 0 !important;
+  }
+  .name-container.logo {
+    width: fit-content;
+    min-width: none;
+  }
+  .name-container img{
+    max-width: 100%;
+    min-width: 200px;
   }
 }

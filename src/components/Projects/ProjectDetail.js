@@ -42,7 +42,10 @@ const ProjectDetail = () => {
             <h1>{project.title}</h1>
             <div className="project-link-container">
               <div className="link-box">
-                <a href={project.links.live} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={project.links.live}
+                  target="_blank"
+                  rel="noopener noreferrer">
                   Live&nbsp;
                   <NewTab />
                 </a>
@@ -59,9 +62,12 @@ const ProjectDetail = () => {
               </a>
             </div>
           </div>
-          <div className='feature-section'>
-            <p className="slide-text">{project.description}</p>
+          <div className="feature-section">
             <ItemList itemList={project.features} />
+            <span className="mini-slide-text">{project.description}</span>
+            {project.design ? (
+              <p className="mini-slide-text"> {project.design}</p>
+            ) : null}
           </div>
           <div className="icon-row">
             {project.tech.map((item) =>

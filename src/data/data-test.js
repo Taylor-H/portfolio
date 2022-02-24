@@ -63,14 +63,14 @@ const data = {
       projectName: 'portfolio',
       title: 'Portfolio',
       tagLine: 'A React app to showcase my skills through projects',
-      tech: ['reactJS', 'Node', 'html5', 'css3', 'heroku'],
+      tech: ['reactJS', 'node', 'html5', 'css3', 'heroku'],
       role: ['Developer', 'UI/UX Design', 'Graphic Design'],
       description: `My portfolio app allows you to view my projects and see a brief description of each. It has a messaging feature that I set up using emailJS. I've separated the information from the app itself. When I get more projects up I will add a database. It has categories that allow you to filter through the projects. I set up front end routing with React Router.`,
       design: `I designed the Navigation to be representative of the site structure. I decided minimal and succinct was the way to go. I used a combination of Styled Components and CSS to style the site. I wanted a clean simple aesthetic that didn't distract from the sites purpose. I believe this design accomplishes my goals.`,
       features: [
-        'Accordion Navigation',
-        'Messaging',
-        'Routing',
+        'Expandable Nav',
+        'Sends me email',
+        'Intuitive UI',
         'Clean Design',
         'Responsive',
       ],
@@ -98,6 +98,13 @@ const data = {
       role: ['Full Stack Developer', 'UI/UX Design', 'Creative Design'],
       description:
         "Robots are great but if you don't tell them what to do they just sit around doing nothing. This app is a robot boss. It allows you to assign your team of robots to your todo list. It is a single page React application with an Express server to handle routing and CRUD operations. I used Sequelize to build my database and associations.",
+      features: [
+        'CRUD Operations',
+        'Sends me email',
+        'Intuitive UI',
+        'Clean Design',
+        'Responsive',
+      ],
       links: {
         gitHub: 'https://github.com/Taylor-H/robot-boss',
         live: '/projects/robot-boss',
@@ -111,10 +118,11 @@ const data = {
       projectName: 'coffee-clicker',
       title: 'Coffee Clicker',
       tagLine: 'Capitalize on the coffee A casual Javascript game.',
-      tech: ['Javascript', 'html5', 'css3'],
+      tech: ['javascript', 'html5', 'css3'],
       role: ['Developer'],
       description:
-        'I recreated a classic Javascript Game. Click the coffee or let time pass to get coffee points. Invest in ever larger containers to grow your coffee rate.',
+        'I recreated a classic Javascript Game. Click the coffee or let time pass to get coffee points. Invest in ever larger containers to grow your coffee rate. Check out the source code on my GitHub.',
+      features: [ 'Fun Game', 'Mildly Addictive'],
       links: {
         gitHub: 'https://github.com/Taylor-H/coffee-clicker',
         live: '/projects/coffee-clicker',
@@ -144,8 +152,7 @@ const data = {
       id: 19,
       projectName: 'pixel-click',
       title: 'Pixel Click',
-      tagLine:
-        'A pixel art tool that allows the user to color blocks to make art.',
+      tagLine:'An interactive art tool I made with React and Redux.',
       tech: [
         'redux',
         'reactJS',
@@ -156,7 +163,8 @@ const data = {
         'heroku',
       ],
       role: ['Game Developer', 'UI/UX Design', 'Graphic Design'],
-      description: `I recreated this app using ReactJS. The app allows the user to create a grid of squares and color them individually.`,
+      description: 'It\'s a fun pixel art tool that allows the user to choose a color to make pixel art. Originally, this was a Javascript exercise.(link below to original script.js) Now I\'ve refactored it in order to explore using a Redux store in my React app. In future versions I want to add a feature to allow the user to export their art to a file so they could use it as an Avatar. It would also be cool to be able to upload a background image to color over.',
+      design: 'I\'ve learned that Redux is a powerful tool to have when adding user interaction without redrawing the page. Having access to to state and props everywhere is very useful. I\'m very excited to know more about Redux.',
       links: {
         gitHub: 'https://github.com/Taylor-H/pixel-click',
         live: '/projects/pixel-click',
@@ -171,9 +179,9 @@ const data = {
       tagLine: 'CSS and HTML for a blog.',
       tech: ['html5', 'css3'],
       role: ['Front End Developer'],
-      description: ``,
+      description: `I didn't design relaxr, it's just a generic layout for a blog. The reason why I've added it is because it is a good example of using CSS media queries to make it responsive. Drag one side of your browser window in until it's as small as it will go. You'll see the layout change to accommodate the change in width.`,
       links: {
-        gitHub: 'https://github.com/Taylor-H/creative-dev.git',
+        gitHub: 'https://github.com/Taylor-H/creative-dev/tree/main/relaxr',
         live: '/projects/creative-dev/relaxr',
       },
       images: {
@@ -221,8 +229,8 @@ const data = {
       tagLine: 'A front end design challenge.',
       tech: ['html5', 'css3', 'git', 'heroku'],
       role: ['Game Developer', 'UI/UX Design', 'Graphic Design'],
-      description: `This was a final project in a Front End Course I took at General assembly. I wanted to set up media queries and make a site that dynamically adjusted to look great at any screen size width.`,
-      design: `I used a CSS grid and Flex-box to create a responsive design. I used media queries to adjust the elements to be the right size whatever the screen size. I designed the layout and the graphics for this site. The concept is an an e-commerce app that allows users to get custom art prints printed on their choice of items.`,
+      description: `This was a final project in a Front End Course I took at General assembly. I wanted to set up media queries and make a site that dynamically adjusted on the screen width.`,
+      design: `I used a CSS grid and Flex-box to create a responsive layout. I used media queries to adjust the layout to be readable whatever the screen width. I designed the layout and the graphics for this site. The concept is an an e-commerce app that allows users to get custom art printed on their choice of items. `,
       features: ['Dropdown Navigation', 'Responsive Design', 'Media Queries'],
       links: {
         gitHub: 'https://github.com/Taylor-H/pop.git',

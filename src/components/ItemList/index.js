@@ -5,14 +5,14 @@ import React from 'react';
 const ItemList = (props) => {
   const {itemName, itemList} = props;
   return itemList ? (
-    <>
+    <span>
       {itemName? <h4>&#8250; {itemName}</h4> : null}
         <ul className="bulleted-list">
           {itemList.map((item, key) => (
             <li key={key}>{item}</li>
           ))}
         </ul>
-    </>
+    </span>
   ) : null;
 };
 export default ItemList;

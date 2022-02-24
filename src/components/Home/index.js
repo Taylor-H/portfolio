@@ -12,12 +12,10 @@ const Home = () => {
      <div className="container">
        <p>Hi, I'm Taylor.</p>
        <p>
-         I'm a Full Stack Web Developer based near Boston, MA. I design and
-         develop dynamic web applications, and games. This is a collection of{' '}
+         I'm a Full Stack Web Developer based near Boston, MA. I design and develop dynamic web applications, and games. This is a collection of{' '}
          <Link to="projects">
          <b>projects</b>
-         </Link>{' '}
-         I've created to demonstrate my skills.
+         </Link>{' '}that I built recently.
        </p>
        <div className="more-link-container">
          <div>
@@ -49,8 +47,7 @@ const Home = () => {
                </a>
              </div>
            </span>
-           <Link to={`/projects/${project.id}`}> <span className="mini-title">{project.title} </span>
-
+           <Link to={`/projects/${project.id}`}> <div className="mini-title">{project.title} </div>
            <span className="mini-tagline">{project.tagLine}</span>
            </Link>
          </div>

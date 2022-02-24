@@ -38,7 +38,7 @@ function App() {
         </div>
       </header>
       <div className="home-container">
-        <div className={'flex-item-left open'}>
+        <div className={'flex-item-left'}>
           <Outlet />
         </div>
         <div
