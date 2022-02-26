@@ -87,9 +87,9 @@ const About = () => {
               the pandemic started I finally had the opportunity to take some
               time and go in depth with software development and computer
               science in general. I really focused on Javascript. When I felt
-              I'd gotten far enough I moved on to tha data part. I was able to
+              I'd gotten far enough I moved on to the data part. I was able to
               learn PostgreSQL and Sequelize. I learned not just how to display
-              data but how to structure, verify and have it persist. I was then
+              data but how to structure, verify and have save it for later. I was then
               able to make <Link to="">a basic CRUD app</Link> with NodeJS and
               Express.
             </p>
