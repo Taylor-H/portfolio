@@ -4,19 +4,15 @@ import React from 'react';
 
 const ItemList = (props) => {
   const {itemName, itemList} = props;
-  return ((itemList.length > 0) ? (
-    <div className='column'>
-      <div>
-        <h4>&#8250; {itemName}</h4>
-      </div>
-      <div className={itemName}>
-        <ul>
+  return itemList ? (
+    <span>
+      {itemName? <h4>&#8250; {itemName}</h4> : null}
+        <ul className="bulleted-list">
           {itemList.map((item, key) => (
-            <li key={key}>{`${item}, `}</li>
+            <li key={key}>{item}</li>
           ))}
         </ul>
-      </div>
-    </div>
-  ): null);
+    </span>
+  ) : null;
 };
 export default ItemList;
