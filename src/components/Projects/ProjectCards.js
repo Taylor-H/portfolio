@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { getProjects } from '../../data/data-test';
+import { getProjects } from '../../data/data';
 
 
 const ProjectCards = () => {
@@ -11,14 +11,15 @@ const ProjectCards = () => {
         <div key={project.id.toString()} className="proj-card">
           <Link to={`/projects/${project.id}`} alt={project.projectName}>
             <div className="proj-column">
-              <p className="slide-header">{project.title}</p>
+              <p></p>
               <img
                 src={`/images/preview/${project.images.prevImg}`}
                 className="project-image"
-                alt={project.projectName}/>
-            <div className="slide-info">
-              <p className="slide-summary">{project.tagLine}</p>
-            </div>
+                alt={project.projectName}
+              />
+              <span className="mini-title">
+                <b>{project.title}</b> {project.tagLine}
+              </span>
             </div>
           </Link>
         </div>

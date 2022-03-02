@@ -1,5 +1,12 @@
+@media (max-width: 1300px) {
+  .mini-slide div.flex-col {
+      margin-top: 2rem;
+      margin-right: .5rem;
+            margin-left: .5rem;
 
-@media (max-width: 900px) {
+  }
+}
+@media () and (max-width: 900px) {
   #root{
     width: 95%;
     min-width: 300px;
@@ -27,7 +34,6 @@
     align-self: flex-start;
   }
   .project-container {
-
     width: 100%;
     min-width: none;
   }
@@ -36,10 +42,28 @@
   }
   .name-container.logo {
     width: fit-content;
-    min-width: none;
+     width: 60%;
   }
-  .name-container img{
+img.logo{
     max-width: 100%;
-    min-width: 200px;
+    min-width: 180px;
+    margin: 0;
   }
+  .mini-slide-text {
+    font-size: 1rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px){
+  name-container.logo {
+    border-right: none;
+     width: 70%;
+  }
+img.logo{
+    max-width: 100%;
+    min-width: 180px;
+    margin: 0;
+  }
+
 }
