@@ -18,12 +18,12 @@ function App() {
   return (
     <>
       <header>
-        <div className="header">
-          <div className="name-container logo">
-            <Link to="/">
+        {/* <div className="header"> */}
+        <Link to="/">
+          <div className="name-container">
               <img src={logo} alt="Taylor Hembree" className="logo" />
-            </Link>
           </div>
+        </Link>
           <div className="hamburg-icon">
             {open ? (
               <Button onClick={() => setOpen(!open)}>
@@ -35,7 +35,7 @@ function App() {
               </Button>
             )}
           </div>
-        </div>
+        {/* </div> */}
       </header>
       <div className="home-container">
         <div className={'flex-item-left'}>

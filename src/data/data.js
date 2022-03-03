@@ -49,13 +49,13 @@ const data = {
       displayName: 'Creative Development',
       subCategory: true,
     },
-    {
-      catId: 8,
-      catName: 'code',
-      shortDisplay: 'Code',
-      displayName: 'Code Examples',
-      subCategory: true,
-    },
+    // {
+    //   catId: 8,
+    //   catName: 'code',
+    //   shortDisplay: 'Code',
+    //   displayName: 'Code Examples',
+    //   subCategory: true,
+    // },
   ],
   projects: [
     {
@@ -147,7 +147,7 @@ const data = {
         gitHub: 'https://github.com/Taylor-H/art-gallery',
         live: 'https://harvard-art-gallery.herokuapp.com/',
       },
-      images: { prevImgName: 'artGallery', prevImg: 'portfolio-big.png' },
+      images: { prevImgName: 'artGallery', prevImg: 'art-gallery-big.png' },
       categories: ['app', 'creative'],
       featured: true,
     },
@@ -176,7 +176,7 @@ const data = {
         live: 'https://click-pixel.herokuapp.com/',
       },
       images: { prevImgName: 'pixel', prevImg: 'pixel-click-big.png' },
-      categories: ['app', 'code'],
+      categories: ['app'],
     },
     {
       id: 20,

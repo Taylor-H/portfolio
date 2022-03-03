@@ -37,16 +37,16 @@ const successHTML = <div className="success">
 const formHTML = (
 <>
   <h5 id="detail-header">Interested in working with me?</h5>
-  <p>This form will send me an email message.</p>
+  <p className="margin-bottom">Send me a message.</p>
   <div className="connect-form">
     <form id="email" ref={formState} onSubmit={sendEmail}>
       <div>
         <input className="input-box" type="text" name="firstname" onChange={setFormData} placeholder={'First Name:'} />
-        <input className="input-box" type="text" name="lastname" placeholder="Last Name:" onChange={setFormData} />
+        <input className="input-box margin-left" type="text" name="lastname" placeholder="Last Name:" onChange={setFormData} />
       </div>
       <div>
         <input className="input-box" type="text" name="company" placeholder="Company" onChange={setFormData} />
-        <input className="input-box" id="em-field" type="email" name="email" placeholder="Email Address:"
+        <input className="input-box margin-left" type="email" name="email" placeholder="Email Address:"
           onChange={setFormData} />
       </div>
       <div>

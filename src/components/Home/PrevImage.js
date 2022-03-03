@@ -9,7 +9,7 @@ import portfolio from '../../images/preview/portfolio-big.png';
 import relaxr from '../../images/preview/relaxr-big.jpg';
 import rioport from "../../images/preview/rioport-big.jpg";
 import vh1 from '../../images/preview/vh1-big.jpg';
-import artGallery from '../../images/preview/portfolio-big.png';
+import artGallery from '../../images/preview/art-gallery-big.png';
 
 const PrevImage = (props) => {
   const { project } = props;

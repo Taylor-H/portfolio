@@ -121,7 +121,8 @@ export const GithubIconSmall = styled(GithubAlt)`
 `;
 export const FaGithubIcon = styled(GrGithub)`
   color: ${theme.colors.primary};
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  vertical-align: bottom;
 `;
 export const FiMenuIcon = styled(FiMenu)`
   background: '#00000000';

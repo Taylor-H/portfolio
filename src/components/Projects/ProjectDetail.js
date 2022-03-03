@@ -46,15 +46,21 @@ const ProjectDetail = () => {
             </div>
           </div>
           <div className="feature-section">
+            <div className="top-row">
             <ItemList itemList={project.features} />
-            <span className="mini-slide-text">{project.description}</span>
+              <p className="mini-slide-text">{project.description}</p>
+            </div>
             {project.design ? (
               <p className="mini-slide-text">{project.design}</p>
             ) : null}
           </div>
           <div className="icon-row">
             {project.tech.map((item) =>
-              techIcons[item] ? <div key={item} alt={item}>{techIcons[item]}</div> : null
+              techIcons[item] ? (
+                <div key={item} alt={item}>
+                  {techIcons[item]}
+                </div>
+              ) : null
             )}
           </div>
         </div>
