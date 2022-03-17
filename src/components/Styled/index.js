@@ -30,8 +30,8 @@ import { SiRedux,
 import { Caret } from './Caret';
 import { File } from './File';
 import { ImNewTab } from 'react-icons/im';
-import * as GrommetIcons from 'react-icons/gr';
-import * as FAIcons from 'react-icons/fa';
+// import * as GrommetIcons from 'react-icons/gr';
+import { FaGithubAlt } from 'react-icons/fa';
 
 const theme = {
   colors: {
@@ -55,10 +55,10 @@ const theme = {
   },
 };
 
-const iconFamilies = {
-  Grommet: GrommetIcons,
-  FontAwesome: FAIcons,
-};
+// const iconFamilies = {
+//   Grommet: GrommetIcons,
+//   FontAwesome: FAIcons,
+// };
 
 export const PageIcon = styled(GrArticle)`
 width: theme.sizing.medium;
@@ -113,8 +113,8 @@ export const BsChevronContractIcon = styled(BsChevronContract)`
 export const BsChevronExpandIcon = styled(BsChevronExpand)`
   color: ${theme.colors.primary};
   font-size: 1.5rem;`
-const GithubAlt = iconFamilies.FontAwesome.FaGithubAlt;
-export const GithubIconSmall = styled(GithubAlt)`
+// const GithubAlt = iconFamilies.FontAwesome.FaGithubAlt;
+export const GithubIconSmall = styled(FaGithubAlt)`
   color: ${theme.colors.primary};
   font-size: 1.2rem;
   vertical-align: bottom;
