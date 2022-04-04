@@ -23,10 +23,14 @@ const ProjectDetail = () => {
     redux: <ReduxIcon />,
   };
   let params = useParams();
+  console.log('params', params);
   const projectId = params.projectId;
 
   const project = projects.find((project) => {
-    console.log('project.id', project.id.toString() === projectId);
+    console.log('projectId', typeof projectId, projectId);
+        console.log('project.id', typeof project.id, project.id);
+
+    console.log('project.id === projectId?', project.id.toString() === projectId);
     return (
       project.id.toString() === projectId ? project : null);
   });
