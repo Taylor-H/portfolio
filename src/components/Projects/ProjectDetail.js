@@ -25,9 +25,11 @@ const ProjectDetail = () => {
   let params = useParams();
   const projectId = params.projectId;
 
-  const project = projects.find((project) =>
-    project.id.toString() === projectId ? project : null
-  );
+  const project = projects.find((project) => {
+    console.log('project.id', typeof project.id.toString(), typeof projectId);
+    return (
+      project.id.toString() === projectId ? project : null);
+  });
   return project ? (
     <div className="con-h">
       <div className="single-project">

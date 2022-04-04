@@ -1613,14 +1613,19 @@ span.project__text {
   background: #fef7ee;
 }
 
-/* .sidebar a.active div,
-.sidebar a:focus div{
-
-
+.fourOfour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: #f8fbdb;
+  color: #000000;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 400;
+  font-size: 5rem;
+  margin-top: 1vh;
+  display: inline-block;
+  vertical-align: center;
 }
-.sidebar a.active svg path {
-  fill: #000000;
-}
-.sidebar a.notactive {
-  color: black;
-} */
