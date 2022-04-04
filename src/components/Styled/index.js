@@ -14,10 +14,7 @@ import {
   GrHtml5,
   GrMenu,
   GrClose,
-  GrTree,
   GrArticle,
-  GrAscend,
-  GrDescend,
   GrDomain,
   GrFolder,
 } from 'react-icons/gr';

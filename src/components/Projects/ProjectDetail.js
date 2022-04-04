@@ -26,7 +26,7 @@ const ProjectDetail = () => {
   const projectId = params.projectId;
 
   const project = projects.find((project) => {
-    console.log('project.id', typeof project.id.toString(), typeof projectId);
+    console.log('project.id', project.id.toString() === projectId);
     return (
       project.id.toString() === projectId ? project : null);
   });

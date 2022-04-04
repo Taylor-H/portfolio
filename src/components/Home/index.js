@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { getProjects, techList } from '../../data/data.js';
+import { getProjects } from '../../data/data.js';
 import ProjectLink from '../Projects/ProjectLinks';
 import PrevImage from './PrevImage'
 const Home = () => {
   const projects = getProjects();
-  const tech = techList;
+  // const tech = techList;
   return (
     <div className="con-h">
       <div className="circle-image"></div>
