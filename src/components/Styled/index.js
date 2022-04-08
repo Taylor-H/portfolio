@@ -14,10 +14,7 @@ import {
   GrHtml5,
   GrMenu,
   GrClose,
-  GrTree,
   GrArticle,
-  GrAscend,
-  GrDescend,
   GrDomain,
   GrFolder,
 } from 'react-icons/gr';
@@ -30,8 +27,8 @@ import { SiRedux,
 import { Caret } from './Caret';
 import { File } from './File';
 import { ImNewTab } from 'react-icons/im';
-import * as GrommetIcons from 'react-icons/gr';
-import * as FAIcons from 'react-icons/fa';
+// import * as GrommetIcons from 'react-icons/gr';
+import { FaGithubAlt } from 'react-icons/fa';
 
 const theme = {
   colors: {
@@ -55,10 +52,10 @@ const theme = {
   },
 };
 
-const iconFamilies = {
-  Grommet: GrommetIcons,
-  FontAwesome: FAIcons,
-};
+// const iconFamilies = {
+//   Grommet: GrommetIcons,
+//   FontAwesome: FAIcons,
+// };
 
 export const PageIcon = styled(GrArticle)`
 width: theme.sizing.medium;
@@ -92,19 +89,19 @@ export const OpenMenuIcon = styled(GrMenu)`
 `;
 
 export const NewTab = styled(ImNewTab)`
-  color: black;
+  color: ${theme.colors.primary};
   font-size: 1.2rem;
   vertical-align: bottom;
 `;
 export const CaretIconBlack = styled(Caret)`
-  color: "black";
+  color: ${theme.colors.primary};
 `;
 export const FileIcon = styled(File)`
-  color: "#000";
+  color: ${theme.colors.primary};
   font-size: 1.5rem;
-  `;
+`;
 export const ReduxIcon = styled(SiRedux)`
-  color: "black";
+  color: ${theme.colors.primary};
   font-size: 1.5rem;
 `;
 export const BsChevronContractIcon = styled(BsChevronContract)`
@@ -113,74 +110,74 @@ export const BsChevronContractIcon = styled(BsChevronContract)`
 export const BsChevronExpandIcon = styled(BsChevronExpand)`
   color: ${theme.colors.primary};
   font-size: 1.5rem;`
-const GithubAlt = iconFamilies.FontAwesome.FaGithubAlt;
-export const GithubIconSmall = styled(GithubAlt)`
+// const GithubAlt = iconFamilies.FontAwesome.FaGithubAlt;
+export const GithubIconSmall = styled(FaGithubAlt)`
   color: ${theme.colors.primary};
   font-size: 1.2rem;
   vertical-align: bottom;
 `;
 export const FaGithubIcon = styled(GrGithub)`
-  color: black;
-  font-size: 1.5rem;
+  color: ${theme.colors.primary};
+  font-size: 1.2rem;
+  vertical-align: bottom;
 `;
 export const FiMenuIcon = styled(FiMenu)`
   background: '#00000000';
-  color: #000000;
-  width: 1.5rem;
-  height: 1.5rem;`;
+  color: ${theme.colors.primary};
+  font-size: 1.5rem;
+`;
 export const MdCloseIcon = styled(GrClose)`
   background: '#00000000';
-  color: #000000;
-  width: 1.5rem;
-  height: 1.5rem;`;
+  color: ${theme.colors.primary};
+  font-size: 1.5rem;
+`;
 export const MenuIcon = styled(FiMenu)`
-  color: #000000;
-  width: 1.5rem;
-  height: 1.5rem;`;
+  color: ${theme.colors.primary};
+  font-size: 1.5rem;
+`;
 export const MySqlDolphin = styled(GrMysql)`
-  color: #000000;
-  width: 1.5rem;
-  height: 1.5rem;`;
+  color: ${theme.colors.primary};
+  font-size: 1.5rem;`;
 export const HerokuIcon = styled(GrHeroku)`
-  color: #000000;
-  width: 1.5rem;
-  height: 1.5rem;`;
+  color: ${theme.colors.primary};
+  font-size: 1.5rem;`;
 export const SequelizeIcon = styled(SiSequelize)`
-  color: #000000;
-  width: 1.5rem;
-  height: 1.5rem;`;
+  color: ${theme.colors.primary};
+  font-size: 1.5rem;`;
 export const DatabaseIcon = styled(GrStorage)`
-  color: #000000;
-  width: 1.5rem;
-  height: 1.5rem;`;
+  color: ${theme.colors.primary};
+  font-size: 1.5rem;`;
 export const NodeJS = styled(GrNode)`
-  width: 1.5rem;
-  height: 1.5rem;`;
+  color: ${theme.colors.primary};
+  font-size: 1.5rem;
+`;
 export const ReactJS = styled(GrReactjs)`
-  width: 1.5rem;
-  height: 1.5rem;`;
+  color: ${theme.colors.primary};
+  font-size: 1.5rem;
+  &:hover {
+    font-weight: bold;
+  }
+`;
 export const CSS = styled(GrCss3)`
-  width: 1.5rem;
-  height: 1.5rem;`;
+  color: ${theme.colors.primary};
+  font-size: 1.5rem;
+`;
 export const HTML5 = styled(GrHtml5)`
-  width: 1.5rem;
-  height: 1.5rem;`;
+  color: ${theme.colors.primary};
+  font-size: 1.5rem;
+`;
 export const ExpressIcon = styled(SiExpress)`
-  color: #000000;
-  width: 1.5rem;
-  height: 1.5rem;`;
+  color: ${theme.colors.primary};
+  font-size: 1.5rem;`;
 export const Javascript = styled(IoLogoJavascript)`
-  color: #000000;
-  width: 1.5rem;
-  height: 1.5rem;`;
+  color: ${theme.colors.primary};
+  font-size: 1.5rem;`;
 export const SchemaIcon = styled(MdOutlineSchema)`
-  color: #000000;
-  width: 1.5rem;
-  height: 1.5rem;`;
+  color: ${theme.colors.primary};
+  font-size: 1.5rem;`;
 export const ResponsiveIcon = styled(DiResponsive)`
-  color: #000000;
-  width: 1.5rem;
-  height: 1.5rem;`;
+  color: ${theme.colors.primary};
+  font-size: 1.5rem;`;
 
 export const StyledSlideMenu = styled.div`
   background: ${theme.colors.paleOrange};

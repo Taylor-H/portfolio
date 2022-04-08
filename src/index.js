@@ -1,18 +1,19 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
-import Contact from './components/Contact';
-import About from './components/About';
-import Projects from './components/Projects';
 import ProjectCards from './components/Projects/ProjectCards';
 import ProjectDetail from './components/Projects/ProjectDetail';
-
-const rootElement = document.getElementById("root");
+const FourOFour = lazy(() => import('./components/FourOFour'));
+const Projects = lazy(() => import('./components/Projects'));
+const Contact = lazy(() => import('./components/Contact'));
+const Home = lazy(() => import('./components/Home'));
+const About = lazy(() => import('./components/About'));
+const rootElement = document.getElementById('root');
 ReactDOM.render(
   <BrowserRouter>
+    <Suspense fallback={<div className="loading">Loading...</div>}>
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
@@ -22,8 +23,10 @@ ReactDOM.render(
             <Route index element={<ProjectCards />} />
             <Route path=":projectId" element={<ProjectDetail />} />
           </Route>
+          <Route path="/*" element={<FourOFour />} />
         </Route>
       </Routes>
-    </BrowserRouter>
-    ,rootElement
+    </Suspense>
+  </BrowserRouter>,
+  rootElement
 );

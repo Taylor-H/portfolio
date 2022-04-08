@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect} from 'react';
 import { NavLink, Link, useParams } from 'react-router-dom';
-import { getProjects, getCategories } from '../../data/data-test.js';
-import { SiteIcon, PageIcon, CaretIconBlack, CloseMenuIcon, BsChevronExpandIcon, BsChevronContractIcon } from '../Styled';
+import { getProjects, getCategories } from '../../data/data.js';
+import { SiteIcon, CaretIconBlack } from '../Styled';
 
 export const Sidebar = (props) => {
   const params = useParams();
