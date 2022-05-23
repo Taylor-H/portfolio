@@ -21,7 +21,7 @@ ReactDOM.render(
           <Route path="contact" element={<Contact />} />
           <Route path="projects" element={<Projects />}>
             <Route index element={<ProjectCards />} />
-            <Route path=":projectId" element={<ProjectDetail />} />
+            <Route path="/projects/:projectId" element={<ProjectDetail />} />
           </Route>
           <Route path="/*" element={<FourOFour />} />
         </Route>

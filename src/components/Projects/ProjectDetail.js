@@ -28,7 +28,11 @@ const ProjectDetail = () => {
 
   const project = projects.find((project) => {
     console.log('projectId', typeof projectId, projectId);
-        console.log('project.id', typeof project.id, project.id);
+        console.log(
+          'project.id',
+          typeof project.id.toString(),
+          project.id.toString()
+        );
 
     console.log('project.id === projectId?', project.id.toString() === projectId);
     return (
