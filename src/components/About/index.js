@@ -10,15 +10,28 @@ const About = () => {
         <div className="para">
           <h5 id="detail-header">Web Developer Back Story</h5>
           <p className="summary-text">
-            I've lived about half my life in Las Vegas and Los Angeles CA and
-            the other half in Massachusetts. My professional web development
-            experience goes way back to the mid '90s in Pasadena CA. I got my
-            introduction to the internet at one of the first ISP's in the LA
-            area, Earthlink. I started in Technical Support helping people all
-            over the country get connected to the World Wild Web. It wasn't long
-            before I moved to supporting our commercial and corporate web
-            hosting clients. That's where I learned to make web sites that were
-            more than static pages.
+            My tech history begins in Southern California in the mid 90s. Having
+            a parent that was a software developer and several CS classes in
+            high school and college coupled with customer service experience I
+            was hired at an ISP and web hosting company in an entry level
+            Technical Support role connecting people all over the US to the
+            World Wide Web at Earthlink. It was internet boom time and I quickly
+            moved through the ranks ultimately landing in Earthlink's commercial
+            web hosting department.
+          </p>
+          <p className="summary-text">
+            I ensured customer retention and success by troubleshooting
+            software, assisting domain name registration and forwarding,
+            configuring enterprise email and DNS/A Records, and supporting
+            server side scripting on a Unix/Apache server. Users had only FTP
+            access to the server so calling support was the only way to access
+            their files from the command line. The amazing resources that we
+            enjoy today where rudimentary at the time. In learning to
+            effectively support our commercial web hosting clients I learned
+            everything I could about web design, web browsers, HTML, Javascript
+            and server side scripting. Most importantly I learned how to
+            communicate with people of varying technical backgrounds in an
+            informed yet empathetic manner.
           </p>
         </div>
       </li>
@@ -26,7 +39,8 @@ const About = () => {
         <div className="photo1">
           <img src={rioport} alt="rioport preview" />
           <p>
-            Rioport was the first app that legally sold music online. A precursor to iTunes.
+            Rioport was the first app that legally sold music online. A
+            precursor to iTunes.
           </p>
         </div>
       </li>
@@ -35,31 +49,27 @@ const About = () => {
           <img src={mtv} alt="mtv preview" />
           <img src={vh1} alt="vh1 preview" />
           <p>
-            While at Rioport we made music download sites for companies like Nike, MTV, Vh1 and HP. I was their primary front end developer.
+            While at Rioport we made music download sites for companies like
+            Nike, MTV, Vh1 and HP. I was their primary front end developer.
           </p>
         </div>
       </li>
       <li className="flex-item one">
         <div className="para">
+          <h5 id="detail-header">Things got real.</h5>
           <p className="summary-text">
-            By the end of the '90s I was working on ground breaking technology
-            at internet start ups including{' '}
-            <a href="https://en.wikipedia.org/wiki/RioPort">
-              "the first internet music service (cloud service) to legally offer
-              digital songs from all the major music labels".
-            </a>{' '}
-            The precursor to{' '}
-            <a
-              href="https://variety.com/2001/digital/news/mtvi-rioport-big-5-pact-for-downloads-1117796560/"
-              alt="another RioPort article">
-              iTunes *
-            </a>{' '}
-            among others. I had quickly become a Front End guru primarily
-            integrating graphics, data, and code for the web browser. I enjoyed
-            a successful and rewarding career until 2005 when I took some time
-            off to start a family. Time kept doing what time does and due to
-            circumstances I was not able to continue my career for a very long
-            time.
+            Utilizing my experience in supporting web developers I landed a
+            front end developer position at an internet start up in Los Angeles.
+            I played an integral part in building an app that allowed users to
+            create and edit their own personal website right in the browser (new
+            concept at the time). I played an integral part in integrating the
+            branding, UI, and support pages for consistent experience in web
+            browsers. Homepage was a very fast environment. I gained extensive
+            experience with interacting with SQL database through HTML forms,
+            integrating and optimizing graphics and code, quality assurance and
+            working on a team. I worked with graphic designers to rebrand our
+            application to build online communities for partners like Petsmart,
+            and hollywood.com before social media existed.
           </p>
         </div>
       </li>
@@ -91,15 +101,20 @@ const About = () => {
       <li className="flex-item one">
         <div className="para">
           <p className="summary-text">
-            Back in the day I knew enough Javascript to allow me to add some
-            interactivity or check that a form was filled out correctly. When
-            the pandemic started I finally had the opportunity to take some time
-            and go in depth with software development and computer science in
-            general. I really focused on Javascript. When I felt I'd gotten far
-            enough I moved on to the data part. I was able to learn PostgreSQL
-            and Sequelize. I learned not just how to display data but how to
-            structure, verify and have save it for later. I was then able to
-            make <Link to="">a basic CRUD app</Link> with NodeJS and Express.
+            Later I moved to a prominent position at
+            <a href="https://en.wikipedia.org/wiki/RioPort">
+              the first internet music service (cloud service) to legally offer
+              digital songs from all the major music labels
+            </a>". Rioport's main product was a precursor to iTunes * . This was the
+            most exciting and technically challenging role for me yet. I worked
+            closely with our in-house graphic designers and designers from
+            companies like Nike, and MTV to rebrand Rioport's app and content to
+            their specific design and use. Working with design, engineering and
+            marketing integrate graphics, data, and HTML/CSS for the web browser
+            and then optimizing the final product was my main role. Additionally
+            I worked with marketing to set up scheduled press releases,
+            promotional pages, and content updates on the corporate marketing
+            side of the site.
           </p>
         </div>
       </li>
