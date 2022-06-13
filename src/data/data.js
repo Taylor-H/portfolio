@@ -65,8 +65,8 @@ const data = {
       tagLine: 'A React app to showcase my skills through projects',
       tech: ['reactJS', 'node', 'html5', 'css3', 'heroku'],
       role: ['Developer', 'UI/UX Design', 'Graphic Design'],
-      description: `My portfolio app allows you to view my projects and see a brief description of each. It has a messaging feature that I set up using emailJS. I've separated the information from the app itself. When I get more projects up I will add a database. It has categories that allow you to filter through the projects. I set up front end routing with React Router.`,
-      design: `I designed the Navigation to be representative of the site structure. I decided minimal and succinct was the way to go. I used a combination of Styled Components and CSS to style the site. I wanted a clean simple aesthetic that didn't distract from the sites purpose.`,
+      description: `My portfolio app allows you to view my projects and see a brief description of each. It has a messaging feature that I set up using emailjs. I've separated the information from the app itself. It has categories that allow you to filter the projects by category. I set up front end routing with React Router.`,
+      design: `I designed the Navigation to be representative of the site structure. I decided minimal and succinct was the way to go for the style. I used a combination of Styled Components and CSS to style the site. I wanted a clean simple aesthetic that didn't distract from the sites purpose.`,
       features: [
         'Expandable Nav',
         'Sends me email',
@@ -74,7 +74,10 @@ const data = {
         'Clean Design',
         'Responsive',
       ],
-      links: { gitHub: 'https://github.com/Taylor-H/portfolio', live: '/' },
+      links: {
+        gitHub: 'https://github.com:Taylor-H/web-developer-portfolio.git',
+        live: '/',
+      },
       images: { prevImgName: 'portfolio', prevImg: 'portfolio-big.png' },
       categories: ['app'],
       featured: true,
